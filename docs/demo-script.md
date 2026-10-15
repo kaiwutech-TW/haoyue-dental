@@ -1,3 +1,5 @@
+> The completed 2:27 edit and actual transcript are documented in [demo/README.md](demo/README.md). The table below is the original recording plan, not the final timeline.
+
 # 3-minute demo plan / 三分鐘展示腳本
 
 Use the English live page for international judges. Switch once to Traditional Chinese. Never show credentials, private staff cases, browser history or customer spreadsheets. A video is not recorded until a real recording file exists.

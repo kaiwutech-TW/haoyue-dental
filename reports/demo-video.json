@@ -1,0 +1,93 @@
+{
+  "durationSeconds": 119.333333,
+  "resolution": "1920x1080",
+  "videoCodec": "H.264",
+  "audioCodec": "AAC 48kHz stereo",
+  "narration": "NotebookLM / Gemini Notebook Brief English synthetic narrator; second generation fact-checked",
+  "editing": "Programmatic montage of genuine production UI captures with explanatory annotations; not continuous screen recording",
+  "captions": "Word timestamps from local Whisper ASR, reviewed semantic chapter cuts and corrected proper-name spelling. Burned captions plus uploaded selectable English SRT.",
+  "sourcePrivacy": "Only app-content crops used. Raw full-window captures, browser chrome, and audio intermediates excluded from public snapshot.",
+  "productionActions": [
+    "English correction classified reschedule 0.943; local cold forward 905ms, request 1.55s",
+    "Proposal retained through repeated identical request without inference",
+    "Explicit confirmation committed synthetic booking version 10 to 11",
+    "Explicit confusion got rule-based patient guidance without inference",
+    "Human request created real handoff with booking unchanged",
+    "Mandarin correction classified reschedule 0.977; forward 212ms, request 0.44s"
+  ],
+  "captureNote": "One initial Unicode typeText attempt sent only punctuation; full Mandarin pasted and verified. Not an intent-model error.",
+  "sources": [
+    {
+      "name": "01-start.png",
+      "sha256": "73cbafde027043f89a5e31bc69635c736f7f699df091417be14419de82186b28"
+    },
+    {
+      "name": "02-intent.png",
+      "sha256": "e6238a3648b07124f5b0f4db79f6d9708123b484b3fa243540666f43ab7035a0"
+    },
+    {
+      "name": "03-proposal.png",
+      "sha256": "7ee62ee30c8543d59ad2a73e04776c4f3323ed45c1fb57dd15e3bec9805c5f5c"
+    },
+    {
+      "name": "04-repeat.png",
+      "sha256": "456924bb73544ab69424c9c1cfffe080edfa8fe76fef1a015e3a665c31b72258"
+    },
+    {
+      "name": "05-committed.png",
+      "sha256": "49009e2ed2a9ad8db0dc1096325afb8f9d6f3814b7f78a88a5df5c8d5b3302a2"
+    },
+    {
+      "name": "06-guidance.png",
+      "sha256": "4584cc1e7af77554abeb247d16614cd078c71d520bb785d9da6053aada639cab"
+    },
+    {
+      "name": "07-handoff.png",
+      "sha256": "7757451c1aa1f644fe89f292d40005a9514d44110190d53b655c726aa6da8b89"
+    },
+    {
+      "name": "08-chinese.png",
+      "sha256": "0d5daa41676e5626846e844553364706b536685a7a64572d43ff55d29c431a87"
+    }
+  ],
+  "videoSha256": "3b951dfc5cd76e23f2dd7b98607b1b3773ad643434eb2b12754d9923fd4c6af8",
+  "hostedVideo": "https://youtu.be/bx7hE5PcGok",
+  "channel": "KaiWuTech",
+  "visibility": "public",
+  "publicationVerification": "YouTube Studio displayed Video published and persisted visibility Public; copyright checks found no issues. Devpost project preview embeds bx7hE5PcGok on KaiWuTech and played successfully with elapsed 3 seconds / duration 1 minute 59 seconds. Project remains DRAFT 4/5; final terms not accepted.",
+  "softwareChecks": {
+    "tests": 30,
+    "failures": 0,
+    "typecheck": "pass",
+    "videoFullDecode": "pass",
+    "videoBuildScriptSyntax": "pass"
+  },
+  "earlierEdit": {
+    "durationSeconds": 147.133333,
+    "narration": "macOS Samantha en_US synthetic voice, 172 words/minute",
+    "captions": "Burned in English plus SRT. Phrase timing proportional to spoken word count, not forced alignment.",
+    "videoSha256": "2e78df249d90cbf78a37e79d294d17f0cd314f085fcf20620086f0c6be3594bf",
+    "hostedVideo": "https://youtu.be/sUw0jwCE5TM",
+    "visibility": "unlisted",
+    "publicationVerification": "YouTube Studio displayed Video published; Devpost embed identifies KaiWuTech, plays successfully, and reports 2:27 duration. Project details persisted; DRAFT 4/5 steps complete."
+  },
+  "expressiveNarration": {
+    "provider": "NotebookLM / Gemini Notebook Audio Overview",
+    "status": "publicly-published",
+    "durationSeconds": 119.333333,
+    "resolution": "1920x1080",
+    "videoCodec": "H.264",
+    "audioCodec": "AAC",
+    "bytes": 4761273,
+    "sha256": "3b951dfc5cd76e23f2dd7b98607b1b3773ad643434eb2b12754d9923fd4c6af8",
+    "voiceManifest": "docs/demo/notebooklm/voice-manifest.json",
+    "captionMethod": "Word timestamps from local Whisper ASR, reviewed semantic chapter cuts and corrected proper-name spelling.",
+    "checks": {
+      "fullVideoDecode": "passed",
+      "eightSceneContactSheet": "visually inspected; text legible, no browser chrome",
+      "claimsReview": "passed; synthetic data, accepted error and network-excluded timing retained"
+    },
+    "published": true,
+    "hostedVideo": "https://youtu.be/bx7hE5PcGok"
+  }
+}

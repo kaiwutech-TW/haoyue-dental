@@ -1,0 +1,26 @@
+{
+  "provider": "NotebookLM / Gemini Notebook Audio Overview",
+  "format": "Brief; single English narrator",
+  "sourceAudioSha256": "0052ef586247b0e7953110d858ed0f08965bcaa5514eb57ed4ce0f7055b604a0",
+  "sourceDurationSeconds": 112.918639,
+  "syntheticVoice": true,
+  "claimsReviewed": true,
+  "firstGenerationRejected": "Hyperbole and missing synthetic-data/network latency qualifications. Not published.",
+  "captionMethod": "Whisper word timestamps and reviewed semantic cuts; proper-name spelling corrected against source (HAOYUE, Supabase, Tavily). No changes to spoken meaning.",
+  "sourceBoundaries": [
+    0,
+    16.0,
+    26.54,
+    38.1,
+    47.35,
+    52.3,
+    69.3,
+    92.7,
+    112.918639
+  ],
+  "asrModel": "mlx-community/whisper-base.en-mlx",
+  "asrPackage": "mlx-whisper==0.4.3",
+  "asrSeconds": 1.9875055830016208,
+  "cloudApiRequestsForSpeech": 0,
+  "sourcePrivacy": "Only approved public narration was added to a new private notebook; no clinic workbooks or patient records."
+}

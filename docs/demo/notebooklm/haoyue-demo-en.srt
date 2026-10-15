@@ -1,0 +1,95 @@
+1
+00:00:00,000 --> 00:00:03,880
+This is the brief on HAOYUE, where a helpful reply should lead to
+
+2
+00:00:03,880 --> 00:00:08,340
+a correct appointment. Today, we're looking at a live English demo for a real
+
+3
+00:00:08,340 --> 00:00:13,300
+engineering prototype of a fictional patient, dental concierge in Taiwan, emphasizing that all patients
+
+4
+00:00:13,300 --> 00:00:16,800
+and bookings are strictly synthetic.
+
+5
+00:00:16,800 --> 00:00:22,860
+First, everyday language connects with decisions because free text and buttons share one pipeline.
+
+6
+00:00:22,860 --> 00:00:28,140
+A fine-tuned NVIDIA 4B model scores 8 administrative intents in one pass.
+
+7
+00:00:28,140 --> 00:00:33,740
+So what prevents the model from acting alone? Well, application rules and explicit confirmation
+
+8
+00:00:33,740 --> 00:00:40,500
+are required before any atomic Supabase changes. On conflict, the original booking stays,
+
+9
+00:00:40,500 --> 00:00:45,100
+confusion gets step-by-step guidance, and repeating a request preserves a proposal without
+
+10
+00:00:45,100 --> 00:00:50,550
+another model call. Style rules do not infer age or train emotion,
+
+11
+00:00:50,550 --> 00:00:55,040
+and human or symptom requests immediately open a handoff without pretending to be a
+
+12
+00:00:55,040 --> 00:00:56,300
+staff member.
+
+13
+00:00:56,300 --> 00:01:02,480
+Second, regarding infrastructure, an NVIDIA Nano 30B on Nebius Token Factory is the budgeted
+
+14
+00:01:02,480 --> 00:01:08,500
+fallback when the score drops below .85, or if local inference is unavailable. Also,
+
+15
+00:01:08,500 --> 00:01:14,100
+Tavily supports staff research but requires human approval before knowledge is used.
+
+16
+00:01:14,100 --> 00:01:20,080
+Finally, let's outline the exact evaluation limits. In an author written Synthetic 64 item
+
+17
+00:01:20,080 --> 00:01:25,760
+Mandarin test, the base scored 52 correct versus the adapter's 58, noting that one
+
+18
+00:01:25,760 --> 00:01:30,720
+accepted high score prediction was still wrong. The warmed local median of 53 milliseconds
+
+19
+00:01:30,720 --> 00:01:36,060
+excludes network and database time clarifying this is not end-to-end latency and
+
+20
+00:01:36,060 --> 00:01:38,300
+not clinical validation.
+
+21
+00:01:38,300 --> 00:01:44,840
+While English is interactive, equivalent English accuracy is not established. Source code, adapter, recipe,
+
+22
+00:01:44,840 --> 00:01:49,660
+and costs are all public. HAOYUE is an open-source, transparent prototype prioritizing
+
+23
+00:01:49,660 --> 00:01:57,660
+explicit confirmation and conservative rule-based fallbacks over automated guesses. Understand, confirm, complete. Try
+
+24
+00:01:57,660 --> 00:01:59,319
+the live demo.

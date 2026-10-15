@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:03,242
+A helpful reply should lead to a correct appointment.
+
+2
+00:00:03,242 --> 00:00:06,483
+Meet How Yue: a patient dental concierge for Taiwan.
+
+3
+00:00:06,483 --> 00:00:12,325
+It connects everyday language with decisions you can inspect, and changes you must confirm.
+
+4
+00:00:12,325 --> 00:00:14,836
+This is the live English demo.
+
+5
+00:00:14,836 --> 00:00:19,857
+Choose a fictional patient and type: not cancel, please reschedule my appointment.
+
+6
+00:00:19,857 --> 00:00:24,878
+Our fine-tuned NVIDIA four-billion-parameter model scores eight intents in one forward pass.
+
+7
+00:00:24,878 --> 00:00:29,062
+The panel shows the actual adapter, scores, and processing events.
+
+8
+00:00:29,062 --> 00:00:33,627
+Buttons are simply shortcuts to the same text pipeline.
+
+9
+00:00:33,627 --> 00:00:36,837
+The model cannot change a booking by itself.
+
+10
+00:00:36,837 --> 00:00:40,849
+Application rules check patient ownership, dates, doctors, availability, and versions.
+
+11
+00:00:40,849 --> 00:00:44,059
+Select a time, review the proposal, and confirm.
+
+12
+00:00:44,059 --> 00:00:47,670
+Only then does an atomic transaction update the appointment.
+
+13
+00:00:47,670 --> 00:00:49,676
+Read back the saved result.
+
+14
+00:00:49,676 --> 00:00:56,494
+If a slot is taken or a confirmation is stale, the original appointment is preserved.
+
+15
+00:00:56,494 --> 00:00:58,626
+People sometimes click by mistake.
+
+16
+00:00:58,626 --> 00:01:01,185
+Explicit confusion gets patient, step-by-step guidance.
+
+17
+00:01:01,185 --> 00:01:06,729
+Repeating the same request keeps the pending choice and skips another model call.
+
+18
+00:01:06,729 --> 00:01:09,715
+We do not guess a person’s age.
+
+19
+00:01:09,715 --> 00:01:14,780
+Supportive language uses transparent rules, not a trained emotion classifier.
+
+20
+00:01:14,780 --> 00:01:18,444
+A request for a person opens a real handoff case.
+
+21
+00:01:18,444 --> 00:01:22,475
+The assistant does not pretend that a staff member has replied.
+
+22
+00:01:22,475 --> 00:01:25,773
+Symptoms and family bookings also follow conservative handoff rules.
+
+23
+00:01:25,773 --> 00:01:28,405
+All patients here are synthetic.
+
+24
+00:01:28,405 --> 00:01:34,719
+Below a score of zero point eight five, or when local inference is unavailable, NVIDIA Nano
+
+25
+00:01:34,719 --> 00:01:38,270
+thirty B on Nebius Token Factory provides budgeted fallback.
+
+26
+00:01:38,270 --> 00:01:39,848
+Supabase commits the transaction.
+
+27
+00:01:39,848 --> 00:01:44,189
+Tavily supports staff research, with human approval before knowledge is used.
+
+28
+00:01:44,189 --> 00:01:47,751
+The app and database run in Tokyo.
+
+29
+00:01:47,751 --> 00:01:51,419
+We trained the adapter on an NVIDIA L four.
+
+30
+00:01:51,419 --> 00:01:57,532
+On a fixed sixty-four-item synthetic test, the base scored fifty-two correct and the adapter fifty-eight.
+
+31
+00:01:57,532 --> 00:02:00,385
+One accepted high-score prediction was still wrong.
+
+32
+00:02:00,385 --> 00:02:05,276
+The warmed local median was fifty-three milliseconds, excluding network and database time.
+
+33
+00:02:05,276 --> 00:02:08,929
+These are engineering measurements, not clinical validation.
+
+34
+00:02:08,929 --> 00:02:12,313
+The primary training language is Taiwanese Mandarin.
+
+35
+00:02:12,313 --> 00:02:16,664
+English is interactive too, with separately documented smoke tests.
+
+36
+00:02:16,664 --> 00:02:21,982
+The code, adapter, full training recipe, failures, and costs are public.
+
+37
+00:02:21,982 --> 00:02:24,399
+How Yue: understand, confirm, complete.
+
+38
+00:02:24,399 --> 00:02:27,133
+Try the live demo.

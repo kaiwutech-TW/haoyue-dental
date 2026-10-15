@@ -25,3 +25,10 @@ artifacts/haoyue-choice-v*/
 supabase/.temp/
 
 artifacts/public-repo/
+
+artifacts/SHA256SUMS.txt
+
+# Raw browser window captures and generated media intermediates stay private.
+artifacts/video/
+artifacts/video-openai/
+artifacts/video-notebooklm/

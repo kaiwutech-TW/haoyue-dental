@@ -3,11 +3,11 @@
   "files": [
     {
       "path": ".env.example",
-      "sha256": "890baf11574e615192fabb210b1fdbcc44bb0d67643cc81094e160f734b747da"
+      "sha256": "1b9758fca1a8c33e11a7dcdcbf180689b33d685bd2630dfefd89e3af4fb27d00"
     },
     {
       "path": ".gitignore",
-      "sha256": "ac08dca02cca984401252c1133ae9caf00a79aba093e6c9ebb55c4711b98a980"
+      "sha256": "fe2b84b3cbaf1c2e2709cb8a559e64208268bccbacc3b5d59570b24b3555d656"
     },
     {
       "path": "LICENSE",
@@ -19,7 +19,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "81d12e305bb349462d783b9d7adb2100e6ae055dd34837eb1e72740bc626326e"
+      "sha256": "209c459d55bd36a31a5ed09d876220ffb301d0e362a22ec771bec43a8abf9d09"
     },
     {
       "path": "app/README.md",
@@ -371,7 +371,7 @@
     },
     {
       "path": "docs/assets/README.md",
-      "sha256": "a891e85883ef184cfb564b30ad991d0f680c3639832c25458ee22f456d6ad50b"
+      "sha256": "4c8cf38e2313651dac25ff34c4d3992a32bcfc17a031e34d2fd59e2780c73ad2"
     },
     {
       "path": "docs/assets/architecture.png",
@@ -382,6 +382,18 @@
       "sha256": "07a41a91cb0866b7e9dac69444c5cdd2e81c326c4b3f237236e8b8125cd3086a"
     },
     {
+      "path": "docs/assets/demo-chinese.png",
+      "sha256": "a16085f9c2a48cf42eef11d2f307a39c45f8ec20164345c87ff79de2d529df90"
+    },
+    {
+      "path": "docs/assets/demo-confirmed.png",
+      "sha256": "b49a7fd16712598249c1ac55a58092c6063050d8f80db802a7e5a1cd46dc4956"
+    },
+    {
+      "path": "docs/assets/demo-intent.png",
+      "sha256": "167d20b675f78614a473060feff8dd45b5c9bdbf9a2bc88ecb17401f40b7fae3"
+    },
+    {
       "path": "docs/assets/haoyue-cover.png",
       "sha256": "ee41051fb14c5764f89020b74bffb6383b3ff4ce76039db8328fb513e2ca5dde"
     },
@@ -390,12 +402,52 @@
       "sha256": "a2ba1ebb38dcab7c102ece45632f4d39ea9f61b91807bda181d4a300d70ecbf0"
     },
     {
+      "path": "docs/demo/README.md",
+      "sha256": "b3a3d78d3a94b25d52c17baf4bb8521678b4b3bc101200f8474d0d8c8031bd97"
+    },
+    {
+      "path": "docs/demo/haoyue-demo-en.srt",
+      "sha256": "39368528650c954e32b6385a7a84c44e6d9ee83647dff5136802b48bcf04dcb4"
+    },
+    {
+      "path": "docs/demo/notebooklm/README.md",
+      "sha256": "83ff5906a26fc1bf133732cf74fdc44a8531753416516cadb24c875297c9d102"
+    },
+    {
+      "path": "docs/demo/notebooklm/haoyue-demo-en.srt",
+      "sha256": "eea704cbb3b848e8d4a82d8fe9fff47681c34ee49ca7e354d88e8565c9d50c38"
+    },
+    {
+      "path": "docs/demo/notebooklm/scenes.json",
+      "sha256": "c8226548ccdccaae12aef4d335fbd175b3f4f2baacf0f6a929f5545bc2d8f531"
+    },
+    {
+      "path": "docs/demo/notebooklm/transcript.md",
+      "sha256": "2c3a60d71583cc3261503d45c5c515a805e29378de88b0988ad7b3d0fd517367"
+    },
+    {
+      "path": "docs/demo/notebooklm/voice-manifest.json",
+      "sha256": "d29b5b140f79d4558647e1b31f1129b3344519c3630f4cb9ea6f6239c9b8284e"
+    },
+    {
+      "path": "docs/demo/scenes.json",
+      "sha256": "92fe812cfaed95fe039bc1d52949e958ff229df65cec39c298265a2fd0ae5be0"
+    },
+    {
+      "path": "docs/demo/transcript.md",
+      "sha256": "994c9a493091039cc04ade54bb06ead755895a0be08c70edf538d64f73fa98cd"
+    },
+    {
+      "path": "docs/demo/voice-workflow.md",
+      "sha256": "e910e747d90336b85e2294a2b2bc4621e7fe67322c96fde706f8758a2b9262bb"
+    },
+    {
       "path": "docs/demo-script.md",
-      "sha256": "e441b3d257ab440713db1170c433b7415892ba8958b47e431dddf7fe0c40b32a"
+      "sha256": "c00889bd9bf4ffe1933ccbb112bd2f44fd5617c151b7909c91f7fc0faaaa931c"
     },
     {
       "path": "docs/submission-draft.md",
-      "sha256": "e8b268debc72bb10a77088ba78277f18896a4a4a5aed87722a9646627532c614"
+      "sha256": "1621028affe2912c6f2b87fb5161a8c7f66191c4d50ae04a7e846165078cb757"
     },
     {
       "path": "inference/choice.py",
@@ -420,6 +472,10 @@
     {
       "path": "reports/colab-costs.json",
       "sha256": "9ef63d11fb3c4b2038b9d7600c2b4b50a2261d3f03a31fb4ffbe4e0585e7c06d"
+    },
+    {
+      "path": "reports/demo-video.json",
+      "sha256": "eae9a4d983211a4782a288cf6a3117f7b2ab305ccf8763c18cef4d37fa65ed95"
     },
     {
       "path": "reports/deployment-verification.json",
@@ -482,8 +538,16 @@
       "sha256": "ef832bafa978373c21c7e45b52afc558891275b47c62357604f3e89c5558d32d"
     },
     {
+      "path": "scripts/build-demo-video.mjs",
+      "sha256": "9a0f1d6970020b8ff1ebe3712597c6a90036e97dd3c7c12f68624c25fd1e0bed"
+    },
+    {
       "path": "scripts/deploy-source.py",
       "sha256": "2089b7d6de540c3003432d5942515f4c5b899ff07e14437c19683e1675cbdc0f"
+    },
+    {
+      "path": "scripts/generate-demo-speech.mjs",
+      "sha256": "d12cf8abe8940bb300090c86336d80565d815cc030a4136331ff70f8f66db9f9"
     },
     {
       "path": "scripts/integration-en.mjs",
@@ -498,12 +562,20 @@
       "sha256": "c7989eee60bbd900b857014722f6190095920ff8602e1e7b0e069c73a6fc3add"
     },
     {
+      "path": "scripts/prepare-notebooklm-edit.py",
+      "sha256": "68b216c6d5617d835e0a9eb456db659c17f36f769e15a7bae96bdd7d26a5037d"
+    },
+    {
       "path": "scripts/run-choice-server.py",
       "sha256": "14549fc0ec553553467cb41e075065497aafde4a4bca9d3923d57bce10e6f757"
     },
     {
       "path": "scripts/supervise-choice.py",
       "sha256": "3798acdd83912e1493c0eff96caca9bf275abe17352c0f890b6be890ac27cb4b"
+    },
+    {
+      "path": "scripts/transcribe-demo.py",
+      "sha256": "9d9815af5e3d50652a5a53185b5ea9e7b358b1ff3b671c11009007fba185b7e6"
     },
     {
       "path": "supabase/functions/clinic-store/index.ts",
