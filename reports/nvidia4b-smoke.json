@@ -1,0 +1,11 @@
+{
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+  "revision": "dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f",
+  "gpu": "NVIDIA L4",
+  "torch": "2.10.0+cu130",
+  "loss": 0.0056704143062233925,
+  "gradNorm": 0.07674967497587204,
+  "weightChanged": true,
+  "seconds": 102.28370666503906,
+  "peakMemoryBytes": 8330002432
+}

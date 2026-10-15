@@ -1,0 +1,4456 @@
+{
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+  "revision": "dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f",
+  "gpu": "NVIDIA L4",
+  "architecture": "LoRA eight-choice final-state projection; not Kev masked multi-query architecture",
+  "datasetHashes": {
+    "train": "5f4b1ecf1548f07476cf628e708c45db7e6879363e8fb9044163485be2f985a1",
+    "validation": "b723acb0593ff053b1b8091083493e2e73ebab9c4aff60a95d8964a76a137f04",
+    "test": "dc76861790ee648fbaf1a33c15a9e4166f89e2c5ef3c5387332dee5b391e0e43"
+  },
+  "training": {
+    "steps": 384,
+    "epochs": 4,
+    "selectedEpoch": 3,
+    "lr": 5e-05,
+    "labelSmoothing": 0.05,
+    "seed": 42,
+    "seconds": 127.12812900543213,
+    "peakMemoryBytes": 8328499200
+  },
+  "validationHistory": [
+    {
+      "epoch": 1,
+      "correct": 59,
+      "nll": 0.29470980167388916
+    },
+    {
+      "epoch": 2,
+      "correct": 60,
+      "nll": 0.2213463932275772
+    },
+    {
+      "epoch": 3,
+      "correct": 62,
+      "nll": 0.20247244834899902
+    },
+    {
+      "epoch": 4,
+      "correct": 61,
+      "nll": 0.20865781605243683
+    }
+  ],
+  "baseRaw": {
+    "n": 64,
+    "correct": 52,
+    "accuracy": 0.8125,
+    "temperature": 1,
+    "brier": 0.3186299800872803,
+    "nll": 0.7015832662582397,
+    "threshold": 0.85,
+    "accepted": 30,
+    "acceptedErrors": 2,
+    "latenciesMs": [
+      50.66011400003845,
+      50.52166199993735,
+      51.28398500028197,
+      50.84949999991295,
+      50.45144099995014,
+      50.71829999997135,
+      50.61905699994895,
+      50.54322200021488,
+      50.54959500012046,
+      50.3770519999307,
+      50.69178300027488,
+      51.23484800014921,
+      51.55147499999657,
+      51.03355500023099,
+      50.830063999910635,
+      50.61358400007521,
+      51.536143999783235,
+      51.375924999774725,
+      51.491772000190394,
+      51.28692499965837,
+      51.23385899969435,
+      51.30535800026337,
+      51.230931999725726,
+      51.224075999925844,
+      51.70916099996248,
+      51.25721100012015,
+      51.250799000172265,
+      50.63024700029928,
+      50.54370400011976,
+      50.47449499988943,
+      51.661772999977984,
+      53.52084499963894,
+      51.44833800022752,
+      51.35213699986707,
+      51.304218000041146,
+      51.342182000098546,
+      51.4274629999818,
+      51.43123199968613,
+      51.59617500021341,
+      51.303110999924684,
+      50.958091000211425,
+      51.4004780002324,
+      51.17175000032148,
+      51.44396500008952,
+      51.54748499990092,
+      51.11543700013499,
+      51.712094000322395,
+      51.11410600011368,
+      51.25976299996182,
+      51.31131300004199,
+      51.48765400008415,
+      51.558921999912855,
+      51.265505999708694,
+      51.18518400013272,
+      51.36030399989977,
+      51.334010000118724,
+      51.50766199994905,
+      51.65430099987134,
+      51.499267000053806,
+      51.381828999637946,
+      51.37669400028244,
+      51.196429999890825,
+      51.39256500024203,
+      51.70476800003598
+    ],
+    "predictions": [
+      {
+        "text": "麻煩替本人登記年度檢查",
+        "expected": "book",
+        "predicted": "unclear",
+        "confidence": 0.42346644401550293,
+        "probabilities": {
+          "book": 0.2910439670085907,
+          "reschedule": 0.03067580796778202,
+          "cancel": 0.10706908255815506,
+          "appointment_lookup": 0.027071302756667137,
+          "admin_faq": 0.05730995163321495,
+          "human_request": 0.012787578627467155,
+          "clinical_handoff": 0.0505758561193943,
+          "unclear": 0.42346644401550293
+        }
+      },
+      {
+        "text": "我這個月想第一次來洗牙",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.6905568838119507,
+        "probabilities": {
+          "book": 0.6905568838119507,
+          "reschedule": 0.005612511653453112,
+          "cancel": 0.004953024443238974,
+          "appointment_lookup": 0.03895855322480202,
+          "admin_faq": 0.08247525990009308,
+          "human_request": 0.00133308838121593,
+          "clinical_handoff": 0.0015105870552361012,
+          "unclear": 0.17460012435913086
+        }
+      },
+      {
+        "text": "您好，從沒去過貴診所，能排個諮詢嗎",
+        "expected": "book",
+        "predicted": "unclear",
+        "confidence": 0.5712460875511169,
+        "probabilities": {
+          "book": 0.127462238073349,
+          "reschedule": 0.006345970556139946,
+          "cancel": 0.0036158249713480473,
+          "appointment_lookup": 0.015223192051053047,
+          "admin_faq": 0.26983752846717834,
+          "human_request": 0.005600299220532179,
+          "clinical_handoff": 0.0006688603898510337,
+          "unclear": 0.5712460875511169
+        }
+      },
+      {
+        "text": "固定半年檢查到了，可以新約一次嗎",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9729195833206177,
+        "probabilities": {
+          "book": 0.9729195833206177,
+          "reschedule": 0.0027327309362590313,
+          "cancel": 0.003508895868435502,
+          "appointment_lookup": 0.00373520003631711,
+          "admin_faq": 0.000782940536737442,
+          "human_request": 0.0004748774226754904,
+          "clinical_handoff": 0.00012006781616946682,
+          "unclear": 0.01572578027844429
+        }
+      },
+      {
+        "text": "目前沒任何掛號，想找一個可來的時間",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9038131237030029,
+        "probabilities": {
+          "book": 0.9038131237030029,
+          "reschedule": 0.004185485187917948,
+          "cancel": 0.002538624918088317,
+          "appointment_lookup": 0.02729279175400734,
+          "admin_faq": 0.010040456429123878,
+          "human_request": 0.0010582563700154424,
+          "clinical_handoff": 8.16039610072039e-05,
+          "unclear": 0.05098964646458626
+        }
+      },
+      {
+        "text": "想幫自己預約一般看診",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9933017492294312,
+        "probabilities": {
+          "book": 0.9933017492294312,
+          "reschedule": 0.00037758276448585093,
+          "cancel": 0.0007054174784570932,
+          "appointment_lookup": 0.0008508958853781223,
+          "admin_faq": 0.0005160944419912994,
+          "human_request": 0.00016755133401602507,
+          "clinical_handoff": 2.13017610803945e-05,
+          "unclear": 0.004059397149831057
+        }
+      },
+      {
+        "text": "這次是新增，不是修改以前那筆",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9960770010948181,
+        "probabilities": {
+          "book": 0.9960770010948181,
+          "reschedule": 0.0003139016916975379,
+          "cancel": 0.0006645299145020545,
+          "appointment_lookup": 0.0006242680829018354,
+          "admin_faq": 0.00017885580018628389,
+          "human_request": 8.448549488093704e-05,
+          "clinical_handoff": 1.0090353498526383e-05,
+          "unclear": 0.002046896144747734
+        }
+      },
+      {
+        "text": "排個例行回診檢查給我好嗎",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.8149024844169617,
+        "probabilities": {
+          "book": 0.8149024844169617,
+          "reschedule": 0.011623959057033062,
+          "cancel": 0.013171671889722347,
+          "appointment_lookup": 0.027884429320693016,
+          "admin_faq": 0.016912760213017464,
+          "human_request": 0.001674590166658163,
+          "clinical_handoff": 0.0035451073199510574,
+          "unclear": 0.11028505861759186
+        }
+      },
+      {
+        "text": "已經掛好的那筆延到下個星期行嗎",
+        "expected": "reschedule",
+        "predicted": "unclear",
+        "confidence": 0.3910456597805023,
+        "probabilities": {
+          "book": 0.1438576579093933,
+          "reschedule": 0.09887182712554932,
+          "cancel": 0.06795354932546616,
+          "appointment_lookup": 0.2687614858150482,
+          "admin_faq": 0.024998711422085762,
+          "human_request": 0.0040809279307723045,
+          "clinical_handoff": 0.0004301265871617943,
+          "unclear": 0.3910456597805023
+        }
+      },
+      {
+        "text": "預定那天我人在外縣市，幫我另找日期",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.7437331080436707,
+        "probabilities": {
+          "book": 0.21308310329914093,
+          "reschedule": 0.7437331080436707,
+          "cancel": 0.0288376621901989,
+          "appointment_lookup": 0.002088993089273572,
+          "admin_faq": 8.622304449090734e-05,
+          "human_request": 0.0015283400425687432,
+          "clinical_handoff": 3.376543099875562e-05,
+          "unclear": 0.01060878299176693
+        }
+      },
+      {
+        "text": "不退約，改到午休後好了",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9572051167488098,
+        "probabilities": {
+          "book": 0.017531823366880417,
+          "reschedule": 0.9572051167488098,
+          "cancel": 0.015471779741346836,
+          "appointment_lookup": 0.0009291525930166245,
+          "admin_faq": 4.9243284593103454e-05,
+          "human_request": 0.0004973395261913538,
+          "clinical_handoff": 3.384438241482712e-05,
+          "unclear": 0.008281446993350983
+        }
+      },
+      {
+        "text": "本來的看診要從傍晚調到早上",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.8081523776054382,
+        "probabilities": {
+          "book": 0.0751698836684227,
+          "reschedule": 0.8081523776054382,
+          "cancel": 0.05166345089673996,
+          "appointment_lookup": 0.004805449862033129,
+          "admin_faq": 0.0004198955139145255,
+          "human_request": 0.0010072769364342093,
+          "clinical_handoff": 0.00023924924607854337,
+          "unclear": 0.058542363345623016
+        }
+      },
+      {
+        "text": "我要去，只是原本那天卡到事情",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.85707026720047,
+        "probabilities": {
+          "book": 0.04267101362347603,
+          "reschedule": 0.85707026720047,
+          "cancel": 0.048352595418691635,
+          "appointment_lookup": 0.0024073340464383364,
+          "admin_faq": 6.026642950018868e-05,
+          "human_request": 0.0010035260347649455,
+          "clinical_handoff": 8.237444126280025e-05,
+          "unclear": 0.048352595418691635
+        }
+      },
+      {
+        "text": "前面的取消收回，我其實想延期",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.8955245018005371,
+        "probabilities": {
+          "book": 0.034723252058029175,
+          "reschedule": 0.8955245018005371,
+          "cancel": 0.0393466018140316,
+          "appointment_lookup": 0.002515343949198723,
+          "admin_faq": 0.0001711713121039793,
+          "human_request": 0.0006359785329550505,
+          "clinical_handoff": 4.0656748751644045e-05,
+          "unclear": 0.02704249694943428
+        }
+      },
+      {
+        "text": "想問原預約能不能提早一日",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9287511110305786,
+        "probabilities": {
+          "book": 0.04623979330062866,
+          "reschedule": 0.9287511110305786,
+          "cancel": 0.01701067015528679,
+          "appointment_lookup": 0.0013963207602500916,
+          "admin_faq": 3.4956206945935264e-05,
+          "human_request": 0.0002926847373601049,
+          "clinical_handoff": 1.6512143702129833e-05,
+          "unclear": 0.006257875822484493
+        }
+      },
+      {
+        "text": "原來的門診挪一個鐘頭，醫師照舊",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9028503894805908,
+        "probabilities": {
+          "book": 0.05093533173203468,
+          "reschedule": 0.9028503894805908,
+          "cancel": 0.027263719588518143,
+          "appointment_lookup": 0.0032561870757490396,
+          "admin_faq": 0.000302872562315315,
+          "human_request": 0.0007734121754765511,
+          "clinical_handoff": 2.4861294150468893e-05,
+          "unclear": 0.014593217521905899
+        }
+      },
+      {
+        "text": "已經不用看了，原訂的時段釋出吧",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.63775634765625,
+        "probabilities": {
+          "book": 0.04619891569018364,
+          "reschedule": 0.26585638523101807,
+          "cancel": 0.63775634765625,
+          "appointment_lookup": 0.008028167299926281,
+          "admin_faq": 0.00018880439165513963,
+          "human_request": 0.0010864944197237492,
+          "clinical_handoff": 0.0001145156638813205,
+          "unclear": 0.04077039659023285
+        }
+      },
+      {
+        "text": "麻煩退掉這回掛號，我確定",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.990168571472168,
+        "probabilities": {
+          "book": 0.005195927806198597,
+          "reschedule": 0.0003321645490359515,
+          "cancel": 0.990168571472168,
+          "appointment_lookup": 0.0007485444075427949,
+          "admin_faq": 2.5613779143895954e-05,
+          "human_request": 0.0001569034211570397,
+          "clinical_handoff": 1.7604075765120797e-05,
+          "unclear": 0.0033547431230545044
+        }
+      },
+      {
+        "text": "這個約作廢就行，別找其他時間",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9566357731819153,
+        "probabilities": {
+          "book": 0.017521396279335022,
+          "reschedule": 0.008276521228253841,
+          "cancel": 0.9566357731819153,
+          "appointment_lookup": 0.001734853140078485,
+          "admin_faq": 5.576675903284922e-05,
+          "human_request": 0.00024992928956635296,
+          "clinical_handoff": 6.319201929727569e-05,
+          "unclear": 0.01546257734298706
+        }
+      },
+      {
+        "text": "我決定這次不去了，請取消",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9950976967811584,
+        "probabilities": {
+          "book": 0.0024666006211191416,
+          "reschedule": 0.00037826545303687453,
+          "cancel": 0.9950976967811584,
+          "appointment_lookup": 0.00037826545303687453,
+          "admin_faq": 1.4666943570773583e-05,
+          "human_request": 6.175013550091535e-05,
+          "clinical_handoff": 1.0080432730319444e-05,
+          "unclear": 0.0015925569459795952
+        }
+      },
+      {
+        "text": "先取消原約，未來再自己登記",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9232778549194336,
+        "probabilities": {
+          "book": 0.04056599736213684,
+          "reschedule": 0.009051497094333172,
+          "cancel": 0.9232778549194336,
+          "appointment_lookup": 0.0020196621771901846,
+          "admin_faq": 6.492193642770872e-05,
+          "human_request": 0.0003735999343916774,
+          "clinical_handoff": 4.191675179754384e-05,
+          "unclear": 0.024604521691799164
+        }
+      },
+      {
+        "text": "原來預約我不要了，幫我撤回",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9686448574066162,
+        "probabilities": {
+          "book": 0.013816975988447666,
+          "reschedule": 0.003493478987365961,
+          "cancel": 0.9686448574066162,
+          "appointment_lookup": 0.0014562986325472593,
+          "admin_faq": 7.250483758980408e-05,
+          "human_request": 0.00026938816881738603,
+          "clinical_handoff": 5.304567457642406e-05,
+          "unclear": 0.012193439528346062
+        }
+      },
+      {
+        "text": "確定不保留掛號，取消即可",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.8445907831192017,
+        "probabilities": {
+          "book": 0.037108730524778366,
+          "reschedule": 0.004432005807757378,
+          "cancel": 0.8445907831192017,
+          "appointment_lookup": 0.010631829500198364,
+          "admin_faq": 0.0011928582098335028,
+          "human_request": 0.000988914049230516,
+          "clinical_handoff": 0.00018293072935193777,
+          "unclear": 0.1008719876408577
+        }
+      },
+      {
+        "text": "不要延期，就把預約取消",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9824720621109009,
+        "probabilities": {
+          "book": 0.005155540071427822,
+          "reschedule": 0.001673758844844997,
+          "cancel": 0.9824720621109009,
+          "appointment_lookup": 0.0007427259697578847,
+          "admin_faq": 3.263310281909071e-05,
+          "human_request": 0.00022651861945632845,
+          "clinical_handoff": 6.489866791525856e-05,
+          "unclear": 0.009631817229092121
+        }
+      },
+      {
+        "text": "我的下一次到診日能幫我查出來嗎",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.5463587045669556,
+        "probabilities": {
+          "book": 0.12190911173820496,
+          "reschedule": 0.02118462510406971,
+          "cancel": 0.014559966512024403,
+          "appointment_lookup": 0.5463587045669556,
+          "admin_faq": 0.06525324285030365,
+          "human_request": 0.0028670274186879396,
+          "clinical_handoff": 0.00011116671521449462,
+          "unclear": 0.22775618731975555
+        }
+      },
+      {
+        "text": "想核對掛號單上的日期",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.576015055179596,
+        "probabilities": {
+          "book": 0.03249654546380043,
+          "reschedule": 0.00931041594594717,
+          "cancel": 0.019710151478648186,
+          "appointment_lookup": 0.576015055179596,
+          "admin_faq": 0.08833477646112442,
+          "human_request": 0.0019515693420544267,
+          "clinical_handoff": 9.127610246650875e-05,
+          "unclear": 0.27209022641181946
+        }
+      },
+      {
+        "text": "我不記得約到哪個醫師了",
+        "expected": "appointment_lookup",
+        "predicted": "unclear",
+        "confidence": 0.5331578254699707,
+        "probabilities": {
+          "book": 0.15275228023529053,
+          "reschedule": 0.15275228023529053,
+          "cancel": 0.034083638340234756,
+          "appointment_lookup": 0.11896359175443649,
+          "admin_faq": 0.0012414964148774743,
+          "human_request": 0.004070710390806198,
+          "clinical_handoff": 0.002978195436298847,
+          "unclear": 0.5331578254699707
+        }
+      },
+      {
+        "text": "掛號完忘記抄下時間，幫我看一眼",
+        "expected": "appointment_lookup",
+        "predicted": "unclear",
+        "confidence": 0.304771363735199,
+        "probabilities": {
+          "book": 0.26895979046821594,
+          "reschedule": 0.1848531812429428,
+          "cancel": 0.0989447757601738,
+          "appointment_lookup": 0.127047598361969,
+          "admin_faq": 0.005942095536738634,
+          "human_request": 0.009203298017382622,
+          "clinical_handoff": 0.00027791550382971764,
+          "unclear": 0.304771363735199
+        }
+      },
+      {
+        "text": "上回留的預約現在是否還有效",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.4512375593185425,
+        "probabilities": {
+          "book": 0.08885394781827927,
+          "reschedule": 0.05389264225959778,
+          "cancel": 0.08885394781827927,
+          "appointment_lookup": 0.4512375593185425,
+          "admin_faq": 0.00470908684656024,
+          "human_request": 0.0022244148422032595,
+          "clinical_handoff": 9.773397323442623e-05,
+          "unclear": 0.3101307451725006
+        }
+      },
+      {
+        "text": "讓我知道目前排了幾次門診",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.6040390133857727,
+        "probabilities": {
+          "book": 0.038614921271800995,
+          "reschedule": 0.016097094863653183,
+          "cancel": 0.012536429800093174,
+          "appointment_lookup": 0.6040390133857727,
+          "admin_faq": 0.038614921271800995,
+          "human_request": 0.004611894953995943,
+          "clinical_handoff": 0.00015781036927364767,
+          "unclear": 0.28532782196998596
+        }
+      },
+      {
+        "text": "我只是要知道預約資訊，別幫我改",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.8536956310272217,
+        "probabilities": {
+          "book": 0.02921185828745365,
+          "reschedule": 0.0025525037199258804,
+          "cancel": 0.005076259840279818,
+          "appointment_lookup": 0.8536956310272217,
+          "admin_faq": 0.02921185828745365,
+          "human_request": 0.0008286766242235899,
+          "clinical_handoff": 1.719863575999625e-05,
+          "unclear": 0.07940606772899628
+        }
+      },
+      {
+        "text": "原來排的是早診還是晚診，我忘了",
+        "expected": "appointment_lookup",
+        "predicted": "reschedule",
+        "confidence": 0.7080830931663513,
+        "probabilities": {
+          "book": 0.10858806222677231,
+          "reschedule": 0.7080830931663513,
+          "cancel": 0.04526623710989952,
+          "appointment_lookup": 0.01144509669393301,
+          "admin_faq": 0.0010645597940310836,
+          "human_request": 0.0022536732722073793,
+          "clinical_handoff": 0.0002528551558498293,
+          "unclear": 0.1230463907122612
+        }
+      },
+      {
+        "text": "貴診所中午會休息嗎",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.8577645421028137,
+        "probabilities": {
+          "book": 0.012235353700816631,
+          "reschedule": 0.004501135088503361,
+          "cancel": 0.003293100744485855,
+          "appointment_lookup": 0.004791433922946453,
+          "admin_faq": 0.8577645421028137,
+          "human_request": 0.0012895967811346054,
+          "clinical_handoff": 3.894244946422987e-05,
+          "unclear": 0.11608580499887466
+        }
+      },
+      {
+        "text": "報到時要出示哪些證件",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.421799898147583,
+        "probabilities": {
+          "book": 0.07329782843589783,
+          "reschedule": 0.021000180393457413,
+          "cancel": 0.021000180393457413,
+          "appointment_lookup": 0.05708440765738487,
+          "admin_faq": 0.421799898147583,
+          "human_request": 0.030555082485079765,
+          "clinical_handoff": 0.0030253627337515354,
+          "unclear": 0.37223708629608154
+        }
+      },
+      {
+        "text": "搭公車要在哪站下車",
+        "expected": "admin_faq",
+        "predicted": "unclear",
+        "confidence": 0.9024805426597595,
+        "probabilities": {
+          "book": 0.002534882165491581,
+          "reschedule": 0.0011973935179412365,
+          "cancel": 0.0011973935179412365,
+          "appointment_lookup": 0.001742197317071259,
+          "admin_faq": 0.08394376933574677,
+          "human_request": 0.00536634586751461,
+          "clinical_handoff": 0.001537483767606318,
+          "unclear": 0.9024805426597595
+        }
+      },
+      {
+        "text": "車可以停地下室嗎",
+        "expected": "admin_faq",
+        "predicted": "unclear",
+        "confidence": 0.7597073316574097,
+        "probabilities": {
+          "book": 0.01576722227036953,
+          "reschedule": 0.006572756450623274,
+          "cancel": 0.006572756450623274,
+          "appointment_lookup": 0.005800437182188034,
+          "admin_faq": 0.19208408892154694,
+          "human_request": 0.012279525399208069,
+          "clinical_handoff": 0.001215837663039565,
+          "unclear": 0.7597073316574097
+        }
+      },
+      {
+        "text": "診所門牌號碼再給我一次",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9134106636047363,
+        "probabilities": {
+          "book": 0.021481361240148544,
+          "reschedule": 0.002907186048105359,
+          "cancel": 0.005102270282804966,
+          "appointment_lookup": 0.011498143896460533,
+          "admin_faq": 0.9134106636047363,
+          "human_request": 0.005431338679045439,
+          "clinical_handoff": 3.659606954897754e-05,
+          "unclear": 0.04013246297836304
+        }
+      },
+      {
+        "text": "櫃檯最晚到幾點還在",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.8176144957542419,
+        "probabilities": {
+          "book": 0.059227798134088516,
+          "reschedule": 0.013215507380664349,
+          "cancel": 0.00801561027765274,
+          "appointment_lookup": 0.01166264433413744,
+          "admin_faq": 0.8176144957542419,
+          "human_request": 0.004030501935631037,
+          "clinical_handoff": 5.749202682636678e-05,
+          "unclear": 0.08617593348026276
+        }
+      },
+      {
+        "text": "一般掛號收現金還是能電子付款",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.5437984466552734,
+        "probabilities": {
+          "book": 0.04463769495487213,
+          "reschedule": 0.006845412310212851,
+          "cancel": 0.006430669687688351,
+          "appointment_lookup": 0.012788914144039154,
+          "admin_faq": 0.5437984466552734,
+          "human_request": 0.0112861767411232,
+          "clinical_handoff": 0.0004658361431211233,
+          "unclear": 0.3737468421459198
+        }
+      },
+      {
+        "text": "有電梯讓輪椅上去嗎",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.8754714131355286,
+        "probabilities": {
+          "book": 0.009725608862936497,
+          "reschedule": 0.0023100345861166716,
+          "cancel": 0.002617612248286605,
+          "appointment_lookup": 0.0024590189568698406,
+          "admin_faq": 0.8754714131355286,
+          "human_request": 0.0027864337898790836,
+          "clinical_handoff": 6.975699943723157e-05,
+          "unclear": 0.10456015169620514
+        }
+      },
+      {
+        "text": "可以讓一位真人客服加入這個對話嗎",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.7536235451698303,
+        "probabilities": {
+          "book": 0.013803097419440746,
+          "reschedule": 0.0050778756849467754,
+          "cancel": 0.029221154749393463,
+          "appointment_lookup": 0.0012838880065828562,
+          "admin_faq": 0.0013666916638612747,
+          "human_request": 0.7536235451698303,
+          "clinical_handoff": 0.0050778756849467754,
+          "unclear": 0.19054587185382843
+        }
+      },
+      {
+        "text": "把我轉給在現場的同仁",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.5124321579933167,
+        "probabilities": {
+          "book": 0.013655854389071465,
+          "reschedule": 0.009385522454977036,
+          "cancel": 0.0476636178791523,
+          "appointment_lookup": 0.0030470332130789757,
+          "admin_faq": 0.006450568791478872,
+          "human_request": 0.5124321579933167,
+          "clinical_handoff": 0.008282694034278393,
+          "unclear": 0.39908257126808167
+        }
+      },
+      {
+        "text": "我要替女兒退掛，別取消我自己的",
+        "expected": "human_request",
+        "predicted": "cancel",
+        "confidence": 0.7235330939292908,
+        "probabilities": {
+          "book": 0.08641370385885239,
+          "reschedule": 0.04625392332673073,
+          "cancel": 0.7235330939292908,
+          "appointment_lookup": 0.013251971453428268,
+          "admin_faq": 0.000546974188182503,
+          "human_request": 0.00295691448263824,
+          "clinical_handoff": 0.0013121227966621518,
+          "unclear": 0.1257311999797821
+        }
+      },
+      {
+        "text": "不要自動回答了，給我人工服務",
+        "expected": "human_request",
+        "predicted": "unclear",
+        "confidence": 0.8575573563575745,
+        "probabilities": {
+          "book": 0.014755088835954666,
+          "reschedule": 0.007419324945658445,
+          "cancel": 0.0032923053950071335,
+          "appointment_lookup": 0.004790276288986206,
+          "admin_faq": 0.045448873192071915,
+          "human_request": 0.0661277249455452,
+          "clinical_handoff": 0.0006090152892284095,
+          "unclear": 0.8575573563575745
+        }
+      },
+      {
+        "text": "能請櫃台小姐直接聯絡我嗎",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.757778525352478,
+        "probabilities": {
+          "book": 0.017821243032813072,
+          "reschedule": 0.010809130035340786,
+          "cancel": 0.03772756829857826,
+          "appointment_lookup": 0.0010054056765511632,
+          "admin_faq": 0.002265716902911663,
+          "human_request": 0.757778525352478,
+          "clinical_handoff": 0.003509210655465722,
+          "unclear": 0.16908325254917145
+        }
+      },
+      {
+        "text": "我的對話請交由工作人員處理",
+        "expected": "human_request",
+        "predicted": "unclear",
+        "confidence": 0.6546444892883301,
+        "probabilities": {
+          "book": 0.03259282931685448,
+          "reschedule": 0.007272443268448114,
+          "cancel": 0.028763072565197945,
+          "appointment_lookup": 0.008240758441388607,
+          "admin_faq": 0.05373649299144745,
+          "human_request": 0.2125319391489029,
+          "clinical_handoff": 0.0022179698571562767,
+          "unclear": 0.6546444892883301
+        }
+      },
+      {
+        "text": "家父原本的約想延期，由我來代辦",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.32580816745758057,
+        "probabilities": {
+          "book": 0.09334560483694077,
+          "reschedule": 0.2537396550178528,
+          "cancel": 0.11985813081264496,
+          "appointment_lookup": 0.005967384669929743,
+          "admin_faq": 0.001331503503024578,
+          "human_request": 0.32580816745758057,
+          "clinical_handoff": 0.0023368613328784704,
+          "unclear": 0.19761264324188232
+        }
+      },
+      {
+        "text": "機器人先停，換專員回覆",
+        "expected": "human_request",
+        "predicted": "unclear",
+        "confidence": 0.8327504396438599,
+        "probabilities": {
+          "book": 0.015252356417477131,
+          "reschedule": 0.00720470305532217,
+          "cancel": 0.0038563995622098446,
+          "appointment_lookup": 0.005972908344119787,
+          "admin_faq": 0.11270051449537277,
+          "human_request": 0.02219204790890217,
+          "clinical_handoff": 7.063242810545489e-05,
+          "unclear": 0.8327504396438599
+        }
+      },
+      {
+        "text": "牙齦有膿包，可以自己弄破嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.7946478724479675,
+        "probabilities": {
+          "book": 0.0014410890871658921,
+          "reschedule": 0.0007246250752359629,
+          "cancel": 0.0014410890871658921,
+          "appointment_lookup": 0.00034228863660246134,
+          "admin_faq": 7.174759230110794e-05,
+          "human_request": 0.00041287890053354204,
+          "clinical_handoff": 0.7946478724479675,
+          "unclear": 0.20091845095157623
+        }
+      },
+      {
+        "text": "拔牙傷口整夜出血，怎麼辦",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.7716261148452759,
+        "probabilities": {
+          "book": 0.0029624011367559433,
+          "reschedule": 0.0010898064356297255,
+          "cancel": 0.0019126699771732092,
+          "appointment_lookup": 0.0005833313916809857,
+          "admin_faq": 0.00013015881995670497,
+          "human_request": 0.0006209530401974916,
+          "clinical_handoff": 0.7716261148452759,
+          "unclear": 0.22107459604740143
+        }
+      },
+      {
+        "text": "吞嚥困難還呼吸不順，現在該做什麼",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.7278314232826233,
+        "probabilities": {
+          "book": 0.0019204691052436829,
+          "reschedule": 0.0005168872303329408,
+          "cancel": 0.001164823304861784,
+          "appointment_lookup": 0.0002766698016785085,
+          "admin_faq": 7.926722173579037e-05,
+          "human_request": 0.0004561514069791883,
+          "clinical_handoff": 0.7278314232826233,
+          "unclear": 0.2677542269229889
+        }
+      },
+      {
+        "text": "止痛藥吃幾毫克才有效",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.8779832720756531,
+        "probabilities": {
+          "book": 0.0014051267644390464,
+          "reschedule": 0.0003552716807462275,
+          "cancel": 0.0008522524731233716,
+          "appointment_lookup": 0.00022938064648769796,
+          "admin_faq": 5.799650534754619e-05,
+          "human_request": 0.0002945305604953319,
+          "clinical_handoff": 0.8779832720756531,
+          "unclear": 0.1188221126794815
+        }
+      },
+      {
+        "text": "我懷孕可以打麻醉嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.645412266254425,
+        "probabilities": {
+          "book": 0.002807766431942582,
+          "reschedule": 0.0017029964365065098,
+          "cancel": 0.002186690689995885,
+          "appointment_lookup": 0.0007099144859239459,
+          "admin_faq": 0.0009115483262576163,
+          "human_request": 0.0008044384885579348,
+          "clinical_handoff": 0.645412266254425,
+          "unclear": 0.3454643189907074
+        }
+      },
+      {
+        "text": "看這些症狀能判斷感染嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9122102856636047,
+        "probabilities": {
+          "book": 0.001995451981201768,
+          "reschedule": 0.00019757648988161236,
+          "cancel": 0.00041826945380307734,
+          "appointment_lookup": 0.00013579220103565603,
+          "admin_faq": 1.9562721718102694e-05,
+          "human_request": 0.00017436064081266522,
+          "clinical_handoff": 0.9122102856636047,
+          "unclear": 0.08484877645969391
+        }
+      },
+      {
+        "text": "牙套磨到破皮要擦什麼藥",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.7726436853408813,
+        "probabilities": {
+          "book": 0.0021701969671994448,
+          "reschedule": 0.0010912436991930008,
+          "cancel": 0.0015877500409260392,
+          "appointment_lookup": 0.0004842364287469536,
+          "admin_faq": 0.00010804775956785306,
+          "human_request": 0.0005487117450684309,
+          "clinical_handoff": 0.7726436853408813,
+          "unclear": 0.22136612236499786
+        }
+      },
+      {
+        "text": "嘴巴有麻麻的感覺是不是正常",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.7751178741455078,
+        "probabilities": {
+          "book": 0.0011653425171971321,
+          "reschedule": 0.0003783313441090286,
+          "cancel": 0.0005504688597284257,
+          "appointment_lookup": 0.0002946447639260441,
+          "admin_faq": 8.441712998319417e-05,
+          "human_request": 0.0003338762326166034,
+          "clinical_handoff": 0.7751178741455078,
+          "unclear": 0.22207500040531158
+        }
+      },
+      {
+        "text": "就那樣啦，你看著辦",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.5849480628967285,
+        "probabilities": {
+          "book": 0.1016487330198288,
+          "reschedule": 0.020015820860862732,
+          "cancel": 0.02912284806370735,
+          "appointment_lookup": 0.025700824335217476,
+          "admin_faq": 0.1899048238992691,
+          "human_request": 0.04801546037197113,
+          "clinical_handoff": 0.0006434075185097754,
+          "unclear": 0.5849480628967285
+        }
+      },
+      {
+        "text": "我先跟家裡商量，不要動",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.8795995116233826,
+        "probabilities": {
+          "book": 0.030098238959908485,
+          "reschedule": 0.016110427677631378,
+          "cancel": 0.03864690661430359,
+          "appointment_lookup": 0.009771468117833138,
+          "admin_faq": 0.018255505710840225,
+          "human_request": 0.006715825293213129,
+          "clinical_handoff": 0.0008020909153856337,
+          "unclear": 0.8795995116233826
+        }
+      },
+      {
+        "text": "嗯，我還要想一想",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9741052985191345,
+        "probabilities": {
+          "book": 0.013894865289330482,
+          "reschedule": 0.003300319891422987,
+          "cancel": 0.0010065407259389758,
+          "appointment_lookup": 0.002268274314701557,
+          "admin_faq": 0.0035131722688674927,
+          "human_request": 0.0017665340565145016,
+          "clinical_handoff": 0.00014500593533739448,
+          "unclear": 0.9741052985191345
+        }
+      },
+      {
+        "text": "先擱著，晚點給答案",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.880524754524231,
+        "probabilities": {
+          "book": 0.0438387431204319,
+          "reschedule": 0.007156478241086006,
+          "cancel": 0.002473212778568268,
+          "appointment_lookup": 0.004918571095913649,
+          "admin_faq": 0.05629006400704384,
+          "human_request": 0.004340623505413532,
+          "clinical_handoff": 0.0004574983613565564,
+          "unclear": 0.880524754524231
+        }
+      },
+      {
+        "text": "沒有確定，暫時別處理",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9424374103546143,
+        "probabilities": {
+          "book": 0.017261343076825142,
+          "reschedule": 0.004945457447320223,
+          "cancel": 0.008153681643307209,
+          "appointment_lookup": 0.006350093521177769,
+          "admin_faq": 0.017261343076825142,
+          "human_request": 0.0033989599905908108,
+          "clinical_handoff": 0.00019175620400346816,
+          "unclear": 0.9424374103546143
+        }
+      },
+      {
+        "text": "剛剛的事情再等等",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9267498850822449,
+        "probabilities": {
+          "book": 0.02798542194068432,
+          "reschedule": 0.009085536003112793,
+          "cancel": 0.005510656628757715,
+          "appointment_lookup": 0.004863136913627386,
+          "admin_faq": 0.021795067936182022,
+          "human_request": 0.0035579469986259937,
+          "clinical_handoff": 0.00045234221033751965,
+          "unclear": 0.9267498850822449
+        }
+      },
+      {
+        "text": "我沒說要哪個，還在考慮",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9677892923355103,
+        "probabilities": {
+          "book": 0.012182669714093208,
+          "reschedule": 0.0039551337249577045,
+          "cancel": 0.002117030555382371,
+          "appointment_lookup": 0.0034903932828456163,
+          "admin_faq": 0.008373018354177475,
+          "human_request": 0.001648745033890009,
+          "clinical_handoff": 0.000443753699073568,
+          "unclear": 0.9677892923355103
+        }
+      },
+      {
+        "text": "可能吧，現在沒辦法決定",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.8945249319076538,
+        "probabilities": {
+          "book": 0.027012312784790993,
+          "reschedule": 0.007739156950265169,
+          "cancel": 0.0030306975822895765,
+          "appointment_lookup": 0.004694036208093166,
+          "admin_faq": 0.05718506500124931,
+          "human_request": 0.005319039802998304,
+          "clinical_handoff": 0.0004947477718815207,
+          "unclear": 0.8945249319076538
+        }
+      }
+    ]
+  },
+  "baseCalibrated": {
+    "n": 64,
+    "correct": 52,
+    "accuracy": 0.8125,
+    "temperature": 1.0,
+    "brier": 0.3186299800872803,
+    "nll": 0.7015832662582397,
+    "threshold": 0.85,
+    "accepted": 30,
+    "acceptedErrors": 2,
+    "latenciesMs": [
+      50.66011400003845,
+      50.52166199993735,
+      51.28398500028197,
+      50.84949999991295,
+      50.45144099995014,
+      50.71829999997135,
+      50.61905699994895,
+      50.54322200021488,
+      50.54959500012046,
+      50.3770519999307,
+      50.69178300027488,
+      51.23484800014921,
+      51.55147499999657,
+      51.03355500023099,
+      50.830063999910635,
+      50.61358400007521,
+      51.536143999783235,
+      51.375924999774725,
+      51.491772000190394,
+      51.28692499965837,
+      51.23385899969435,
+      51.30535800026337,
+      51.230931999725726,
+      51.224075999925844,
+      51.70916099996248,
+      51.25721100012015,
+      51.250799000172265,
+      50.63024700029928,
+      50.54370400011976,
+      50.47449499988943,
+      51.661772999977984,
+      53.52084499963894,
+      51.44833800022752,
+      51.35213699986707,
+      51.304218000041146,
+      51.342182000098546,
+      51.4274629999818,
+      51.43123199968613,
+      51.59617500021341,
+      51.303110999924684,
+      50.958091000211425,
+      51.4004780002324,
+      51.17175000032148,
+      51.44396500008952,
+      51.54748499990092,
+      51.11543700013499,
+      51.712094000322395,
+      51.11410600011368,
+      51.25976299996182,
+      51.31131300004199,
+      51.48765400008415,
+      51.558921999912855,
+      51.265505999708694,
+      51.18518400013272,
+      51.36030399989977,
+      51.334010000118724,
+      51.50766199994905,
+      51.65430099987134,
+      51.499267000053806,
+      51.381828999637946,
+      51.37669400028244,
+      51.196429999890825,
+      51.39256500024203,
+      51.70476800003598
+    ],
+    "predictions": [
+      {
+        "text": "麻煩替本人登記年度檢查",
+        "expected": "book",
+        "predicted": "unclear",
+        "confidence": 0.42346644401550293,
+        "probabilities": {
+          "book": 0.2910439670085907,
+          "reschedule": 0.03067580796778202,
+          "cancel": 0.10706908255815506,
+          "appointment_lookup": 0.027071302756667137,
+          "admin_faq": 0.05730995163321495,
+          "human_request": 0.012787578627467155,
+          "clinical_handoff": 0.0505758561193943,
+          "unclear": 0.42346644401550293
+        }
+      },
+      {
+        "text": "我這個月想第一次來洗牙",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.6905568838119507,
+        "probabilities": {
+          "book": 0.6905568838119507,
+          "reschedule": 0.005612511653453112,
+          "cancel": 0.004953024443238974,
+          "appointment_lookup": 0.03895855322480202,
+          "admin_faq": 0.08247525990009308,
+          "human_request": 0.00133308838121593,
+          "clinical_handoff": 0.0015105870552361012,
+          "unclear": 0.17460012435913086
+        }
+      },
+      {
+        "text": "您好，從沒去過貴診所，能排個諮詢嗎",
+        "expected": "book",
+        "predicted": "unclear",
+        "confidence": 0.5712460875511169,
+        "probabilities": {
+          "book": 0.127462238073349,
+          "reschedule": 0.006345970556139946,
+          "cancel": 0.0036158249713480473,
+          "appointment_lookup": 0.015223192051053047,
+          "admin_faq": 0.26983752846717834,
+          "human_request": 0.005600299220532179,
+          "clinical_handoff": 0.0006688603898510337,
+          "unclear": 0.5712460875511169
+        }
+      },
+      {
+        "text": "固定半年檢查到了，可以新約一次嗎",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9729195833206177,
+        "probabilities": {
+          "book": 0.9729195833206177,
+          "reschedule": 0.0027327309362590313,
+          "cancel": 0.003508895868435502,
+          "appointment_lookup": 0.00373520003631711,
+          "admin_faq": 0.000782940536737442,
+          "human_request": 0.0004748774226754904,
+          "clinical_handoff": 0.00012006781616946682,
+          "unclear": 0.01572578027844429
+        }
+      },
+      {
+        "text": "目前沒任何掛號，想找一個可來的時間",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9038131237030029,
+        "probabilities": {
+          "book": 0.9038131237030029,
+          "reschedule": 0.004185485187917948,
+          "cancel": 0.002538624918088317,
+          "appointment_lookup": 0.02729279175400734,
+          "admin_faq": 0.010040456429123878,
+          "human_request": 0.0010582563700154424,
+          "clinical_handoff": 8.16039610072039e-05,
+          "unclear": 0.05098964646458626
+        }
+      },
+      {
+        "text": "想幫自己預約一般看診",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9933017492294312,
+        "probabilities": {
+          "book": 0.9933017492294312,
+          "reschedule": 0.00037758276448585093,
+          "cancel": 0.0007054174784570932,
+          "appointment_lookup": 0.0008508958853781223,
+          "admin_faq": 0.0005160944419912994,
+          "human_request": 0.00016755133401602507,
+          "clinical_handoff": 2.13017610803945e-05,
+          "unclear": 0.004059397149831057
+        }
+      },
+      {
+        "text": "這次是新增，不是修改以前那筆",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9960770010948181,
+        "probabilities": {
+          "book": 0.9960770010948181,
+          "reschedule": 0.0003139016916975379,
+          "cancel": 0.0006645299145020545,
+          "appointment_lookup": 0.0006242680829018354,
+          "admin_faq": 0.00017885580018628389,
+          "human_request": 8.448549488093704e-05,
+          "clinical_handoff": 1.0090353498526383e-05,
+          "unclear": 0.002046896144747734
+        }
+      },
+      {
+        "text": "排個例行回診檢查給我好嗎",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.8149024844169617,
+        "probabilities": {
+          "book": 0.8149024844169617,
+          "reschedule": 0.011623959057033062,
+          "cancel": 0.013171671889722347,
+          "appointment_lookup": 0.027884429320693016,
+          "admin_faq": 0.016912760213017464,
+          "human_request": 0.001674590166658163,
+          "clinical_handoff": 0.0035451073199510574,
+          "unclear": 0.11028505861759186
+        }
+      },
+      {
+        "text": "已經掛好的那筆延到下個星期行嗎",
+        "expected": "reschedule",
+        "predicted": "unclear",
+        "confidence": 0.3910456597805023,
+        "probabilities": {
+          "book": 0.1438576579093933,
+          "reschedule": 0.09887182712554932,
+          "cancel": 0.06795354932546616,
+          "appointment_lookup": 0.2687614858150482,
+          "admin_faq": 0.024998711422085762,
+          "human_request": 0.0040809279307723045,
+          "clinical_handoff": 0.0004301265871617943,
+          "unclear": 0.3910456597805023
+        }
+      },
+      {
+        "text": "預定那天我人在外縣市，幫我另找日期",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.7437331080436707,
+        "probabilities": {
+          "book": 0.21308310329914093,
+          "reschedule": 0.7437331080436707,
+          "cancel": 0.0288376621901989,
+          "appointment_lookup": 0.002088993089273572,
+          "admin_faq": 8.622304449090734e-05,
+          "human_request": 0.0015283400425687432,
+          "clinical_handoff": 3.376543099875562e-05,
+          "unclear": 0.01060878299176693
+        }
+      },
+      {
+        "text": "不退約，改到午休後好了",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9572051167488098,
+        "probabilities": {
+          "book": 0.017531823366880417,
+          "reschedule": 0.9572051167488098,
+          "cancel": 0.015471779741346836,
+          "appointment_lookup": 0.0009291525930166245,
+          "admin_faq": 4.9243284593103454e-05,
+          "human_request": 0.0004973395261913538,
+          "clinical_handoff": 3.384438241482712e-05,
+          "unclear": 0.008281446993350983
+        }
+      },
+      {
+        "text": "本來的看診要從傍晚調到早上",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.8081523776054382,
+        "probabilities": {
+          "book": 0.0751698836684227,
+          "reschedule": 0.8081523776054382,
+          "cancel": 0.05166345089673996,
+          "appointment_lookup": 0.004805449862033129,
+          "admin_faq": 0.0004198955139145255,
+          "human_request": 0.0010072769364342093,
+          "clinical_handoff": 0.00023924924607854337,
+          "unclear": 0.058542363345623016
+        }
+      },
+      {
+        "text": "我要去，只是原本那天卡到事情",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.85707026720047,
+        "probabilities": {
+          "book": 0.04267101362347603,
+          "reschedule": 0.85707026720047,
+          "cancel": 0.048352595418691635,
+          "appointment_lookup": 0.0024073340464383364,
+          "admin_faq": 6.026642950018868e-05,
+          "human_request": 0.0010035260347649455,
+          "clinical_handoff": 8.237444126280025e-05,
+          "unclear": 0.048352595418691635
+        }
+      },
+      {
+        "text": "前面的取消收回，我其實想延期",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.8955245018005371,
+        "probabilities": {
+          "book": 0.034723252058029175,
+          "reschedule": 0.8955245018005371,
+          "cancel": 0.0393466018140316,
+          "appointment_lookup": 0.002515343949198723,
+          "admin_faq": 0.0001711713121039793,
+          "human_request": 0.0006359785329550505,
+          "clinical_handoff": 4.0656748751644045e-05,
+          "unclear": 0.02704249694943428
+        }
+      },
+      {
+        "text": "想問原預約能不能提早一日",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9287511110305786,
+        "probabilities": {
+          "book": 0.04623979330062866,
+          "reschedule": 0.9287511110305786,
+          "cancel": 0.01701067015528679,
+          "appointment_lookup": 0.0013963207602500916,
+          "admin_faq": 3.4956206945935264e-05,
+          "human_request": 0.0002926847373601049,
+          "clinical_handoff": 1.6512143702129833e-05,
+          "unclear": 0.006257875822484493
+        }
+      },
+      {
+        "text": "原來的門診挪一個鐘頭，醫師照舊",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9028503894805908,
+        "probabilities": {
+          "book": 0.05093533173203468,
+          "reschedule": 0.9028503894805908,
+          "cancel": 0.027263719588518143,
+          "appointment_lookup": 0.0032561870757490396,
+          "admin_faq": 0.000302872562315315,
+          "human_request": 0.0007734121754765511,
+          "clinical_handoff": 2.4861294150468893e-05,
+          "unclear": 0.014593217521905899
+        }
+      },
+      {
+        "text": "已經不用看了，原訂的時段釋出吧",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.63775634765625,
+        "probabilities": {
+          "book": 0.04619891569018364,
+          "reschedule": 0.26585638523101807,
+          "cancel": 0.63775634765625,
+          "appointment_lookup": 0.008028167299926281,
+          "admin_faq": 0.00018880439165513963,
+          "human_request": 0.0010864944197237492,
+          "clinical_handoff": 0.0001145156638813205,
+          "unclear": 0.04077039659023285
+        }
+      },
+      {
+        "text": "麻煩退掉這回掛號，我確定",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.990168571472168,
+        "probabilities": {
+          "book": 0.005195927806198597,
+          "reschedule": 0.0003321645490359515,
+          "cancel": 0.990168571472168,
+          "appointment_lookup": 0.0007485444075427949,
+          "admin_faq": 2.5613779143895954e-05,
+          "human_request": 0.0001569034211570397,
+          "clinical_handoff": 1.7604075765120797e-05,
+          "unclear": 0.0033547431230545044
+        }
+      },
+      {
+        "text": "這個約作廢就行，別找其他時間",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9566357731819153,
+        "probabilities": {
+          "book": 0.017521396279335022,
+          "reschedule": 0.008276521228253841,
+          "cancel": 0.9566357731819153,
+          "appointment_lookup": 0.001734853140078485,
+          "admin_faq": 5.576675903284922e-05,
+          "human_request": 0.00024992928956635296,
+          "clinical_handoff": 6.319201929727569e-05,
+          "unclear": 0.01546257734298706
+        }
+      },
+      {
+        "text": "我決定這次不去了，請取消",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9950976967811584,
+        "probabilities": {
+          "book": 0.0024666006211191416,
+          "reschedule": 0.00037826545303687453,
+          "cancel": 0.9950976967811584,
+          "appointment_lookup": 0.00037826545303687453,
+          "admin_faq": 1.4666943570773583e-05,
+          "human_request": 6.175013550091535e-05,
+          "clinical_handoff": 1.0080432730319444e-05,
+          "unclear": 0.0015925569459795952
+        }
+      },
+      {
+        "text": "先取消原約，未來再自己登記",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9232778549194336,
+        "probabilities": {
+          "book": 0.04056599736213684,
+          "reschedule": 0.009051497094333172,
+          "cancel": 0.9232778549194336,
+          "appointment_lookup": 0.0020196621771901846,
+          "admin_faq": 6.492193642770872e-05,
+          "human_request": 0.0003735999343916774,
+          "clinical_handoff": 4.191675179754384e-05,
+          "unclear": 0.024604521691799164
+        }
+      },
+      {
+        "text": "原來預約我不要了，幫我撤回",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9686448574066162,
+        "probabilities": {
+          "book": 0.013816975988447666,
+          "reschedule": 0.003493478987365961,
+          "cancel": 0.9686448574066162,
+          "appointment_lookup": 0.0014562986325472593,
+          "admin_faq": 7.250483758980408e-05,
+          "human_request": 0.00026938816881738603,
+          "clinical_handoff": 5.304567457642406e-05,
+          "unclear": 0.012193439528346062
+        }
+      },
+      {
+        "text": "確定不保留掛號，取消即可",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.8445907831192017,
+        "probabilities": {
+          "book": 0.037108730524778366,
+          "reschedule": 0.004432005807757378,
+          "cancel": 0.8445907831192017,
+          "appointment_lookup": 0.010631829500198364,
+          "admin_faq": 0.0011928582098335028,
+          "human_request": 0.000988914049230516,
+          "clinical_handoff": 0.00018293072935193777,
+          "unclear": 0.1008719876408577
+        }
+      },
+      {
+        "text": "不要延期，就把預約取消",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9824720621109009,
+        "probabilities": {
+          "book": 0.005155540071427822,
+          "reschedule": 0.001673758844844997,
+          "cancel": 0.9824720621109009,
+          "appointment_lookup": 0.0007427259697578847,
+          "admin_faq": 3.263310281909071e-05,
+          "human_request": 0.00022651861945632845,
+          "clinical_handoff": 6.489866791525856e-05,
+          "unclear": 0.009631817229092121
+        }
+      },
+      {
+        "text": "我的下一次到診日能幫我查出來嗎",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.5463587045669556,
+        "probabilities": {
+          "book": 0.12190911173820496,
+          "reschedule": 0.02118462510406971,
+          "cancel": 0.014559966512024403,
+          "appointment_lookup": 0.5463587045669556,
+          "admin_faq": 0.06525324285030365,
+          "human_request": 0.0028670274186879396,
+          "clinical_handoff": 0.00011116671521449462,
+          "unclear": 0.22775618731975555
+        }
+      },
+      {
+        "text": "想核對掛號單上的日期",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.576015055179596,
+        "probabilities": {
+          "book": 0.03249654546380043,
+          "reschedule": 0.00931041594594717,
+          "cancel": 0.019710151478648186,
+          "appointment_lookup": 0.576015055179596,
+          "admin_faq": 0.08833477646112442,
+          "human_request": 0.0019515693420544267,
+          "clinical_handoff": 9.127610246650875e-05,
+          "unclear": 0.27209022641181946
+        }
+      },
+      {
+        "text": "我不記得約到哪個醫師了",
+        "expected": "appointment_lookup",
+        "predicted": "unclear",
+        "confidence": 0.5331578254699707,
+        "probabilities": {
+          "book": 0.15275228023529053,
+          "reschedule": 0.15275228023529053,
+          "cancel": 0.034083638340234756,
+          "appointment_lookup": 0.11896359175443649,
+          "admin_faq": 0.0012414964148774743,
+          "human_request": 0.004070710390806198,
+          "clinical_handoff": 0.002978195436298847,
+          "unclear": 0.5331578254699707
+        }
+      },
+      {
+        "text": "掛號完忘記抄下時間，幫我看一眼",
+        "expected": "appointment_lookup",
+        "predicted": "unclear",
+        "confidence": 0.304771363735199,
+        "probabilities": {
+          "book": 0.26895979046821594,
+          "reschedule": 0.1848531812429428,
+          "cancel": 0.0989447757601738,
+          "appointment_lookup": 0.127047598361969,
+          "admin_faq": 0.005942095536738634,
+          "human_request": 0.009203298017382622,
+          "clinical_handoff": 0.00027791550382971764,
+          "unclear": 0.304771363735199
+        }
+      },
+      {
+        "text": "上回留的預約現在是否還有效",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.4512375593185425,
+        "probabilities": {
+          "book": 0.08885394781827927,
+          "reschedule": 0.05389264225959778,
+          "cancel": 0.08885394781827927,
+          "appointment_lookup": 0.4512375593185425,
+          "admin_faq": 0.00470908684656024,
+          "human_request": 0.0022244148422032595,
+          "clinical_handoff": 9.773397323442623e-05,
+          "unclear": 0.3101307451725006
+        }
+      },
+      {
+        "text": "讓我知道目前排了幾次門診",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.6040390133857727,
+        "probabilities": {
+          "book": 0.038614921271800995,
+          "reschedule": 0.016097094863653183,
+          "cancel": 0.012536429800093174,
+          "appointment_lookup": 0.6040390133857727,
+          "admin_faq": 0.038614921271800995,
+          "human_request": 0.004611894953995943,
+          "clinical_handoff": 0.00015781036927364767,
+          "unclear": 0.28532782196998596
+        }
+      },
+      {
+        "text": "我只是要知道預約資訊，別幫我改",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.8536956310272217,
+        "probabilities": {
+          "book": 0.02921185828745365,
+          "reschedule": 0.0025525037199258804,
+          "cancel": 0.005076259840279818,
+          "appointment_lookup": 0.8536956310272217,
+          "admin_faq": 0.02921185828745365,
+          "human_request": 0.0008286766242235899,
+          "clinical_handoff": 1.719863575999625e-05,
+          "unclear": 0.07940606772899628
+        }
+      },
+      {
+        "text": "原來排的是早診還是晚診，我忘了",
+        "expected": "appointment_lookup",
+        "predicted": "reschedule",
+        "confidence": 0.7080830931663513,
+        "probabilities": {
+          "book": 0.10858806222677231,
+          "reschedule": 0.7080830931663513,
+          "cancel": 0.04526623710989952,
+          "appointment_lookup": 0.01144509669393301,
+          "admin_faq": 0.0010645597940310836,
+          "human_request": 0.0022536732722073793,
+          "clinical_handoff": 0.0002528551558498293,
+          "unclear": 0.1230463907122612
+        }
+      },
+      {
+        "text": "貴診所中午會休息嗎",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.8577645421028137,
+        "probabilities": {
+          "book": 0.012235353700816631,
+          "reschedule": 0.004501135088503361,
+          "cancel": 0.003293100744485855,
+          "appointment_lookup": 0.004791433922946453,
+          "admin_faq": 0.8577645421028137,
+          "human_request": 0.0012895967811346054,
+          "clinical_handoff": 3.894244946422987e-05,
+          "unclear": 0.11608580499887466
+        }
+      },
+      {
+        "text": "報到時要出示哪些證件",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.421799898147583,
+        "probabilities": {
+          "book": 0.07329782843589783,
+          "reschedule": 0.021000180393457413,
+          "cancel": 0.021000180393457413,
+          "appointment_lookup": 0.05708440765738487,
+          "admin_faq": 0.421799898147583,
+          "human_request": 0.030555082485079765,
+          "clinical_handoff": 0.0030253627337515354,
+          "unclear": 0.37223708629608154
+        }
+      },
+      {
+        "text": "搭公車要在哪站下車",
+        "expected": "admin_faq",
+        "predicted": "unclear",
+        "confidence": 0.9024805426597595,
+        "probabilities": {
+          "book": 0.002534882165491581,
+          "reschedule": 0.0011973935179412365,
+          "cancel": 0.0011973935179412365,
+          "appointment_lookup": 0.001742197317071259,
+          "admin_faq": 0.08394376933574677,
+          "human_request": 0.00536634586751461,
+          "clinical_handoff": 0.001537483767606318,
+          "unclear": 0.9024805426597595
+        }
+      },
+      {
+        "text": "車可以停地下室嗎",
+        "expected": "admin_faq",
+        "predicted": "unclear",
+        "confidence": 0.7597073316574097,
+        "probabilities": {
+          "book": 0.01576722227036953,
+          "reschedule": 0.006572756450623274,
+          "cancel": 0.006572756450623274,
+          "appointment_lookup": 0.005800437182188034,
+          "admin_faq": 0.19208408892154694,
+          "human_request": 0.012279525399208069,
+          "clinical_handoff": 0.001215837663039565,
+          "unclear": 0.7597073316574097
+        }
+      },
+      {
+        "text": "診所門牌號碼再給我一次",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9134106636047363,
+        "probabilities": {
+          "book": 0.021481361240148544,
+          "reschedule": 0.002907186048105359,
+          "cancel": 0.005102270282804966,
+          "appointment_lookup": 0.011498143896460533,
+          "admin_faq": 0.9134106636047363,
+          "human_request": 0.005431338679045439,
+          "clinical_handoff": 3.659606954897754e-05,
+          "unclear": 0.04013246297836304
+        }
+      },
+      {
+        "text": "櫃檯最晚到幾點還在",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.8176144957542419,
+        "probabilities": {
+          "book": 0.059227798134088516,
+          "reschedule": 0.013215507380664349,
+          "cancel": 0.00801561027765274,
+          "appointment_lookup": 0.01166264433413744,
+          "admin_faq": 0.8176144957542419,
+          "human_request": 0.004030501935631037,
+          "clinical_handoff": 5.749202682636678e-05,
+          "unclear": 0.08617593348026276
+        }
+      },
+      {
+        "text": "一般掛號收現金還是能電子付款",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.5437984466552734,
+        "probabilities": {
+          "book": 0.04463769495487213,
+          "reschedule": 0.006845412310212851,
+          "cancel": 0.006430669687688351,
+          "appointment_lookup": 0.012788914144039154,
+          "admin_faq": 0.5437984466552734,
+          "human_request": 0.0112861767411232,
+          "clinical_handoff": 0.0004658361431211233,
+          "unclear": 0.3737468421459198
+        }
+      },
+      {
+        "text": "有電梯讓輪椅上去嗎",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.8754714131355286,
+        "probabilities": {
+          "book": 0.009725608862936497,
+          "reschedule": 0.0023100345861166716,
+          "cancel": 0.002617612248286605,
+          "appointment_lookup": 0.0024590189568698406,
+          "admin_faq": 0.8754714131355286,
+          "human_request": 0.0027864337898790836,
+          "clinical_handoff": 6.975699943723157e-05,
+          "unclear": 0.10456015169620514
+        }
+      },
+      {
+        "text": "可以讓一位真人客服加入這個對話嗎",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.7536235451698303,
+        "probabilities": {
+          "book": 0.013803097419440746,
+          "reschedule": 0.0050778756849467754,
+          "cancel": 0.029221154749393463,
+          "appointment_lookup": 0.0012838880065828562,
+          "admin_faq": 0.0013666916638612747,
+          "human_request": 0.7536235451698303,
+          "clinical_handoff": 0.0050778756849467754,
+          "unclear": 0.19054587185382843
+        }
+      },
+      {
+        "text": "把我轉給在現場的同仁",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.5124321579933167,
+        "probabilities": {
+          "book": 0.013655854389071465,
+          "reschedule": 0.009385522454977036,
+          "cancel": 0.0476636178791523,
+          "appointment_lookup": 0.0030470332130789757,
+          "admin_faq": 0.006450568791478872,
+          "human_request": 0.5124321579933167,
+          "clinical_handoff": 0.008282694034278393,
+          "unclear": 0.39908257126808167
+        }
+      },
+      {
+        "text": "我要替女兒退掛，別取消我自己的",
+        "expected": "human_request",
+        "predicted": "cancel",
+        "confidence": 0.7235330939292908,
+        "probabilities": {
+          "book": 0.08641370385885239,
+          "reschedule": 0.04625392332673073,
+          "cancel": 0.7235330939292908,
+          "appointment_lookup": 0.013251971453428268,
+          "admin_faq": 0.000546974188182503,
+          "human_request": 0.00295691448263824,
+          "clinical_handoff": 0.0013121227966621518,
+          "unclear": 0.1257311999797821
+        }
+      },
+      {
+        "text": "不要自動回答了，給我人工服務",
+        "expected": "human_request",
+        "predicted": "unclear",
+        "confidence": 0.8575573563575745,
+        "probabilities": {
+          "book": 0.014755088835954666,
+          "reschedule": 0.007419324945658445,
+          "cancel": 0.0032923053950071335,
+          "appointment_lookup": 0.004790276288986206,
+          "admin_faq": 0.045448873192071915,
+          "human_request": 0.0661277249455452,
+          "clinical_handoff": 0.0006090152892284095,
+          "unclear": 0.8575573563575745
+        }
+      },
+      {
+        "text": "能請櫃台小姐直接聯絡我嗎",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.757778525352478,
+        "probabilities": {
+          "book": 0.017821243032813072,
+          "reschedule": 0.010809130035340786,
+          "cancel": 0.03772756829857826,
+          "appointment_lookup": 0.0010054056765511632,
+          "admin_faq": 0.002265716902911663,
+          "human_request": 0.757778525352478,
+          "clinical_handoff": 0.003509210655465722,
+          "unclear": 0.16908325254917145
+        }
+      },
+      {
+        "text": "我的對話請交由工作人員處理",
+        "expected": "human_request",
+        "predicted": "unclear",
+        "confidence": 0.6546444892883301,
+        "probabilities": {
+          "book": 0.03259282931685448,
+          "reschedule": 0.007272443268448114,
+          "cancel": 0.028763072565197945,
+          "appointment_lookup": 0.008240758441388607,
+          "admin_faq": 0.05373649299144745,
+          "human_request": 0.2125319391489029,
+          "clinical_handoff": 0.0022179698571562767,
+          "unclear": 0.6546444892883301
+        }
+      },
+      {
+        "text": "家父原本的約想延期，由我來代辦",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.32580816745758057,
+        "probabilities": {
+          "book": 0.09334560483694077,
+          "reschedule": 0.2537396550178528,
+          "cancel": 0.11985813081264496,
+          "appointment_lookup": 0.005967384669929743,
+          "admin_faq": 0.001331503503024578,
+          "human_request": 0.32580816745758057,
+          "clinical_handoff": 0.0023368613328784704,
+          "unclear": 0.19761264324188232
+        }
+      },
+      {
+        "text": "機器人先停，換專員回覆",
+        "expected": "human_request",
+        "predicted": "unclear",
+        "confidence": 0.8327504396438599,
+        "probabilities": {
+          "book": 0.015252356417477131,
+          "reschedule": 0.00720470305532217,
+          "cancel": 0.0038563995622098446,
+          "appointment_lookup": 0.005972908344119787,
+          "admin_faq": 0.11270051449537277,
+          "human_request": 0.02219204790890217,
+          "clinical_handoff": 7.063242810545489e-05,
+          "unclear": 0.8327504396438599
+        }
+      },
+      {
+        "text": "牙齦有膿包，可以自己弄破嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.7946478724479675,
+        "probabilities": {
+          "book": 0.0014410890871658921,
+          "reschedule": 0.0007246250752359629,
+          "cancel": 0.0014410890871658921,
+          "appointment_lookup": 0.00034228863660246134,
+          "admin_faq": 7.174759230110794e-05,
+          "human_request": 0.00041287890053354204,
+          "clinical_handoff": 0.7946478724479675,
+          "unclear": 0.20091845095157623
+        }
+      },
+      {
+        "text": "拔牙傷口整夜出血，怎麼辦",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.7716261148452759,
+        "probabilities": {
+          "book": 0.0029624011367559433,
+          "reschedule": 0.0010898064356297255,
+          "cancel": 0.0019126699771732092,
+          "appointment_lookup": 0.0005833313916809857,
+          "admin_faq": 0.00013015881995670497,
+          "human_request": 0.0006209530401974916,
+          "clinical_handoff": 0.7716261148452759,
+          "unclear": 0.22107459604740143
+        }
+      },
+      {
+        "text": "吞嚥困難還呼吸不順，現在該做什麼",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.7278314232826233,
+        "probabilities": {
+          "book": 0.0019204691052436829,
+          "reschedule": 0.0005168872303329408,
+          "cancel": 0.001164823304861784,
+          "appointment_lookup": 0.0002766698016785085,
+          "admin_faq": 7.926722173579037e-05,
+          "human_request": 0.0004561514069791883,
+          "clinical_handoff": 0.7278314232826233,
+          "unclear": 0.2677542269229889
+        }
+      },
+      {
+        "text": "止痛藥吃幾毫克才有效",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.8779832720756531,
+        "probabilities": {
+          "book": 0.0014051267644390464,
+          "reschedule": 0.0003552716807462275,
+          "cancel": 0.0008522524731233716,
+          "appointment_lookup": 0.00022938064648769796,
+          "admin_faq": 5.799650534754619e-05,
+          "human_request": 0.0002945305604953319,
+          "clinical_handoff": 0.8779832720756531,
+          "unclear": 0.1188221126794815
+        }
+      },
+      {
+        "text": "我懷孕可以打麻醉嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.645412266254425,
+        "probabilities": {
+          "book": 0.002807766431942582,
+          "reschedule": 0.0017029964365065098,
+          "cancel": 0.002186690689995885,
+          "appointment_lookup": 0.0007099144859239459,
+          "admin_faq": 0.0009115483262576163,
+          "human_request": 0.0008044384885579348,
+          "clinical_handoff": 0.645412266254425,
+          "unclear": 0.3454643189907074
+        }
+      },
+      {
+        "text": "看這些症狀能判斷感染嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9122102856636047,
+        "probabilities": {
+          "book": 0.001995451981201768,
+          "reschedule": 0.00019757648988161236,
+          "cancel": 0.00041826945380307734,
+          "appointment_lookup": 0.00013579220103565603,
+          "admin_faq": 1.9562721718102694e-05,
+          "human_request": 0.00017436064081266522,
+          "clinical_handoff": 0.9122102856636047,
+          "unclear": 0.08484877645969391
+        }
+      },
+      {
+        "text": "牙套磨到破皮要擦什麼藥",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.7726436853408813,
+        "probabilities": {
+          "book": 0.0021701969671994448,
+          "reschedule": 0.0010912436991930008,
+          "cancel": 0.0015877500409260392,
+          "appointment_lookup": 0.0004842364287469536,
+          "admin_faq": 0.00010804775956785306,
+          "human_request": 0.0005487117450684309,
+          "clinical_handoff": 0.7726436853408813,
+          "unclear": 0.22136612236499786
+        }
+      },
+      {
+        "text": "嘴巴有麻麻的感覺是不是正常",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.7751178741455078,
+        "probabilities": {
+          "book": 0.0011653425171971321,
+          "reschedule": 0.0003783313441090286,
+          "cancel": 0.0005504688597284257,
+          "appointment_lookup": 0.0002946447639260441,
+          "admin_faq": 8.441712998319417e-05,
+          "human_request": 0.0003338762326166034,
+          "clinical_handoff": 0.7751178741455078,
+          "unclear": 0.22207500040531158
+        }
+      },
+      {
+        "text": "就那樣啦，你看著辦",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.5849480628967285,
+        "probabilities": {
+          "book": 0.1016487330198288,
+          "reschedule": 0.020015820860862732,
+          "cancel": 0.02912284806370735,
+          "appointment_lookup": 0.025700824335217476,
+          "admin_faq": 0.1899048238992691,
+          "human_request": 0.04801546037197113,
+          "clinical_handoff": 0.0006434075185097754,
+          "unclear": 0.5849480628967285
+        }
+      },
+      {
+        "text": "我先跟家裡商量，不要動",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.8795995116233826,
+        "probabilities": {
+          "book": 0.030098238959908485,
+          "reschedule": 0.016110427677631378,
+          "cancel": 0.03864690661430359,
+          "appointment_lookup": 0.009771468117833138,
+          "admin_faq": 0.018255505710840225,
+          "human_request": 0.006715825293213129,
+          "clinical_handoff": 0.0008020909153856337,
+          "unclear": 0.8795995116233826
+        }
+      },
+      {
+        "text": "嗯，我還要想一想",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9741052985191345,
+        "probabilities": {
+          "book": 0.013894865289330482,
+          "reschedule": 0.003300319891422987,
+          "cancel": 0.0010065407259389758,
+          "appointment_lookup": 0.002268274314701557,
+          "admin_faq": 0.0035131722688674927,
+          "human_request": 0.0017665340565145016,
+          "clinical_handoff": 0.00014500593533739448,
+          "unclear": 0.9741052985191345
+        }
+      },
+      {
+        "text": "先擱著，晚點給答案",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.880524754524231,
+        "probabilities": {
+          "book": 0.0438387431204319,
+          "reschedule": 0.007156478241086006,
+          "cancel": 0.002473212778568268,
+          "appointment_lookup": 0.004918571095913649,
+          "admin_faq": 0.05629006400704384,
+          "human_request": 0.004340623505413532,
+          "clinical_handoff": 0.0004574983613565564,
+          "unclear": 0.880524754524231
+        }
+      },
+      {
+        "text": "沒有確定，暫時別處理",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9424374103546143,
+        "probabilities": {
+          "book": 0.017261343076825142,
+          "reschedule": 0.004945457447320223,
+          "cancel": 0.008153681643307209,
+          "appointment_lookup": 0.006350093521177769,
+          "admin_faq": 0.017261343076825142,
+          "human_request": 0.0033989599905908108,
+          "clinical_handoff": 0.00019175620400346816,
+          "unclear": 0.9424374103546143
+        }
+      },
+      {
+        "text": "剛剛的事情再等等",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9267498850822449,
+        "probabilities": {
+          "book": 0.02798542194068432,
+          "reschedule": 0.009085536003112793,
+          "cancel": 0.005510656628757715,
+          "appointment_lookup": 0.004863136913627386,
+          "admin_faq": 0.021795067936182022,
+          "human_request": 0.0035579469986259937,
+          "clinical_handoff": 0.00045234221033751965,
+          "unclear": 0.9267498850822449
+        }
+      },
+      {
+        "text": "我沒說要哪個，還在考慮",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9677892923355103,
+        "probabilities": {
+          "book": 0.012182669714093208,
+          "reschedule": 0.0039551337249577045,
+          "cancel": 0.002117030555382371,
+          "appointment_lookup": 0.0034903932828456163,
+          "admin_faq": 0.008373018354177475,
+          "human_request": 0.001648745033890009,
+          "clinical_handoff": 0.000443753699073568,
+          "unclear": 0.9677892923355103
+        }
+      },
+      {
+        "text": "可能吧，現在沒辦法決定",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.8945249319076538,
+        "probabilities": {
+          "book": 0.027012312784790993,
+          "reschedule": 0.007739156950265169,
+          "cancel": 0.0030306975822895765,
+          "appointment_lookup": 0.004694036208093166,
+          "admin_faq": 0.05718506500124931,
+          "human_request": 0.005319039802998304,
+          "clinical_handoff": 0.0004947477718815207,
+          "unclear": 0.8945249319076538
+        }
+      }
+    ]
+  },
+  "trainedRaw": {
+    "n": 64,
+    "correct": 58,
+    "accuracy": 0.90625,
+    "temperature": 1,
+    "brier": 0.15697340667247772,
+    "nll": 0.36452147364616394,
+    "threshold": 0.85,
+    "accepted": 54,
+    "acceptedErrors": 1,
+    "latenciesMs": [
+      53.2184009998673,
+      52.92292100011764,
+      53.25128100002985,
+      53.18155299983118,
+      53.10735100010788,
+      53.63465099981113,
+      52.63755800024228,
+      52.28223399990384,
+      52.340009000090504,
+      52.42821100000583,
+      52.60613399968861,
+      55.21393899971372,
+      53.34070100025201,
+      53.20776100006697,
+      52.81968000008419,
+      52.864651000163576,
+      53.08417100013685,
+      60.46977500000139,
+      53.44972900002176,
+      53.15323600007105,
+      53.159039999627566,
+      53.10788099995989,
+      52.8205830000843,
+      54.5029270001578,
+      52.92304400018111,
+      52.67323699990811,
+      52.89435000031517,
+      53.00557900000058,
+      52.588912000373966,
+      52.67247099982342,
+      52.7743439997721,
+      52.909403999819915,
+      52.79260500037708,
+      52.64676399974633,
+      52.67693399991913,
+      52.62882999977592,
+      52.82984499990562,
+      53.100633999747515,
+      52.77134199968714,
+      52.35147399980633,
+      52.438184000038746,
+      52.68638999996256,
+      52.68407599987768,
+      52.78374499994243,
+      52.74682099980055,
+      52.696419000312744,
+      52.7471999998852,
+      52.612909999879776,
+      52.80623500038928,
+      52.79176299973187,
+      55.411898999864206,
+      54.8576320002212,
+      53.46340500000224,
+      53.32432100021833,
+      53.18904300020222,
+      53.53332999993654,
+      53.50788699979603,
+      53.149074999964796,
+      53.09890799981076,
+      53.39838300005795,
+      53.08034999961819,
+      53.08008100018924,
+      52.9626500001541,
+      53.285856999991665
+    ],
+    "predictions": [
+      {
+        "text": "麻煩替本人登記年度檢查",
+        "expected": "book",
+        "predicted": "human_request",
+        "confidence": 0.6902083158493042,
+        "probabilities": {
+          "book": 0.07274741679430008,
+          "reschedule": 0.025140836834907532,
+          "cancel": 0.03893888741731644,
+          "appointment_lookup": 0.02218671143054962,
+          "admin_faq": 0.04999852553009987,
+          "human_request": 0.6902083158493042,
+          "clinical_handoff": 0.056655749678611755,
+          "unclear": 0.04412354156374931
+        }
+      },
+      {
+        "text": "我這個月想第一次來洗牙",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.7466354370117188,
+        "probabilities": {
+          "book": 0.7466354370117188,
+          "reschedule": 0.016495326533913612,
+          "cancel": 0.011337059549987316,
+          "appointment_lookup": 0.065240278840065,
+          "admin_faq": 0.08917288482189178,
+          "human_request": 0.010650182142853737,
+          "clinical_handoff": 0.03492060676217079,
+          "unclear": 0.025548459962010384
+        }
+      },
+      {
+        "text": "您好，從沒去過貴診所，能排個諮詢嗎",
+        "expected": "book",
+        "predicted": "admin_faq",
+        "confidence": 0.8130610585212708,
+        "probabilities": {
+          "book": 0.07562646269798279,
+          "reschedule": 0.014891733415424824,
+          "cancel": 0.007488033268600702,
+          "appointment_lookup": 0.024552317336201668,
+          "admin_faq": 0.8130610585212708,
+          "human_request": 0.014891733415424824,
+          "clinical_handoff": 0.017962859943509102,
+          "unclear": 0.03152579814195633
+        }
+      },
+      {
+        "text": "固定半年檢查到了，可以新約一次嗎",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9478529095649719,
+        "probabilities": {
+          "book": 0.9478529095649719,
+          "reschedule": 0.005636139772832394,
+          "cancel": 0.006386582739651203,
+          "appointment_lookup": 0.011208801530301571,
+          "admin_faq": 0.0092924227938056,
+          "human_request": 0.005999639164656401,
+          "clinical_handoff": 0.007236946374177933,
+          "unclear": 0.006386582739651203
+        }
+      },
+      {
+        "text": "目前沒任何掛號，想找一個可來的時間",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.886589765548706,
+        "probabilities": {
+          "book": 0.886589765548706,
+          "reschedule": 0.0072057717479765415,
+          "cancel": 0.005271855741739273,
+          "appointment_lookup": 0.05001797154545784,
+          "admin_faq": 0.020850593224167824,
+          "human_request": 0.0081652095541358,
+          "clinical_handoff": 0.009252394549548626,
+          "unclear": 0.012646523304283619
+        }
+      },
+      {
+        "text": "想幫自己預約一般看診",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9640678763389587,
+        "probabilities": {
+          "book": 0.9640678763389587,
+          "reschedule": 0.002707868115976453,
+          "cancel": 0.0030684168450534344,
+          "appointment_lookup": 0.004752456676214933,
+          "admin_faq": 0.009451388381421566,
+          "human_request": 0.005385239142924547,
+          "clinical_handoff": 0.006102275103330612,
+          "unclear": 0.004464519675821066
+        }
+      },
+      {
+        "text": "這次是新增，不是修改以前那筆",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9696646928787231,
+        "probabilities": {
+          "book": 0.9696646928787231,
+          "reschedule": 0.0028992448933422565,
+          "cancel": 0.003285275073722005,
+          "appointment_lookup": 0.004490438383072615,
+          "admin_faq": 0.006954926997423172,
+          "human_request": 0.003962798044085503,
+          "clinical_handoff": 0.00478004664182663,
+          "unclear": 0.003962798044085503
+        }
+      },
+      {
+        "text": "排個例行回診檢查給我好嗎",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.8970220685005188,
+        "probabilities": {
+          "book": 0.8970220685005188,
+          "reschedule": 0.009361266158521175,
+          "cancel": 0.009965014643967152,
+          "appointment_lookup": 0.02245650812983513,
+          "admin_faq": 0.01981779932975769,
+          "human_request": 0.008261287584900856,
+          "clinical_handoff": 0.021095937117934227,
+          "unclear": 0.012020101770758629
+        }
+      },
+      {
+        "text": "已經掛好的那筆延到下個星期行嗎",
+        "expected": "reschedule",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9531736969947815,
+        "probabilities": {
+          "book": 0.004414069931954145,
+          "reschedule": 0.006033318117260933,
+          "cancel": 0.0046987528912723064,
+          "appointment_lookup": 0.9531736969947815,
+          "admin_faq": 0.009344586171209812,
+          "human_request": 0.00532438512891531,
+          "clinical_handoff": 0.006422434002161026,
+          "unclear": 0.010588803328573704
+        }
+      },
+      {
+        "text": "預定那天我人在外縣市，幫我另找日期",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.7511774897575378,
+        "probabilities": {
+          "book": 0.05441511794924736,
+          "reschedule": 0.7511774897575378,
+          "cancel": 0.024146562442183495,
+          "appointment_lookup": 0.017666000872850418,
+          "admin_faq": 0.012924722395837307,
+          "human_request": 0.11519680172204971,
+          "clinical_handoff": 0.013758296146988869,
+          "unclear": 0.010714971460402012
+        }
+      },
+      {
+        "text": "不退約，改到午休後好了",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9489928483963013,
+        "probabilities": {
+          "book": 0.0049798572435975075,
+          "reschedule": 0.9489928483963013,
+          "cancel": 0.01054235827177763,
+          "appointment_lookup": 0.007712953723967075,
+          "admin_faq": 0.006806658115237951,
+          "human_request": 0.008739921264350414,
+          "clinical_handoff": 0.007245650049299002,
+          "unclear": 0.0049798572435975075
+        }
+      },
+      {
+        "text": "本來的看診要從傍晚調到早上",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9159078001976013,
+        "probabilities": {
+          "book": 0.008979244157671928,
+          "reschedule": 0.9159078001976013,
+          "cancel": 0.013907325454056263,
+          "appointment_lookup": 0.01785735785961151,
+          "admin_faq": 0.010831036604940891,
+          "human_request": 0.010174816474318504,
+          "clinical_handoff": 0.013907325454056263,
+          "unclear": 0.008435218594968319
+        }
+      },
+      {
+        "text": "我要去，只是原本那天卡到事情",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.8863200545310974,
+        "probabilities": {
+          "book": 0.011876694858074188,
+          "reschedule": 0.8863200545310974,
+          "cancel": 0.020844250917434692,
+          "appointment_lookup": 0.022188587114214897,
+          "admin_faq": 0.010481147095561028,
+          "human_request": 0.01958136074244976,
+          "clinical_handoff": 0.013458059169352055,
+          "unclear": 0.015249978750944138
+        }
+      },
+      {
+        "text": "前面的取消收回，我其實想延期",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9199440479278564,
+        "probabilities": {
+          "book": 0.010219654999673367,
+          "reschedule": 0.9199440479278564,
+          "cancel": 0.01793605275452137,
+          "appointment_lookup": 0.011580387130379677,
+          "admin_faq": 0.009018813259899616,
+          "human_request": 0.013122296892106533,
+          "clinical_handoff": 0.010219654999673367,
+          "unclear": 0.007959075272083282
+        }
+      },
+      {
+        "text": "想問原預約能不能提早一日",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9317778944969177,
+        "probabilities": {
+          "book": 0.011729353107511997,
+          "reschedule": 0.9317778944969177,
+          "cancel": 0.009723975323140621,
+          "appointment_lookup": 0.01933843269944191,
+          "admin_faq": 0.0075730388052761555,
+          "human_request": 0.008061458356678486,
+          "clinical_handoff": 0.0058978889137506485,
+          "unclear": 0.0058978889137506485
+        }
+      },
+      {
+        "text": "原來的門診挪一個鐘頭，醫師照舊",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9296038746833801,
+        "probabilities": {
+          "book": 0.00856135506182909,
+          "reschedule": 0.9296038746833801,
+          "cancel": 0.013260086998343468,
+          "appointment_lookup": 0.015994718298316002,
+          "admin_faq": 0.01032696571201086,
+          "human_request": 0.009701287373900414,
+          "clinical_handoff": 0.0066675907000899315,
+          "unclear": 0.00588412769138813
+        }
+      },
+      {
+        "text": "已經不用看了，原訂的時段釋出吧",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.817592442035675,
+        "probabilities": {
+          "book": 0.01166232954710722,
+          "reschedule": 0.07604794949293137,
+          "cancel": 0.817592442035675,
+          "appointment_lookup": 0.027976473793387413,
+          "admin_faq": 0.013215150684118271,
+          "human_request": 0.018062971532344818,
+          "clinical_handoff": 0.020468026399612427,
+          "unclear": 0.014974728226661682
+        }
+      },
+      {
+        "text": "麻煩退掉這回掛號，我確定",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9533032178878784,
+        "probabilities": {
+          "book": 0.006837574299424887,
+          "reschedule": 0.002515403088182211,
+          "cancel": 0.9533032178878784,
+          "appointment_lookup": 0.008779618889093399,
+          "admin_faq": 0.00566854840144515,
+          "human_request": 0.0072785597294569016,
+          "clinical_handoff": 0.009948612190783024,
+          "unclear": 0.00566854840144515
+        }
+      },
+      {
+        "text": "這個約作廢就行，別找其他時間",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9462973475456238,
+        "probabilities": {
+          "book": 0.008715096861124039,
+          "reschedule": 0.006376101169735193,
+          "cancel": 0.9462973475456238,
+          "appointment_lookup": 0.00987549964338541,
+          "admin_faq": 0.005285974126309156,
+          "human_request": 0.0067873247899115086,
+          "clinical_handoff": 0.00987549964338541,
+          "unclear": 0.0067873247899115086
+        }
+      },
+      {
+        "text": "我決定這次不去了，請取消",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9534628391265869,
+        "probabilities": {
+          "book": 0.005326000042259693,
+          "reschedule": 0.003660502377897501,
+          "cancel": 0.9534628391265869,
+          "appointment_lookup": 0.008781088516116142,
+          "admin_faq": 0.0056694974191486835,
+          "human_request": 0.006838718894869089,
+          "clinical_handoff": 0.010592015460133553,
+          "unclear": 0.0056694974191486835
+        }
+      },
+      {
+        "text": "先取消原約，未來再自己登記",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9431845545768738,
+        "probabilities": {
+          "book": 0.012638679705560207,
+          "reschedule": 0.007665746845304966,
+          "cancel": 0.9431845545768738,
+          "appointment_lookup": 0.008686428889632225,
+          "admin_faq": 0.005608380772173405,
+          "human_request": 0.005608380772173405,
+          "clinical_handoff": 0.009843014180660248,
+          "unclear": 0.006764998193830252
+        }
+      },
+      {
+        "text": "原來預約我不要了，幫我撤回",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9446758031845093,
+        "probabilities": {
+          "book": 0.007212688680738211,
+          "reschedule": 0.005276916082948446,
+          "cancel": 0.9446758031845093,
+          "appointment_lookup": 0.00926127564162016,
+          "admin_faq": 0.006365175358951092,
+          "human_request": 0.00926127564162016,
+          "clinical_handoff": 0.011171231046319008,
+          "unclear": 0.006775693967938423
+        }
+      },
+      {
+        "text": "確定不保留掛號，取消即可",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9451082348823547,
+        "probabilities": {
+          "book": 0.007681381423026323,
+          "reschedule": 0.0036284278612583876,
+          "cancel": 0.9451082348823547,
+          "appointment_lookup": 0.012664456851780415,
+          "admin_faq": 0.005982265807688236,
+          "human_request": 0.006368089001625776,
+          "clinical_handoff": 0.009863089770078659,
+          "unclear": 0.008704145438969135
+        }
+      },
+      {
+        "text": "不要延期，就把預約取消",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9564133882522583,
+        "probabilities": {
+          "book": 0.005687042139470577,
+          "reschedule": 0.004160728771239519,
+          "cancel": 0.9564133882522583,
+          "appointment_lookup": 0.006859881803393364,
+          "admin_faq": 0.0039086430333554745,
+          "human_request": 0.00730230612680316,
+          "clinical_handoff": 0.009981069713830948,
+          "unclear": 0.005687042139470577
+        }
+      },
+      {
+        "text": "我的下一次到診日能幫我查出來嗎",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9478123188018799,
+        "probabilities": {
+          "book": 0.006798190530389547,
+          "reschedule": 0.007236636243760586,
+          "cancel": 0.0052944365888834,
+          "appointment_lookup": 0.9478123188018799,
+          "admin_faq": 0.01193119678646326,
+          "human_request": 0.005635898094624281,
+          "clinical_handoff": 0.005999382119625807,
+          "unclear": 0.009292024187743664
+        }
+      },
+      {
+        "text": "想核對掛號單上的日期",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9572194814682007,
+        "probabilities": {
+          "book": 0.0036749248392879963,
+          "reschedule": 0.004164235666394234,
+          "cancel": 0.004432805348187685,
+          "appointment_lookup": 0.9572194814682007,
+          "admin_faq": 0.015472011640667915,
+          "human_request": 0.0034522726200520992,
+          "clinical_handoff": 0.004718697164207697,
+          "unclear": 0.006865663453936577
+        }
+      },
+      {
+        "text": "我不記得約到哪個醫師了",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.8898505568504333,
+        "probabilities": {
+          "book": 0.01269303634762764,
+          "reschedule": 0.01629818230867386,
+          "cancel": 0.007698715664446354,
+          "appointment_lookup": 0.8898505568504333,
+          "admin_faq": 0.00988534651696682,
+          "human_request": 0.01269303634762764,
+          "clinical_handoff": 0.02860420010983944,
+          "unclear": 0.022276971489191055
+        }
+      },
+      {
+        "text": "掛號完忘記抄下時間，幫我看一眼",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9238505959510803,
+        "probabilities": {
+          "book": 0.009641246870160103,
+          "reschedule": 0.014027929864823818,
+          "cancel": 0.008508369326591492,
+          "appointment_lookup": 0.9238505959510803,
+          "admin_faq": 0.009057112038135529,
+          "human_request": 0.010924963280558586,
+          "clinical_handoff": 0.009057112038135529,
+          "unclear": 0.014932653866708279
+        }
+      },
+      {
+        "text": "上回留的預約現在是否還有效",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9611711502075195,
+        "probabilities": {
+          "book": 0.004738177172839642,
+          "reschedule": 0.005369058344513178,
+          "cancel": 0.00504376320168376,
+          "appointment_lookup": 0.9611711502075195,
+          "admin_faq": 0.00608393969014287,
+          "human_request": 0.004738177172839642,
+          "clinical_handoff": 0.00504376320168376,
+          "unclear": 0.0078119332902133465
+        }
+      },
+      {
+        "text": "讓我知道目前排了幾次門診",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9650266170501709,
+        "probabilities": {
+          "book": 0.00475718267261982,
+          "reschedule": 0.004198199138045311,
+          "cancel": 0.0034804295282810926,
+          "appointment_lookup": 0.9650266170501709,
+          "admin_faq": 0.0065022981725633144,
+          "human_request": 0.004468959756195545,
+          "clinical_handoff": 0.005063994787633419,
+          "unclear": 0.0065022981725633144
+        }
+      },
+      {
+        "text": "我只是要知道預約資訊，別幫我改",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9711382985115051,
+        "probabilities": {
+          "book": 0.004224787000566721,
+          "reschedule": 0.003090920392423868,
+          "cancel": 0.0029036509804427624,
+          "appointment_lookup": 0.9711382985115051,
+          "admin_faq": 0.007892941124737263,
+          "human_request": 0.003090920392423868,
+          "clinical_handoff": 0.0025624630507081747,
+          "unclear": 0.005096066277474165
+        }
+      },
+      {
+        "text": "原來排的是早診還是晚診，我忘了",
+        "expected": "appointment_lookup",
+        "predicted": "reschedule",
+        "confidence": 0.8332183361053467,
+        "probabilities": {
+          "book": 0.015260926447808743,
+          "reschedule": 0.8332183361053467,
+          "cancel": 0.013467719778418541,
+          "appointment_lookup": 0.0683947280049324,
+          "admin_faq": 0.015260926447808743,
+          "human_request": 0.016245171427726746,
+          "clinical_handoff": 0.020859211683273315,
+          "unclear": 0.017292894423007965
+        }
+      },
+      {
+        "text": "貴診所中午會休息嗎",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9588571786880493,
+        "probabilities": {
+          "book": 0.0039186300709843636,
+          "reschedule": 0.00646072905510664,
+          "cancel": 0.004726770333945751,
+          "appointment_lookup": 0.011338932439684868,
+          "admin_faq": 0.9588571786880493,
+          "human_request": 0.0039186300709843636,
+          "clinical_handoff": 0.0034581790678203106,
+          "unclear": 0.0073209647089242935
+        }
+      },
+      {
+        "text": "報到時要出示哪些證件",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.8962817192077637,
+        "probabilities": {
+          "book": 0.009956790134310722,
+          "reschedule": 0.011282522231340408,
+          "cancel": 0.01059894822537899,
+          "appointment_lookup": 0.0306690726429224,
+          "admin_faq": 0.8962817192077637,
+          "human_request": 0.016415972262620926,
+          "clinical_handoff": 0.012010181322693825,
+          "unclear": 0.012784771621227264
+        }
+      },
+      {
+        "text": "搭公車要在哪站下車",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9530820846557617,
+        "probabilities": {
+          "book": 0.0030334515031427145,
+          "reschedule": 0.004146236460655928,
+          "cancel": 0.004698301199823618,
+          "appointment_lookup": 0.009343687444925308,
+          "admin_faq": 0.9530820846557617,
+          "human_request": 0.006421816535294056,
+          "clinical_handoff": 0.007276871707290411,
+          "unclear": 0.011997533030807972
+        }
+      },
+      {
+        "text": "車可以停地下室嗎",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9319344758987427,
+        "probabilities": {
+          "book": 0.004594052210450172,
+          "reschedule": 0.009136363863945007,
+          "cancel": 0.009725609794259071,
+          "appointment_lookup": 0.013293330557644367,
+          "admin_faq": 0.9319344758987427,
+          "human_request": 0.008582819253206253,
+          "clinical_handoff": 0.008582819253206253,
+          "unclear": 0.014150677248835564
+        }
+      },
+      {
+        "text": "診所門牌號碼再給我一次",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9503939747810364,
+        "probabilities": {
+          "book": 0.005651249550282955,
+          "reschedule": 0.006403704173862934,
+          "cancel": 0.00601572310552001,
+          "appointment_lookup": 0.014430969953536987,
+          "admin_faq": 0.9503939747810364,
+          "human_request": 0.006403704173862934,
+          "clinical_handoff": 0.0038840430788695812,
+          "unclear": 0.00681670755147934
+        }
+      },
+      {
+        "text": "櫃檯最晚到幾點還在",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9580177068710327,
+        "probabilities": {
+          "book": 0.004436502233147621,
+          "reschedule": 0.00731455534696579,
+          "cancel": 0.005027215462177992,
+          "appointment_lookup": 0.00999781209975481,
+          "admin_faq": 0.9580177068710327,
+          "human_request": 0.004436502233147621,
+          "clinical_handoff": 0.0034551513381302357,
+          "unclear": 0.00731455534696579
+        }
+      },
+      {
+        "text": "一般掛號收現金還是能電子付款",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9645528197288513,
+        "probabilities": {
+          "book": 0.003703078720718622,
+          "reschedule": 0.004754847381263971,
+          "cancel": 0.003703078720718622,
+          "appointment_lookup": 0.007364451885223389,
+          "admin_faq": 0.9645528197288513,
+          "human_request": 0.004754847381263971,
+          "clinical_handoff": 0.005061508622020483,
+          "unclear": 0.006105344742536545
+        }
+      },
+      {
+        "text": "有電梯讓輪椅上去嗎",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9686257243156433,
+        "probabilities": {
+          "book": 0.0030829235911369324,
+          "reschedule": 0.004774924833327532,
+          "cancel": 0.0037187153939157724,
+          "appointment_lookup": 0.006947475019842386,
+          "admin_faq": 0.9686257243156433,
+          "human_request": 0.004485626704990864,
+          "clinical_handoff": 0.003281754907220602,
+          "unclear": 0.005082881543785334
+        }
+      },
+      {
+        "text": "可以讓一位真人客服加入這個對話嗎",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9680666327476501,
+        "probabilities": {
+          "book": 0.003081144066527486,
+          "reschedule": 0.004483037628233433,
+          "cancel": 0.00786797609180212,
+          "appointment_lookup": 0.003081144066527486,
+          "admin_faq": 0.003081144066527486,
+          "human_request": 0.9680666327476501,
+          "clinical_handoff": 0.006127586122602224,
+          "unclear": 0.004211424384266138
+        }
+      },
+      {
+        "text": "把我轉給在現場的同仁",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9652611613273621,
+        "probabilities": {
+          "book": 0.002711219945922494,
+          "reschedule": 0.004758338909596205,
+          "cancel": 0.008351145312190056,
+          "appointment_lookup": 0.0032703555189073086,
+          "admin_faq": 0.0028860787861049175,
+          "human_request": 0.9652611613273621,
+          "clinical_handoff": 0.007369860075414181,
+          "unclear": 0.0053919050842523575
+        }
+      },
+      {
+        "text": "我要替女兒退掛，別取消我自己的",
+        "expected": "human_request",
+        "predicted": "cancel",
+        "confidence": 0.8492985367774963,
+        "probabilities": {
+          "book": 0.01289591658860445,
+          "reschedule": 0.013727632351219654,
+          "cancel": 0.8492985367774963,
+          "appointment_lookup": 0.01997358724474907,
+          "admin_faq": 0.011380606330931187,
+          "human_request": 0.05100434273481369,
+          "clinical_handoff": 0.024092745035886765,
+          "unclear": 0.017626628279685974
+        }
+      },
+      {
+        "text": "不要自動回答了，給我人工服務",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9599424600601196,
+        "probabilities": {
+          "book": 0.00473212031647563,
+          "reschedule": 0.003462093183770776,
+          "cancel": 0.00473212031647563,
+          "appointment_lookup": 0.00392306549474597,
+          "admin_faq": 0.006468041334301233,
+          "human_request": 0.9599424600601196,
+          "clinical_handoff": 0.006076162215322256,
+          "unclear": 0.010663997381925583
+        }
+      },
+      {
+        "text": "能請櫃台小姐直接聯絡我嗎",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9594349265098572,
+        "probabilities": {
+          "book": 0.004443065263330936,
+          "reschedule": 0.0068815541453659534,
+          "cancel": 0.010012602433562279,
+          "appointment_lookup": 0.003460262669250369,
+          "admin_faq": 0.004443065263330936,
+          "human_request": 0.9594349265098572,
+          "clinical_handoff": 0.0068815541453659534,
+          "unclear": 0.004443065263330936
+        }
+      },
+      {
+        "text": "我的對話請交由工作人員處理",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9557543396949768,
+        "probabilities": {
+          "book": 0.006439822260290384,
+          "reschedule": 0.005683123134076595,
+          "cancel": 0.00826889555901289,
+          "appointment_lookup": 0.0028576538898050785,
+          "admin_faq": 0.004426020663231611,
+          "human_request": 0.9557543396949768,
+          "clinical_handoff": 0.008802193216979504,
+          "unclear": 0.007767907809466124
+        }
+      },
+      {
+        "text": "家父原本的約想延期，由我來代辦",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9458882212638855,
+        "probabilities": {
+          "book": 0.007221945561468601,
+          "reschedule": 0.011906975880265236,
+          "cancel": 0.011185568757355213,
+          "appointment_lookup": 0.004963566083461046,
+          "admin_faq": 0.00466283829882741,
+          "human_request": 0.9458882212638855,
+          "clinical_handoff": 0.008183537051081657,
+          "unclear": 0.00598720321431756
+        }
+      },
+      {
+        "text": "機器人先停，換專員回覆",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.7754533886909485,
+        "probabilities": {
+          "book": 0.007602277211844921,
+          "reschedule": 0.009761517867445946,
+          "cancel": 0.006302508991211653,
+          "appointment_lookup": 0.011061248369514942,
+          "admin_faq": 0.10494620352983475,
+          "human_request": 0.7754533886909485,
+          "clinical_handoff": 0.00809258222579956,
+          "unclear": 0.0767802819609642
+        }
+      },
+      {
+        "text": "牙齦有膿包，可以自己弄破嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9537643194198608,
+        "probabilities": {
+          "book": 0.005004895851016045,
+          "reschedule": 0.007282080594450235,
+          "cancel": 0.007282080594450235,
+          "appointment_lookup": 0.008783865720033646,
+          "admin_faq": 0.0060370564460754395,
+          "human_request": 0.006840881425887346,
+          "clinical_handoff": 0.9537643194198608,
+          "unclear": 0.005004895851016045
+        }
+      },
+      {
+        "text": "拔牙傷口整夜出血，怎麼辦",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9317697882652283,
+        "probabilities": {
+          "book": 0.006683125626295805,
+          "reschedule": 0.010351027362048626,
+          "cancel": 0.009723890572786331,
+          "appointment_lookup": 0.013290981762111187,
+          "admin_faq": 0.008581303060054779,
+          "human_request": 0.011018611490726471,
+          "clinical_handoff": 0.9317697882652283,
+          "unclear": 0.008581303060054779
+        }
+      },
+      {
+        "text": "吞嚥困難還呼吸不順，現在該做什麼",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9600244164466858,
+        "probabilities": {
+          "book": 0.005708514247089624,
+          "reschedule": 0.005362652707844973,
+          "cancel": 0.005362652707844973,
+          "appointment_lookup": 0.00688578188419342,
+          "admin_faq": 0.005037745926529169,
+          "human_request": 0.00688578188419342,
+          "clinical_handoff": 0.9600244164466858,
+          "unclear": 0.004732524044811726
+        }
+      },
+      {
+        "text": "止痛藥吃幾毫克才有效",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9692556262016296,
+        "probabilities": {
+          "book": 0.003961126320064068,
+          "reschedule": 0.0042165969498455524,
+          "cancel": 0.0042165969498455524,
+          "appointment_lookup": 0.005086186807602644,
+          "admin_faq": 0.005763405002653599,
+          "human_request": 0.0042165969498455524,
+          "clinical_handoff": 0.9692556262016296,
+          "unclear": 0.0032838890329003334
+        }
+      },
+      {
+        "text": "我懷孕可以打麻醉嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9498128890991211,
+        "probabilities": {
+          "book": 0.004984160419553518,
+          "reschedule": 0.007719618733972311,
+          "cancel": 0.006399788893759251,
+          "appointment_lookup": 0.009311637841165066,
+          "admin_faq": 0.009311637841165066,
+          "human_request": 0.006812539882957935,
+          "clinical_handoff": 0.9498128890991211,
+          "unclear": 0.0056477938778698444
+        }
+      },
+      {
+        "text": "看這些症狀能判斷感染嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9680970907211304,
+        "probabilities": {
+          "book": 0.006943683605641127,
+          "reschedule": 0.004772318992763758,
+          "cancel": 0.0037166858091950417,
+          "appointment_lookup": 0.0054077464155852795,
+          "admin_faq": 0.004211557097733021,
+          "human_request": 0.003956391476094723,
+          "clinical_handoff": 0.9680970907211304,
+          "unclear": 0.002894558012485504
+        }
+      },
+      {
+        "text": "牙套磨到破皮要擦什麼藥",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9579938650131226,
+        "probabilities": {
+          "book": 0.004436391405761242,
+          "reschedule": 0.006454912014305592,
+          "cancel": 0.005696440115571022,
+          "appointment_lookup": 0.0077861095778644085,
+          "admin_faq": 0.006454912014305592,
+          "human_request": 0.006454912014305592,
+          "clinical_handoff": 0.9579938650131226,
+          "unclear": 0.0047225141897797585
+        }
+      },
+      {
+        "text": "嘴巴有麻麻的感覺是不是正常",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9561169743537903,
+        "probabilities": {
+          "book": 0.005340825766324997,
+          "reschedule": 0.006442265585064888,
+          "cancel": 0.004713261965662241,
+          "appointment_lookup": 0.009373440407216549,
+          "admin_faq": 0.006857756059616804,
+          "human_request": 0.006442265585064888,
+          "clinical_handoff": 0.9561169743537903,
+          "unclear": 0.004713261965662241
+        }
+      },
+      {
+        "text": "就那樣啦，你看著辦",
+        "expected": "unclear",
+        "predicted": "human_request",
+        "confidence": 0.8170660734176636,
+        "probabilities": {
+          "book": 0.01805134117603302,
+          "reschedule": 0.01593025214970112,
+          "cancel": 0.020454848185181618,
+          "appointment_lookup": 0.012406492605805397,
+          "admin_faq": 0.05223328620195389,
+          "human_request": 0.8170660734176636,
+          "clinical_handoff": 0.023178381845355034,
+          "unclear": 0.04067932441830635
+        }
+      },
+      {
+        "text": "我先跟家裡商量，不要動",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.8494209051132202,
+        "probabilities": {
+          "book": 0.009436213411390781,
+          "reschedule": 0.017629167065024376,
+          "cancel": 0.017629167065024376,
+          "appointment_lookup": 0.01876615360379219,
+          "admin_faq": 0.016561070457100868,
+          "human_request": 0.04792104661464691,
+          "clinical_handoff": 0.022636299952864647,
+          "unclear": 0.8494209051132202
+        }
+      },
+      {
+        "text": "嗯，我還要想一想",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9776509404182434,
+        "probabilities": {
+          "book": 0.0021386027801781893,
+          "reschedule": 0.0033123327884823084,
+          "cancel": 0.0012185390805825591,
+          "appointment_lookup": 0.00452742213383317,
+          "admin_faq": 0.0033123327884823084,
+          "human_request": 0.0033123327884823084,
+          "clinical_handoff": 0.00452742213383317,
+          "unclear": 0.9776509404182434
+        }
+      },
+      {
+        "text": "先擱著，晚點給答案",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9495208859443665,
+        "probabilities": {
+          "book": 0.005303980316966772,
+          "reschedule": 0.007249681279063225,
+          "cancel": 0.0018330065067857504,
+          "appointment_lookup": 0.006010196637362242,
+          "admin_faq": 0.012723586522042751,
+          "human_request": 0.006810445338487625,
+          "clinical_handoff": 0.010548223741352558,
+          "unclear": 0.9495208859443665
+        }
+      },
+      {
+        "text": "沒有確定，暫時別處理",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9305111169815063,
+        "probabilities": {
+          "book": 0.0051977927796542645,
+          "reschedule": 0.008050498552620411,
+          "cancel": 0.005533021409064531,
+          "appointment_lookup": 0.016010327264666557,
+          "admin_faq": 0.01327302772551775,
+          "human_request": 0.009710755199193954,
+          "clinical_handoff": 0.011713406071066856,
+          "unclear": 0.9305111169815063
+        }
+      },
+      {
+        "text": "剛剛的事情再等等",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9469879865646362,
+        "probabilities": {
+          "book": 0.004969337023794651,
+          "reschedule": 0.00819305144250393,
+          "cancel": 0.0034153719898313284,
+          "appointment_lookup": 0.008721457794308662,
+          "admin_faq": 0.0105200856924057,
+          "human_request": 0.005994164384901524,
+          "clinical_handoff": 0.011198573745787144,
+          "unclear": 0.9469879865646362
+        }
+      },
+      {
+        "text": "我沒說要哪個，還在考慮",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9614101052284241,
+        "probabilities": {
+          "book": 0.0036910134367644787,
+          "reschedule": 0.0060854521580040455,
+          "cancel": 0.0022387127391994,
+          "appointment_lookup": 0.006895720958709717,
+          "admin_faq": 0.0057167536579072475,
+          "human_request": 0.0039290632121264935,
+          "clinical_handoff": 0.010033215396106243,
+          "unclear": 0.9614101052284241
+        }
+      },
+      {
+        "text": "可能吧，現在沒辦法決定",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9313515424728394,
+        "probabilities": {
+          "book": 0.004887284245342016,
+          "reschedule": 0.00857745110988617,
+          "cancel": 0.0033589783124625683,
+          "appointment_lookup": 0.00857745110988617,
+          "admin_faq": 0.017058299854397774,
+          "human_request": 0.009130649268627167,
+          "clinical_handoff": 0.017058299854397774,
+          "unclear": 0.9313515424728394
+        }
+      }
+    ]
+  },
+  "trainedCalibrated": {
+    "n": 64,
+    "correct": 58,
+    "accuracy": 0.90625,
+    "temperature": 1.0,
+    "brier": 0.15697340667247772,
+    "nll": 0.36452147364616394,
+    "threshold": 0.85,
+    "accepted": 54,
+    "acceptedErrors": 1,
+    "latenciesMs": [
+      53.2184009998673,
+      52.92292100011764,
+      53.25128100002985,
+      53.18155299983118,
+      53.10735100010788,
+      53.63465099981113,
+      52.63755800024228,
+      52.28223399990384,
+      52.340009000090504,
+      52.42821100000583,
+      52.60613399968861,
+      55.21393899971372,
+      53.34070100025201,
+      53.20776100006697,
+      52.81968000008419,
+      52.864651000163576,
+      53.08417100013685,
+      60.46977500000139,
+      53.44972900002176,
+      53.15323600007105,
+      53.159039999627566,
+      53.10788099995989,
+      52.8205830000843,
+      54.5029270001578,
+      52.92304400018111,
+      52.67323699990811,
+      52.89435000031517,
+      53.00557900000058,
+      52.588912000373966,
+      52.67247099982342,
+      52.7743439997721,
+      52.909403999819915,
+      52.79260500037708,
+      52.64676399974633,
+      52.67693399991913,
+      52.62882999977592,
+      52.82984499990562,
+      53.100633999747515,
+      52.77134199968714,
+      52.35147399980633,
+      52.438184000038746,
+      52.68638999996256,
+      52.68407599987768,
+      52.78374499994243,
+      52.74682099980055,
+      52.696419000312744,
+      52.7471999998852,
+      52.612909999879776,
+      52.80623500038928,
+      52.79176299973187,
+      55.411898999864206,
+      54.8576320002212,
+      53.46340500000224,
+      53.32432100021833,
+      53.18904300020222,
+      53.53332999993654,
+      53.50788699979603,
+      53.149074999964796,
+      53.09890799981076,
+      53.39838300005795,
+      53.08034999961819,
+      53.08008100018924,
+      52.9626500001541,
+      53.285856999991665
+    ],
+    "predictions": [
+      {
+        "text": "麻煩替本人登記年度檢查",
+        "expected": "book",
+        "predicted": "human_request",
+        "confidence": 0.6902083158493042,
+        "probabilities": {
+          "book": 0.07274741679430008,
+          "reschedule": 0.025140836834907532,
+          "cancel": 0.03893888741731644,
+          "appointment_lookup": 0.02218671143054962,
+          "admin_faq": 0.04999852553009987,
+          "human_request": 0.6902083158493042,
+          "clinical_handoff": 0.056655749678611755,
+          "unclear": 0.04412354156374931
+        }
+      },
+      {
+        "text": "我這個月想第一次來洗牙",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.7466354370117188,
+        "probabilities": {
+          "book": 0.7466354370117188,
+          "reschedule": 0.016495326533913612,
+          "cancel": 0.011337059549987316,
+          "appointment_lookup": 0.065240278840065,
+          "admin_faq": 0.08917288482189178,
+          "human_request": 0.010650182142853737,
+          "clinical_handoff": 0.03492060676217079,
+          "unclear": 0.025548459962010384
+        }
+      },
+      {
+        "text": "您好，從沒去過貴診所，能排個諮詢嗎",
+        "expected": "book",
+        "predicted": "admin_faq",
+        "confidence": 0.8130610585212708,
+        "probabilities": {
+          "book": 0.07562646269798279,
+          "reschedule": 0.014891733415424824,
+          "cancel": 0.007488033268600702,
+          "appointment_lookup": 0.024552317336201668,
+          "admin_faq": 0.8130610585212708,
+          "human_request": 0.014891733415424824,
+          "clinical_handoff": 0.017962859943509102,
+          "unclear": 0.03152579814195633
+        }
+      },
+      {
+        "text": "固定半年檢查到了，可以新約一次嗎",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9478529095649719,
+        "probabilities": {
+          "book": 0.9478529095649719,
+          "reschedule": 0.005636139772832394,
+          "cancel": 0.006386582739651203,
+          "appointment_lookup": 0.011208801530301571,
+          "admin_faq": 0.0092924227938056,
+          "human_request": 0.005999639164656401,
+          "clinical_handoff": 0.007236946374177933,
+          "unclear": 0.006386582739651203
+        }
+      },
+      {
+        "text": "目前沒任何掛號，想找一個可來的時間",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.886589765548706,
+        "probabilities": {
+          "book": 0.886589765548706,
+          "reschedule": 0.0072057717479765415,
+          "cancel": 0.005271855741739273,
+          "appointment_lookup": 0.05001797154545784,
+          "admin_faq": 0.020850593224167824,
+          "human_request": 0.0081652095541358,
+          "clinical_handoff": 0.009252394549548626,
+          "unclear": 0.012646523304283619
+        }
+      },
+      {
+        "text": "想幫自己預約一般看診",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9640678763389587,
+        "probabilities": {
+          "book": 0.9640678763389587,
+          "reschedule": 0.002707868115976453,
+          "cancel": 0.0030684168450534344,
+          "appointment_lookup": 0.004752456676214933,
+          "admin_faq": 0.009451388381421566,
+          "human_request": 0.005385239142924547,
+          "clinical_handoff": 0.006102275103330612,
+          "unclear": 0.004464519675821066
+        }
+      },
+      {
+        "text": "這次是新增，不是修改以前那筆",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.9696646928787231,
+        "probabilities": {
+          "book": 0.9696646928787231,
+          "reschedule": 0.0028992448933422565,
+          "cancel": 0.003285275073722005,
+          "appointment_lookup": 0.004490438383072615,
+          "admin_faq": 0.006954926997423172,
+          "human_request": 0.003962798044085503,
+          "clinical_handoff": 0.00478004664182663,
+          "unclear": 0.003962798044085503
+        }
+      },
+      {
+        "text": "排個例行回診檢查給我好嗎",
+        "expected": "book",
+        "predicted": "book",
+        "confidence": 0.8970220685005188,
+        "probabilities": {
+          "book": 0.8970220685005188,
+          "reschedule": 0.009361266158521175,
+          "cancel": 0.009965014643967152,
+          "appointment_lookup": 0.02245650812983513,
+          "admin_faq": 0.01981779932975769,
+          "human_request": 0.008261287584900856,
+          "clinical_handoff": 0.021095937117934227,
+          "unclear": 0.012020101770758629
+        }
+      },
+      {
+        "text": "已經掛好的那筆延到下個星期行嗎",
+        "expected": "reschedule",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9531736969947815,
+        "probabilities": {
+          "book": 0.004414069931954145,
+          "reschedule": 0.006033318117260933,
+          "cancel": 0.0046987528912723064,
+          "appointment_lookup": 0.9531736969947815,
+          "admin_faq": 0.009344586171209812,
+          "human_request": 0.00532438512891531,
+          "clinical_handoff": 0.006422434002161026,
+          "unclear": 0.010588803328573704
+        }
+      },
+      {
+        "text": "預定那天我人在外縣市，幫我另找日期",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.7511774897575378,
+        "probabilities": {
+          "book": 0.05441511794924736,
+          "reschedule": 0.7511774897575378,
+          "cancel": 0.024146562442183495,
+          "appointment_lookup": 0.017666000872850418,
+          "admin_faq": 0.012924722395837307,
+          "human_request": 0.11519680172204971,
+          "clinical_handoff": 0.013758296146988869,
+          "unclear": 0.010714971460402012
+        }
+      },
+      {
+        "text": "不退約，改到午休後好了",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9489928483963013,
+        "probabilities": {
+          "book": 0.0049798572435975075,
+          "reschedule": 0.9489928483963013,
+          "cancel": 0.01054235827177763,
+          "appointment_lookup": 0.007712953723967075,
+          "admin_faq": 0.006806658115237951,
+          "human_request": 0.008739921264350414,
+          "clinical_handoff": 0.007245650049299002,
+          "unclear": 0.0049798572435975075
+        }
+      },
+      {
+        "text": "本來的看診要從傍晚調到早上",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9159078001976013,
+        "probabilities": {
+          "book": 0.008979244157671928,
+          "reschedule": 0.9159078001976013,
+          "cancel": 0.013907325454056263,
+          "appointment_lookup": 0.01785735785961151,
+          "admin_faq": 0.010831036604940891,
+          "human_request": 0.010174816474318504,
+          "clinical_handoff": 0.013907325454056263,
+          "unclear": 0.008435218594968319
+        }
+      },
+      {
+        "text": "我要去，只是原本那天卡到事情",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.8863200545310974,
+        "probabilities": {
+          "book": 0.011876694858074188,
+          "reschedule": 0.8863200545310974,
+          "cancel": 0.020844250917434692,
+          "appointment_lookup": 0.022188587114214897,
+          "admin_faq": 0.010481147095561028,
+          "human_request": 0.01958136074244976,
+          "clinical_handoff": 0.013458059169352055,
+          "unclear": 0.015249978750944138
+        }
+      },
+      {
+        "text": "前面的取消收回，我其實想延期",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9199440479278564,
+        "probabilities": {
+          "book": 0.010219654999673367,
+          "reschedule": 0.9199440479278564,
+          "cancel": 0.01793605275452137,
+          "appointment_lookup": 0.011580387130379677,
+          "admin_faq": 0.009018813259899616,
+          "human_request": 0.013122296892106533,
+          "clinical_handoff": 0.010219654999673367,
+          "unclear": 0.007959075272083282
+        }
+      },
+      {
+        "text": "想問原預約能不能提早一日",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9317778944969177,
+        "probabilities": {
+          "book": 0.011729353107511997,
+          "reschedule": 0.9317778944969177,
+          "cancel": 0.009723975323140621,
+          "appointment_lookup": 0.01933843269944191,
+          "admin_faq": 0.0075730388052761555,
+          "human_request": 0.008061458356678486,
+          "clinical_handoff": 0.0058978889137506485,
+          "unclear": 0.0058978889137506485
+        }
+      },
+      {
+        "text": "原來的門診挪一個鐘頭，醫師照舊",
+        "expected": "reschedule",
+        "predicted": "reschedule",
+        "confidence": 0.9296038746833801,
+        "probabilities": {
+          "book": 0.00856135506182909,
+          "reschedule": 0.9296038746833801,
+          "cancel": 0.013260086998343468,
+          "appointment_lookup": 0.015994718298316002,
+          "admin_faq": 0.01032696571201086,
+          "human_request": 0.009701287373900414,
+          "clinical_handoff": 0.0066675907000899315,
+          "unclear": 0.00588412769138813
+        }
+      },
+      {
+        "text": "已經不用看了，原訂的時段釋出吧",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.817592442035675,
+        "probabilities": {
+          "book": 0.01166232954710722,
+          "reschedule": 0.07604794949293137,
+          "cancel": 0.817592442035675,
+          "appointment_lookup": 0.027976473793387413,
+          "admin_faq": 0.013215150684118271,
+          "human_request": 0.018062971532344818,
+          "clinical_handoff": 0.020468026399612427,
+          "unclear": 0.014974728226661682
+        }
+      },
+      {
+        "text": "麻煩退掉這回掛號，我確定",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9533032178878784,
+        "probabilities": {
+          "book": 0.006837574299424887,
+          "reschedule": 0.002515403088182211,
+          "cancel": 0.9533032178878784,
+          "appointment_lookup": 0.008779618889093399,
+          "admin_faq": 0.00566854840144515,
+          "human_request": 0.0072785597294569016,
+          "clinical_handoff": 0.009948612190783024,
+          "unclear": 0.00566854840144515
+        }
+      },
+      {
+        "text": "這個約作廢就行，別找其他時間",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9462973475456238,
+        "probabilities": {
+          "book": 0.008715096861124039,
+          "reschedule": 0.006376101169735193,
+          "cancel": 0.9462973475456238,
+          "appointment_lookup": 0.00987549964338541,
+          "admin_faq": 0.005285974126309156,
+          "human_request": 0.0067873247899115086,
+          "clinical_handoff": 0.00987549964338541,
+          "unclear": 0.0067873247899115086
+        }
+      },
+      {
+        "text": "我決定這次不去了，請取消",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9534628391265869,
+        "probabilities": {
+          "book": 0.005326000042259693,
+          "reschedule": 0.003660502377897501,
+          "cancel": 0.9534628391265869,
+          "appointment_lookup": 0.008781088516116142,
+          "admin_faq": 0.0056694974191486835,
+          "human_request": 0.006838718894869089,
+          "clinical_handoff": 0.010592015460133553,
+          "unclear": 0.0056694974191486835
+        }
+      },
+      {
+        "text": "先取消原約，未來再自己登記",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9431845545768738,
+        "probabilities": {
+          "book": 0.012638679705560207,
+          "reschedule": 0.007665746845304966,
+          "cancel": 0.9431845545768738,
+          "appointment_lookup": 0.008686428889632225,
+          "admin_faq": 0.005608380772173405,
+          "human_request": 0.005608380772173405,
+          "clinical_handoff": 0.009843014180660248,
+          "unclear": 0.006764998193830252
+        }
+      },
+      {
+        "text": "原來預約我不要了，幫我撤回",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9446758031845093,
+        "probabilities": {
+          "book": 0.007212688680738211,
+          "reschedule": 0.005276916082948446,
+          "cancel": 0.9446758031845093,
+          "appointment_lookup": 0.00926127564162016,
+          "admin_faq": 0.006365175358951092,
+          "human_request": 0.00926127564162016,
+          "clinical_handoff": 0.011171231046319008,
+          "unclear": 0.006775693967938423
+        }
+      },
+      {
+        "text": "確定不保留掛號，取消即可",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9451082348823547,
+        "probabilities": {
+          "book": 0.007681381423026323,
+          "reschedule": 0.0036284278612583876,
+          "cancel": 0.9451082348823547,
+          "appointment_lookup": 0.012664456851780415,
+          "admin_faq": 0.005982265807688236,
+          "human_request": 0.006368089001625776,
+          "clinical_handoff": 0.009863089770078659,
+          "unclear": 0.008704145438969135
+        }
+      },
+      {
+        "text": "不要延期，就把預約取消",
+        "expected": "cancel",
+        "predicted": "cancel",
+        "confidence": 0.9564133882522583,
+        "probabilities": {
+          "book": 0.005687042139470577,
+          "reschedule": 0.004160728771239519,
+          "cancel": 0.9564133882522583,
+          "appointment_lookup": 0.006859881803393364,
+          "admin_faq": 0.0039086430333554745,
+          "human_request": 0.00730230612680316,
+          "clinical_handoff": 0.009981069713830948,
+          "unclear": 0.005687042139470577
+        }
+      },
+      {
+        "text": "我的下一次到診日能幫我查出來嗎",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9478123188018799,
+        "probabilities": {
+          "book": 0.006798190530389547,
+          "reschedule": 0.007236636243760586,
+          "cancel": 0.0052944365888834,
+          "appointment_lookup": 0.9478123188018799,
+          "admin_faq": 0.01193119678646326,
+          "human_request": 0.005635898094624281,
+          "clinical_handoff": 0.005999382119625807,
+          "unclear": 0.009292024187743664
+        }
+      },
+      {
+        "text": "想核對掛號單上的日期",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9572194814682007,
+        "probabilities": {
+          "book": 0.0036749248392879963,
+          "reschedule": 0.004164235666394234,
+          "cancel": 0.004432805348187685,
+          "appointment_lookup": 0.9572194814682007,
+          "admin_faq": 0.015472011640667915,
+          "human_request": 0.0034522726200520992,
+          "clinical_handoff": 0.004718697164207697,
+          "unclear": 0.006865663453936577
+        }
+      },
+      {
+        "text": "我不記得約到哪個醫師了",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.8898505568504333,
+        "probabilities": {
+          "book": 0.01269303634762764,
+          "reschedule": 0.01629818230867386,
+          "cancel": 0.007698715664446354,
+          "appointment_lookup": 0.8898505568504333,
+          "admin_faq": 0.00988534651696682,
+          "human_request": 0.01269303634762764,
+          "clinical_handoff": 0.02860420010983944,
+          "unclear": 0.022276971489191055
+        }
+      },
+      {
+        "text": "掛號完忘記抄下時間，幫我看一眼",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9238505959510803,
+        "probabilities": {
+          "book": 0.009641246870160103,
+          "reschedule": 0.014027929864823818,
+          "cancel": 0.008508369326591492,
+          "appointment_lookup": 0.9238505959510803,
+          "admin_faq": 0.009057112038135529,
+          "human_request": 0.010924963280558586,
+          "clinical_handoff": 0.009057112038135529,
+          "unclear": 0.014932653866708279
+        }
+      },
+      {
+        "text": "上回留的預約現在是否還有效",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9611711502075195,
+        "probabilities": {
+          "book": 0.004738177172839642,
+          "reschedule": 0.005369058344513178,
+          "cancel": 0.00504376320168376,
+          "appointment_lookup": 0.9611711502075195,
+          "admin_faq": 0.00608393969014287,
+          "human_request": 0.004738177172839642,
+          "clinical_handoff": 0.00504376320168376,
+          "unclear": 0.0078119332902133465
+        }
+      },
+      {
+        "text": "讓我知道目前排了幾次門診",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9650266170501709,
+        "probabilities": {
+          "book": 0.00475718267261982,
+          "reschedule": 0.004198199138045311,
+          "cancel": 0.0034804295282810926,
+          "appointment_lookup": 0.9650266170501709,
+          "admin_faq": 0.0065022981725633144,
+          "human_request": 0.004468959756195545,
+          "clinical_handoff": 0.005063994787633419,
+          "unclear": 0.0065022981725633144
+        }
+      },
+      {
+        "text": "我只是要知道預約資訊，別幫我改",
+        "expected": "appointment_lookup",
+        "predicted": "appointment_lookup",
+        "confidence": 0.9711382985115051,
+        "probabilities": {
+          "book": 0.004224787000566721,
+          "reschedule": 0.003090920392423868,
+          "cancel": 0.0029036509804427624,
+          "appointment_lookup": 0.9711382985115051,
+          "admin_faq": 0.007892941124737263,
+          "human_request": 0.003090920392423868,
+          "clinical_handoff": 0.0025624630507081747,
+          "unclear": 0.005096066277474165
+        }
+      },
+      {
+        "text": "原來排的是早診還是晚診，我忘了",
+        "expected": "appointment_lookup",
+        "predicted": "reschedule",
+        "confidence": 0.8332183361053467,
+        "probabilities": {
+          "book": 0.015260926447808743,
+          "reschedule": 0.8332183361053467,
+          "cancel": 0.013467719778418541,
+          "appointment_lookup": 0.0683947280049324,
+          "admin_faq": 0.015260926447808743,
+          "human_request": 0.016245171427726746,
+          "clinical_handoff": 0.020859211683273315,
+          "unclear": 0.017292894423007965
+        }
+      },
+      {
+        "text": "貴診所中午會休息嗎",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9588571786880493,
+        "probabilities": {
+          "book": 0.0039186300709843636,
+          "reschedule": 0.00646072905510664,
+          "cancel": 0.004726770333945751,
+          "appointment_lookup": 0.011338932439684868,
+          "admin_faq": 0.9588571786880493,
+          "human_request": 0.0039186300709843636,
+          "clinical_handoff": 0.0034581790678203106,
+          "unclear": 0.0073209647089242935
+        }
+      },
+      {
+        "text": "報到時要出示哪些證件",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.8962817192077637,
+        "probabilities": {
+          "book": 0.009956790134310722,
+          "reschedule": 0.011282522231340408,
+          "cancel": 0.01059894822537899,
+          "appointment_lookup": 0.0306690726429224,
+          "admin_faq": 0.8962817192077637,
+          "human_request": 0.016415972262620926,
+          "clinical_handoff": 0.012010181322693825,
+          "unclear": 0.012784771621227264
+        }
+      },
+      {
+        "text": "搭公車要在哪站下車",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9530820846557617,
+        "probabilities": {
+          "book": 0.0030334515031427145,
+          "reschedule": 0.004146236460655928,
+          "cancel": 0.004698301199823618,
+          "appointment_lookup": 0.009343687444925308,
+          "admin_faq": 0.9530820846557617,
+          "human_request": 0.006421816535294056,
+          "clinical_handoff": 0.007276871707290411,
+          "unclear": 0.011997533030807972
+        }
+      },
+      {
+        "text": "車可以停地下室嗎",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9319344758987427,
+        "probabilities": {
+          "book": 0.004594052210450172,
+          "reschedule": 0.009136363863945007,
+          "cancel": 0.009725609794259071,
+          "appointment_lookup": 0.013293330557644367,
+          "admin_faq": 0.9319344758987427,
+          "human_request": 0.008582819253206253,
+          "clinical_handoff": 0.008582819253206253,
+          "unclear": 0.014150677248835564
+        }
+      },
+      {
+        "text": "診所門牌號碼再給我一次",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9503939747810364,
+        "probabilities": {
+          "book": 0.005651249550282955,
+          "reschedule": 0.006403704173862934,
+          "cancel": 0.00601572310552001,
+          "appointment_lookup": 0.014430969953536987,
+          "admin_faq": 0.9503939747810364,
+          "human_request": 0.006403704173862934,
+          "clinical_handoff": 0.0038840430788695812,
+          "unclear": 0.00681670755147934
+        }
+      },
+      {
+        "text": "櫃檯最晚到幾點還在",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9580177068710327,
+        "probabilities": {
+          "book": 0.004436502233147621,
+          "reschedule": 0.00731455534696579,
+          "cancel": 0.005027215462177992,
+          "appointment_lookup": 0.00999781209975481,
+          "admin_faq": 0.9580177068710327,
+          "human_request": 0.004436502233147621,
+          "clinical_handoff": 0.0034551513381302357,
+          "unclear": 0.00731455534696579
+        }
+      },
+      {
+        "text": "一般掛號收現金還是能電子付款",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9645528197288513,
+        "probabilities": {
+          "book": 0.003703078720718622,
+          "reschedule": 0.004754847381263971,
+          "cancel": 0.003703078720718622,
+          "appointment_lookup": 0.007364451885223389,
+          "admin_faq": 0.9645528197288513,
+          "human_request": 0.004754847381263971,
+          "clinical_handoff": 0.005061508622020483,
+          "unclear": 0.006105344742536545
+        }
+      },
+      {
+        "text": "有電梯讓輪椅上去嗎",
+        "expected": "admin_faq",
+        "predicted": "admin_faq",
+        "confidence": 0.9686257243156433,
+        "probabilities": {
+          "book": 0.0030829235911369324,
+          "reschedule": 0.004774924833327532,
+          "cancel": 0.0037187153939157724,
+          "appointment_lookup": 0.006947475019842386,
+          "admin_faq": 0.9686257243156433,
+          "human_request": 0.004485626704990864,
+          "clinical_handoff": 0.003281754907220602,
+          "unclear": 0.005082881543785334
+        }
+      },
+      {
+        "text": "可以讓一位真人客服加入這個對話嗎",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9680666327476501,
+        "probabilities": {
+          "book": 0.003081144066527486,
+          "reschedule": 0.004483037628233433,
+          "cancel": 0.00786797609180212,
+          "appointment_lookup": 0.003081144066527486,
+          "admin_faq": 0.003081144066527486,
+          "human_request": 0.9680666327476501,
+          "clinical_handoff": 0.006127586122602224,
+          "unclear": 0.004211424384266138
+        }
+      },
+      {
+        "text": "把我轉給在現場的同仁",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9652611613273621,
+        "probabilities": {
+          "book": 0.002711219945922494,
+          "reschedule": 0.004758338909596205,
+          "cancel": 0.008351145312190056,
+          "appointment_lookup": 0.0032703555189073086,
+          "admin_faq": 0.0028860787861049175,
+          "human_request": 0.9652611613273621,
+          "clinical_handoff": 0.007369860075414181,
+          "unclear": 0.0053919050842523575
+        }
+      },
+      {
+        "text": "我要替女兒退掛，別取消我自己的",
+        "expected": "human_request",
+        "predicted": "cancel",
+        "confidence": 0.8492985367774963,
+        "probabilities": {
+          "book": 0.01289591658860445,
+          "reschedule": 0.013727632351219654,
+          "cancel": 0.8492985367774963,
+          "appointment_lookup": 0.01997358724474907,
+          "admin_faq": 0.011380606330931187,
+          "human_request": 0.05100434273481369,
+          "clinical_handoff": 0.024092745035886765,
+          "unclear": 0.017626628279685974
+        }
+      },
+      {
+        "text": "不要自動回答了，給我人工服務",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9599424600601196,
+        "probabilities": {
+          "book": 0.00473212031647563,
+          "reschedule": 0.003462093183770776,
+          "cancel": 0.00473212031647563,
+          "appointment_lookup": 0.00392306549474597,
+          "admin_faq": 0.006468041334301233,
+          "human_request": 0.9599424600601196,
+          "clinical_handoff": 0.006076162215322256,
+          "unclear": 0.010663997381925583
+        }
+      },
+      {
+        "text": "能請櫃台小姐直接聯絡我嗎",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9594349265098572,
+        "probabilities": {
+          "book": 0.004443065263330936,
+          "reschedule": 0.0068815541453659534,
+          "cancel": 0.010012602433562279,
+          "appointment_lookup": 0.003460262669250369,
+          "admin_faq": 0.004443065263330936,
+          "human_request": 0.9594349265098572,
+          "clinical_handoff": 0.0068815541453659534,
+          "unclear": 0.004443065263330936
+        }
+      },
+      {
+        "text": "我的對話請交由工作人員處理",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9557543396949768,
+        "probabilities": {
+          "book": 0.006439822260290384,
+          "reschedule": 0.005683123134076595,
+          "cancel": 0.00826889555901289,
+          "appointment_lookup": 0.0028576538898050785,
+          "admin_faq": 0.004426020663231611,
+          "human_request": 0.9557543396949768,
+          "clinical_handoff": 0.008802193216979504,
+          "unclear": 0.007767907809466124
+        }
+      },
+      {
+        "text": "家父原本的約想延期，由我來代辦",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.9458882212638855,
+        "probabilities": {
+          "book": 0.007221945561468601,
+          "reschedule": 0.011906975880265236,
+          "cancel": 0.011185568757355213,
+          "appointment_lookup": 0.004963566083461046,
+          "admin_faq": 0.00466283829882741,
+          "human_request": 0.9458882212638855,
+          "clinical_handoff": 0.008183537051081657,
+          "unclear": 0.00598720321431756
+        }
+      },
+      {
+        "text": "機器人先停，換專員回覆",
+        "expected": "human_request",
+        "predicted": "human_request",
+        "confidence": 0.7754533886909485,
+        "probabilities": {
+          "book": 0.007602277211844921,
+          "reschedule": 0.009761517867445946,
+          "cancel": 0.006302508991211653,
+          "appointment_lookup": 0.011061248369514942,
+          "admin_faq": 0.10494620352983475,
+          "human_request": 0.7754533886909485,
+          "clinical_handoff": 0.00809258222579956,
+          "unclear": 0.0767802819609642
+        }
+      },
+      {
+        "text": "牙齦有膿包，可以自己弄破嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9537643194198608,
+        "probabilities": {
+          "book": 0.005004895851016045,
+          "reschedule": 0.007282080594450235,
+          "cancel": 0.007282080594450235,
+          "appointment_lookup": 0.008783865720033646,
+          "admin_faq": 0.0060370564460754395,
+          "human_request": 0.006840881425887346,
+          "clinical_handoff": 0.9537643194198608,
+          "unclear": 0.005004895851016045
+        }
+      },
+      {
+        "text": "拔牙傷口整夜出血，怎麼辦",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9317697882652283,
+        "probabilities": {
+          "book": 0.006683125626295805,
+          "reschedule": 0.010351027362048626,
+          "cancel": 0.009723890572786331,
+          "appointment_lookup": 0.013290981762111187,
+          "admin_faq": 0.008581303060054779,
+          "human_request": 0.011018611490726471,
+          "clinical_handoff": 0.9317697882652283,
+          "unclear": 0.008581303060054779
+        }
+      },
+      {
+        "text": "吞嚥困難還呼吸不順，現在該做什麼",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9600244164466858,
+        "probabilities": {
+          "book": 0.005708514247089624,
+          "reschedule": 0.005362652707844973,
+          "cancel": 0.005362652707844973,
+          "appointment_lookup": 0.00688578188419342,
+          "admin_faq": 0.005037745926529169,
+          "human_request": 0.00688578188419342,
+          "clinical_handoff": 0.9600244164466858,
+          "unclear": 0.004732524044811726
+        }
+      },
+      {
+        "text": "止痛藥吃幾毫克才有效",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9692556262016296,
+        "probabilities": {
+          "book": 0.003961126320064068,
+          "reschedule": 0.0042165969498455524,
+          "cancel": 0.0042165969498455524,
+          "appointment_lookup": 0.005086186807602644,
+          "admin_faq": 0.005763405002653599,
+          "human_request": 0.0042165969498455524,
+          "clinical_handoff": 0.9692556262016296,
+          "unclear": 0.0032838890329003334
+        }
+      },
+      {
+        "text": "我懷孕可以打麻醉嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9498128890991211,
+        "probabilities": {
+          "book": 0.004984160419553518,
+          "reschedule": 0.007719618733972311,
+          "cancel": 0.006399788893759251,
+          "appointment_lookup": 0.009311637841165066,
+          "admin_faq": 0.009311637841165066,
+          "human_request": 0.006812539882957935,
+          "clinical_handoff": 0.9498128890991211,
+          "unclear": 0.0056477938778698444
+        }
+      },
+      {
+        "text": "看這些症狀能判斷感染嗎",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9680970907211304,
+        "probabilities": {
+          "book": 0.006943683605641127,
+          "reschedule": 0.004772318992763758,
+          "cancel": 0.0037166858091950417,
+          "appointment_lookup": 0.0054077464155852795,
+          "admin_faq": 0.004211557097733021,
+          "human_request": 0.003956391476094723,
+          "clinical_handoff": 0.9680970907211304,
+          "unclear": 0.002894558012485504
+        }
+      },
+      {
+        "text": "牙套磨到破皮要擦什麼藥",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9579938650131226,
+        "probabilities": {
+          "book": 0.004436391405761242,
+          "reschedule": 0.006454912014305592,
+          "cancel": 0.005696440115571022,
+          "appointment_lookup": 0.0077861095778644085,
+          "admin_faq": 0.006454912014305592,
+          "human_request": 0.006454912014305592,
+          "clinical_handoff": 0.9579938650131226,
+          "unclear": 0.0047225141897797585
+        }
+      },
+      {
+        "text": "嘴巴有麻麻的感覺是不是正常",
+        "expected": "clinical_handoff",
+        "predicted": "clinical_handoff",
+        "confidence": 0.9561169743537903,
+        "probabilities": {
+          "book": 0.005340825766324997,
+          "reschedule": 0.006442265585064888,
+          "cancel": 0.004713261965662241,
+          "appointment_lookup": 0.009373440407216549,
+          "admin_faq": 0.006857756059616804,
+          "human_request": 0.006442265585064888,
+          "clinical_handoff": 0.9561169743537903,
+          "unclear": 0.004713261965662241
+        }
+      },
+      {
+        "text": "就那樣啦，你看著辦",
+        "expected": "unclear",
+        "predicted": "human_request",
+        "confidence": 0.8170660734176636,
+        "probabilities": {
+          "book": 0.01805134117603302,
+          "reschedule": 0.01593025214970112,
+          "cancel": 0.020454848185181618,
+          "appointment_lookup": 0.012406492605805397,
+          "admin_faq": 0.05223328620195389,
+          "human_request": 0.8170660734176636,
+          "clinical_handoff": 0.023178381845355034,
+          "unclear": 0.04067932441830635
+        }
+      },
+      {
+        "text": "我先跟家裡商量，不要動",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.8494209051132202,
+        "probabilities": {
+          "book": 0.009436213411390781,
+          "reschedule": 0.017629167065024376,
+          "cancel": 0.017629167065024376,
+          "appointment_lookup": 0.01876615360379219,
+          "admin_faq": 0.016561070457100868,
+          "human_request": 0.04792104661464691,
+          "clinical_handoff": 0.022636299952864647,
+          "unclear": 0.8494209051132202
+        }
+      },
+      {
+        "text": "嗯，我還要想一想",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9776509404182434,
+        "probabilities": {
+          "book": 0.0021386027801781893,
+          "reschedule": 0.0033123327884823084,
+          "cancel": 0.0012185390805825591,
+          "appointment_lookup": 0.00452742213383317,
+          "admin_faq": 0.0033123327884823084,
+          "human_request": 0.0033123327884823084,
+          "clinical_handoff": 0.00452742213383317,
+          "unclear": 0.9776509404182434
+        }
+      },
+      {
+        "text": "先擱著，晚點給答案",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9495208859443665,
+        "probabilities": {
+          "book": 0.005303980316966772,
+          "reschedule": 0.007249681279063225,
+          "cancel": 0.0018330065067857504,
+          "appointment_lookup": 0.006010196637362242,
+          "admin_faq": 0.012723586522042751,
+          "human_request": 0.006810445338487625,
+          "clinical_handoff": 0.010548223741352558,
+          "unclear": 0.9495208859443665
+        }
+      },
+      {
+        "text": "沒有確定，暫時別處理",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9305111169815063,
+        "probabilities": {
+          "book": 0.0051977927796542645,
+          "reschedule": 0.008050498552620411,
+          "cancel": 0.005533021409064531,
+          "appointment_lookup": 0.016010327264666557,
+          "admin_faq": 0.01327302772551775,
+          "human_request": 0.009710755199193954,
+          "clinical_handoff": 0.011713406071066856,
+          "unclear": 0.9305111169815063
+        }
+      },
+      {
+        "text": "剛剛的事情再等等",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9469879865646362,
+        "probabilities": {
+          "book": 0.004969337023794651,
+          "reschedule": 0.00819305144250393,
+          "cancel": 0.0034153719898313284,
+          "appointment_lookup": 0.008721457794308662,
+          "admin_faq": 0.0105200856924057,
+          "human_request": 0.005994164384901524,
+          "clinical_handoff": 0.011198573745787144,
+          "unclear": 0.9469879865646362
+        }
+      },
+      {
+        "text": "我沒說要哪個，還在考慮",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9614101052284241,
+        "probabilities": {
+          "book": 0.0036910134367644787,
+          "reschedule": 0.0060854521580040455,
+          "cancel": 0.0022387127391994,
+          "appointment_lookup": 0.006895720958709717,
+          "admin_faq": 0.0057167536579072475,
+          "human_request": 0.0039290632121264935,
+          "clinical_handoff": 0.010033215396106243,
+          "unclear": 0.9614101052284241
+        }
+      },
+      {
+        "text": "可能吧，現在沒辦法決定",
+        "expected": "unclear",
+        "predicted": "unclear",
+        "confidence": 0.9313515424728394,
+        "probabilities": {
+          "book": 0.004887284245342016,
+          "reschedule": 0.00857745110988617,
+          "cancel": 0.0033589783124625683,
+          "appointment_lookup": 0.00857745110988617,
+          "admin_faq": 0.017058299854397774,
+          "human_request": 0.009130649268627167,
+          "clinical_handoff": 0.017058299854397774,
+          "unclear": 0.9313515424728394
+        }
+      }
+    ]
+  },
+  "limitations": "Synthetic same-author test authored and hashed before v2 optimization; validation was the inspected v1 challenge. Not an independent clinical or customer study. Latency is GPU forward only, not API end-to-end."
+}

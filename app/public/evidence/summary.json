@@ -1,0 +1,70 @@
+{
+  "baseModel": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+  "revision": "dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f",
+  "training": {
+    "steps": 384,
+    "epochs": 4,
+    "selectedEpoch": 3,
+    "lr": 5e-05,
+    "labelSmoothing": 0.05,
+    "seed": 42,
+    "seconds": 127.12812900543213,
+    "peakMemoryBytes": 8328499200
+  },
+  "test": {
+    "baseRaw": {
+      "n": 64,
+      "correct": 52,
+      "nll": 0.7015832662582397,
+      "brier": 0.3186299800872803,
+      "accepted": 30,
+      "acceptedErrors": 2,
+      "threshold": 0.85
+    },
+    "trainedCalibrated": {
+      "n": 64,
+      "correct": 58,
+      "nll": 0.36452147364616394,
+      "brier": 0.15697340667247772,
+      "accepted": 54,
+      "acceptedErrors": 1,
+      "threshold": 0.85
+    }
+  },
+  "mac": {
+    "adapterSha256": "4940141c0e05473b3cc1bb77ea8ab341deb6183c1a6dcc4039136c8ab0fac857",
+    "n": 64,
+    "correct": 58,
+    "cudaIntentAgreement": 64,
+    "maxProbabilityDifference": 0.03611171245574951,
+    "medianLatencyMs": 53.33766649982863,
+    "peakMemoryBytes": 8529066462
+  },
+  "colabCost": {
+    "recordedAt": "2026-10-15T14:20:53.960256+00:00",
+    "gpu": "NVIDIA L4 23034 MiB",
+    "plan": "Existing Colab Pro; no extra credits purchased",
+    "rateComputeUnitsPerHour": 1.54,
+    "firstObservedBalanceApprox": 199.6,
+    "finalBalance": 197.99,
+    "observedBalanceDecreaseApprox": 1.61,
+    "finalActiveAssignments": 0,
+    "finalUsageRate": 0.0,
+    "timingsSeconds": {
+      "abortedDependencyCompilation": 1462.98,
+      "firstBackwardSmokeIncludingFirstKernelCompilation": 102.2837,
+      "v1TrainingAndEvaluation": 64.140257,
+      "v2OptimizationAndEvaluation": 127.128129
+    },
+    "estimatedPureExperimentUnits": 0.08182036512222224,
+    "limitations": "First balance was an earlier rounded observation, not an isolated per-job billing reading. Balance decrease includes dependency setup, downloads, evaluation, idle time and a subsequent project runtime, not only training. Per-experiment units are arithmetic estimates, not provider itemized billing."
+  },
+  "limitations": [
+    "Synthetic same-author test authored and hashed before v2 optimization; validation was the inspected v1 challenge. Not an independent clinical or customer study. Latency is GPU forward only, not API end-to-end.",
+    "Re-evaluation of the already inspected v2 synthetic test for runtime parity; not a new generalization test. Timing excludes network and includes tokenization."
+  ],
+  "fullReportHashes": {
+    "nvidia4b-choice-v2.json": "b6c1d38539133faee1e9087b8a54d6db9083dfcbf4ab471ea985872c9db62b5a",
+    "mlx-choice-v2.json": "ddeee2aeb54ee20da6a864f5e961023ea81324bcfcc26913175c97d423c6ebb3"
+  }
+}

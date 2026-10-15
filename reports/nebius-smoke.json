@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-15T12:43:04.091Z",
+  "scope": "3-case connectivity smoke; not accuracy benchmark",
+  "price": {
+    "inputPerMillion": 0.06,
+    "outputPerMillion": 0.24,
+    "source": "https://nebius.com/services/token-factory/models/nvidia-nemotron-models-inference"
+  },
+  "results": [
+    {
+      "text": "不是取消，是改禮拜五",
+      "expected": "reschedule",
+      "pass": false,
+      "error": "TimeoutError: The operation was aborted due to timeout"
+    },
+    {
+      "text": "請問你們的營業時間",
+      "expected": "admin_faq",
+      "pass": false,
+      "error": "TimeoutError: The operation was aborted due to timeout"
+    },
+    {
+      "text": "我牙齦腫起來可以吃什麼藥",
+      "expected": "clinical_handoff",
+      "pass": false,
+      "error": "TimeoutError: The operation was aborted due to timeout"
+    }
+  ],
+  "estimatedUsd": null,
+  "costNote": "Timed out calls have unknown billed usage. Conservatively reserved USD 0.02 each; not zero cost."
+}

@@ -1,0 +1,78 @@
+{
+  "purpose": "Post-hoc English demo smoke; not a held-out benchmark",
+  "model": "haoyue-choice-v2",
+  "cases": [
+    {
+      "text": "I want to reschedule",
+      "expected": "reschedule",
+      "intent": "reschedule",
+      "confidence": 0.9590591192245483,
+      "abstain": false,
+      "latencyMs": 1033.618541998294
+    },
+    {
+      "text": "Check my appointment",
+      "expected": "appointment_lookup",
+      "intent": "appointment_lookup",
+      "confidence": 0.9639611840248108,
+      "abstain": false,
+      "latencyMs": 105.52833299880149
+    },
+    {
+      "text": "What are your opening hours?",
+      "expected": "admin_faq",
+      "intent": "admin_faq",
+      "confidence": 0.9676589369773865,
+      "abstain": false,
+      "latencyMs": 121.82395800118684
+    },
+    {
+      "text": "Not cancel—please reschedule my appointment",
+      "expected": "reschedule",
+      "intent": "reschedule",
+      "confidence": 0.9428649544715881,
+      "abstain": false,
+      "latencyMs": 104.73462500158348
+    },
+    {
+      "text": "I want to book an appointment",
+      "expected": "book",
+      "intent": "book",
+      "confidence": 0.9798256754875183,
+      "abstain": false,
+      "latencyMs": 53.06366700096987
+    },
+    {
+      "text": "Cancel my appointment",
+      "expected": "cancel",
+      "intent": "cancel",
+      "confidence": 0.9497738480567932,
+      "abstain": false,
+      "latencyMs": 51.424500001303386
+    },
+    {
+      "text": "Talk to staff",
+      "expected": "human_request",
+      "intent": "human_request",
+      "confidence": 0.9336023926734924,
+      "abstain": false,
+      "latencyMs": 52.04433300241362
+    },
+    {
+      "text": "My tooth hurts",
+      "expected": "clinical_handoff",
+      "intent": "clinical_handoff",
+      "confidence": 0.9647426605224609,
+      "abstain": false,
+      "latencyMs": 50.94870799803175
+    },
+    {
+      "text": "I am nervous about visiting the dentist",
+      "expected": "unclear",
+      "intent": "clinical_handoff",
+      "confidence": 0.875907838344574,
+      "abstain": false,
+      "latencyMs": 53.85404199842014
+    }
+  ]
+}

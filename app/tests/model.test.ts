@@ -1,0 +1,10 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {decisionSchema,decide} from '../lib/dental/model.ts';import {seed,createSession,getSession} from '../lib/dental/domain.ts';
+test('拒絕未知意圖及額外工具欄位',()=>{const base={intent:'book',date:null,doctor:null,period:null,appointmentId:null,question:null};assert.ok(decisionSchema.safeParse(base).success);assert.ok(!decisionSchema.safeParse({...base,intent:'execute_sql'}).success);assert.ok(!decisionSchema.safeParse({...base,tool:'delete_all'}).success);});
+test('live 模式缺 key 明確失敗，不回退規則',async()=>{const old=process.env.DECISION_MODE,key=process.env.NEBIUS_API_KEY;process.env.DECISION_MODE='nebius';delete process.env.NEBIUS_API_KEY;const c=seed(),id=createSession(c);try{await assert.rejects(decide('我要預約',getSession(c,id)),/金鑰/);}finally{if(old===undefined)delete process.env.DECISION_MODE;else process.env.DECISION_MODE=old;if(key)process.env.NEBIUS_API_KEY=key;}});
+
+test('hybrid 的低信心先預留後備額度，預算拒絕時保留澄清而不呼叫付費 API',async()=>{
+ const original=globalThis.fetch;const env={...process.env};const c=seed();const s=c.sessions[createSession(c)];let fetches=0,reservations=0;
+ process.env.DECISION_MODE='hybrid';process.env.DECISION_ADAPTER_URL='https://decision.test/decision';process.env.DECISION_ADAPTER_KEY='test-key';
+ globalThis.fetch=async()=>{fetches++;return Response.json({intent:'unclear',confidence:.6,probabilities:{book:.1,reschedule:.1,cancel:.05,appointment_lookup:.05,admin_faq:.04,human_request:.03,clinical_handoff:.03,unclear:.6},abstain:true,latencyMs:55,inputTokens:200,model:'nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16',version:'haoyue-choice-v2',adapterSha256:'4940141c0e05473b3cc1bb77ea8ab341deb6183c1a6dcc4039136c8ab0fac857',runtime:'MLX / Apple silicon'});};
+ try{const r=await decide('先不要',s,async()=>{reservations++;throw Error('budget denied');});assert.equal(r.decision.intent,'unclear');assert.equal(fetches,1);assert.equal(reservations,1);assert.match(r.fallbackReason!,/未完成/);assert.equal(r.choice?.abstain,true);}finally{globalThis.fetch=original;for(const k of Object.keys(process.env))if(!(k in env))delete process.env[k];Object.assign(process.env,env);}
+});

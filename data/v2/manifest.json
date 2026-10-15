@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "source": "Original author-written synthetic examples; no real patients or scraped conversations.",
+  "splitMethod": "Fixed utterance-family partitions before v2 optimization; no augmentation/paraphrases cross a partition. Labels are shared by design. Semantic templates may still overlap.",
+  "limitations": "Validation is the 64-item v1 diagnostic challenge already inspected during development. Test is newly authored before v2 training, not independent human/clinical validation. Not a population accuracy estimate.",
+  "splits": {
+    "train": {
+      "rows": 96,
+      "families": 96,
+      "sha256": "5f4b1ecf1548f07476cf628e708c45db7e6879363e8fb9044163485be2f985a1"
+    },
+    "validation": {
+      "rows": 64,
+      "families": 64,
+      "sha256": "b723acb0593ff053b1b8091083493e2e73ebab9c4aff60a95d8964a76a137f04"
+    },
+    "test": {
+      "rows": 64,
+      "families": 64,
+      "sha256": "dc76861790ee648fbaf1a33c15a9e4166f89e2c5ef3c5387332dee5b391e0e43"
+    }
+  }
+}

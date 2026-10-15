@@ -1,0 +1,13 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {seed} from '../lib/dental/domain.ts';
+import {LimitError,reserveModel,admitRequest,pauseModels} from '../lib/dental/budget.ts';
+const now=Date.parse('2026-10-15T12:00:00Z');
+const env={MODEL_SPEND_CAP_USD:'1',VERIFIED_NEBIUS_BALANCE_USD:'25',BALANCE_VERIFIED_AT:new Date(now).toISOString(),MODEL_DAILY_CAP_USD:'.40'};
+test('不同會話與來源仍共用每日總上限',()=>{const c=seed();for(let i=0;i<20;i++)reserveModel(c,'s'+i,'ip'+i,env,now);assert.equal(c.usage.reservedUsd,.4);assert.throws(()=>reserveModel(c,'other','other',env,now),/額度/);assert.equal(c.usage.calls,20);});
+test('帳號保留5美元且無效或過期快照關閉呼叫',()=>{for(const overrides of [{VERIFIED_NEBIUS_BALANCE_USD:'5.01'},{BALANCE_VERIFIED_AT:'bad'},{BALANCE_VERIFIED_AT:new Date(now-86400001).toISOString()},{MODEL_CALL_RESERVE_USD:'0'},{MODEL_SPEND_CAP_USD:'NaN'}]){const c=seed();assert.throws(()=>reserveModel(c,'s','ip',{...env,...overrides},now));assert.equal(c.usage.calls,0);}});
+test('同來源換會話不能繞過每分鐘3次',()=>{const c=seed();for(let i=0;i<3;i++)reserveModel(c,'s'+i,'ip',env,now);assert.throws(()=>reserveModel(c,'fresh','ip',env,now));reserveModel(c,'fresh','ip',env,now+60001);assert.equal(c.usage.calls,4);});
+test('每個會話最多10次且暫停開關立即生效',()=>{const c=seed();for(let i=0;i<10;i++)reserveModel(c,'s','ip'+i,env,now);assert.throws(()=>reserveModel(c,'s','other',env,now));pauseModels(c);assert.throws(()=>reserveModel(c,'new','new',env,now),/暫停/);assert.equal(c.usage.calls,10);});
+test('總預算不因跨日重設，失敗保留額不會退回',()=>{const c=seed();c.usage.reservedUsd=.99;assert.throws(()=>reserveModel(c,'s','ip',env,now));const d=seed();reserveModel(d,'s','ip',env,now);assert.equal(d.usage.reservedUsd,.02);});
+test('同來源每小時最多5個新會話',()=>{const c=seed();for(let i=0;i<5;i++)admitRequest(c,'ip','start',now);assert.throws(()=>admitRequest(c,'ip','start',now));admitRequest(c,'ip','start',now+3600001);});
+test('本機判斷有共享速率限制但不消耗 Nebius 預留，過期餘額仍不能付費後備',()=>{const c=seed();const now=Date.now();const stale={MODEL_SPEND_CAP_USD:'1',VERIFIED_NEBIUS_BALANCE_USD:'25',BALANCE_VERIFIED_AT:new Date(now-90000000).toISOString()};reserveModel(c,'local','src',stale,now,false);assert.equal(c.usage.reservedUsd,0);assert.equal(c.usage.calls,1);assert.throws(()=>reserveModel(c,'local','src',stale,now,true),LimitError);assert.equal(c.usage.reservedUsd,0);reserveModel(c,'local','src',stale,now,false);reserveModel(c,'local','src',stale,now,false);assert.throws(()=>reserveModel(c,'local','src',stale,now,false),LimitError);});

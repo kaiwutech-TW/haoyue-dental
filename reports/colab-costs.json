@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-10-15T14:20:53.960256+00:00",
+  "gpu": "NVIDIA L4 23034 MiB",
+  "plan": "Existing Colab Pro; no extra credits purchased",
+  "rateComputeUnitsPerHour": 1.54,
+  "firstObservedBalanceApprox": 199.6,
+  "finalBalance": 197.99,
+  "observedBalanceDecreaseApprox": 1.61,
+  "finalActiveAssignments": 0,
+  "finalUsageRate": 0.0,
+  "timingsSeconds": {
+    "abortedDependencyCompilation": 1462.98,
+    "firstBackwardSmokeIncludingFirstKernelCompilation": 102.2837,
+    "v1TrainingAndEvaluation": 64.140257,
+    "v2OptimizationAndEvaluation": 127.128129
+  },
+  "estimatedPureExperimentUnits": 0.08182036512222224,
+  "limitations": "First balance was an earlier rounded observation, not an isolated per-job billing reading. Balance decrease includes dependency setup, downloads, evaluation, idle time and a subsequent project runtime, not only training. Per-experiment units are arithmetic estimates, not provider itemized billing."
+}

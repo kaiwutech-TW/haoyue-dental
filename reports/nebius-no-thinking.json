@@ -1,0 +1,19 @@
+{
+  "decision": {
+    "intent": "reschedule",
+    "date": "2026-10-16",
+    "doctor": null,
+    "period": "afternoon",
+    "appointmentId": null,
+    "question": null
+  },
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "latencyMs": 1796,
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 374,
+    "total_tokens": 428,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  }
+}

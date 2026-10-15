@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "source": "Original author-written synthetic Taiwan dental administrative examples. No scraped conversations or patient records.",
+  "limitations": "Small template corpus; held-out families still authored by same process, not an independent clinical/customer validation. Intent-only warmup, not full slot extraction.",
+  "splits": {
+    "train": {
+      "rows": 96,
+      "sha256": "29a1c4825beca50cd2bd6c37435eb653372ffcadd0944dd473406c8257dfac20",
+      "families": [
+        "admin_faq-train-0",
+        "admin_faq-train-1",
+        "admin_faq-train-2",
+        "appointment_lookup-train-0",
+        "appointment_lookup-train-1",
+        "appointment_lookup-train-2",
+        "book-train-0",
+        "book-train-1",
+        "book-train-2",
+        "cancel-train-0",
+        "cancel-train-1",
+        "cancel-train-2",
+        "clinical_handoff-train-0",
+        "clinical_handoff-train-1",
+        "clinical_handoff-train-2",
+        "human_request-train-0",
+        "human_request-train-1",
+        "human_request-train-2",
+        "reschedule-train-0",
+        "reschedule-train-1",
+        "reschedule-train-2",
+        "unclear-train-0",
+        "unclear-train-1",
+        "unclear-train-2"
+      ]
+    },
+    "validation": {
+      "rows": 8,
+      "sha256": "c00b4ba65cdebdd689c281152ded6765d2f7b43f9c06bdab161d7d03243209de",
+      "families": [
+        "admin_faq-validation-0",
+        "appointment_lookup-validation-0",
+        "book-validation-0",
+        "cancel-validation-0",
+        "clinical_handoff-validation-0",
+        "human_request-validation-0",
+        "reschedule-validation-0",
+        "unclear-validation-0"
+      ]
+    },
+    "test": {
+      "rows": 8,
+      "sha256": "af3ccfcadd088accfde7fa66f3ae6dd9e059b72c2ee97bdc5fbbcfb752a0ed52",
+      "families": [
+        "admin_faq-test-0",
+        "appointment_lookup-test-0",
+        "book-test-0",
+        "cancel-test-0",
+        "clinical_handoff-test-0",
+        "human_request-test-0",
+        "reschedule-test-0",
+        "unclear-test-0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,533 @@
+{
+  "note": "Public snapshot; private deployment credential digest replaced by a configuration placeholder. Original research history and customer files are not included.",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "890baf11574e615192fabb210b1fdbcc44bb0d67643cc81094e160f734b747da"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "ac08dca02cca984401252c1133ae9caf00a79aba093e6c9ebb55c4711b98a980"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "31c29c76ba7091c96015ed73476d2ab75a9947f5f315e3ee2bef06db5a68d88f"
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "506d9648c64a39175800b5f88c76a2584ee05fd737bf385cd42bffef2e0f86aa"
+    },
+    {
+      "path": "README.md",
+      "sha256": "067732b0302e98d4d5c94535e4c675bb5869e457fcad54f7b43674c593cc37fa"
+    },
+    {
+      "path": "app/README.md",
+      "sha256": "f6cb4b4d15f2c106b11476f4acbe76a3c85bc8d347f2f1accbb16709acabbed3"
+    },
+    {
+      "path": "app/agent/agent.ts",
+      "sha256": "cc9f0c2d1c6e67954a84cc37ccee07ce3c86401dd846a502ef43f83ea51befef"
+    },
+    {
+      "path": "app/agent/channels/eve.ts",
+      "sha256": "98e93493bcc8823361ac7420a8936a38c289ddc1eb0a5574217db45969406a2a"
+    },
+    {
+      "path": "app/agent/instructions.md",
+      "sha256": "b351ebb90370a816b695a364ef5a652371fa11df496003b575e5cb55aa2cc17d"
+    },
+    {
+      "path": "app/agent/tools/clinic_information.ts",
+      "sha256": "f523a40ea0402cca7d6628d18a4925b39de58dd7a6297622a17649511756b294"
+    },
+    {
+      "path": "app/app/_components/agent-chat.tsx",
+      "sha256": "da6fe78c3812c2f6cf5e4db693d2a83f14b87b51caa04795df45ab15d4348b32"
+    },
+    {
+      "path": "app/app/_components/agent-message.tsx",
+      "sha256": "6e54a3bb6ac055fb876cbe06602fdde2749b7dd1a72245d50249b975005ebdfe"
+    },
+    {
+      "path": "app/app/api/clinic/route.ts",
+      "sha256": "650c04654d95344dd95eb011094f8e42284ac6f3b57cc771d376eeb0579ea615"
+    },
+    {
+      "path": "app/app/api/desk/route.ts",
+      "sha256": "d3a3cf6c6eabc0543ce2287f8efe227539af3bb5feb5bdd68183573018cf3a4d"
+    },
+    {
+      "path": "app/app/apple-icon.tsx",
+      "sha256": "947e926268759870756f133ea7089bbeda1df7e96cb779a6b5e91352e1f7c334"
+    },
+    {
+      "path": "app/app/dental-demo.tsx",
+      "sha256": "2a2fbfef5c1aca1aaf5f326a19daa2c7f328ec9e5ef0f4b865006b6dbb2f0528"
+    },
+    {
+      "path": "app/app/desk/page.tsx",
+      "sha256": "71fb6f1517246fbbd7da046320b0dea36d8cb136a449eaecf89eac4549e99e35"
+    },
+    {
+      "path": "app/app/en/page.tsx",
+      "sha256": "20ef55fd58eeed67caefd0911704e913f33cbd1ac38da37dd0265ec5832b82ed"
+    },
+    {
+      "path": "app/app/eve-agent.ts",
+      "sha256": "d048c7169ed7e79bcc965d78115c98362729bf196114c36338d996a885ddc8cc"
+    },
+    {
+      "path": "app/app/globals.css",
+      "sha256": "91d907dd255985742102e8f98798f838492d149d762a58dd7c64cc89dc573786"
+    },
+    {
+      "path": "app/app/icon.svg",
+      "sha256": "a602a4540db4f1d2f9579f479f4c0c376ac5de960d6680d4ef7ab6632b6bf03f"
+    },
+    {
+      "path": "app/app/layout.tsx",
+      "sha256": "e31f2fe4cc3d55ad10ee0cecec97b051bffbcc5286f6dc8e3ccdf3273efbe929"
+    },
+    {
+      "path": "app/app/page.tsx",
+      "sha256": "8f16c0af12b8208b5b5f957b53f7d4560c0cde9da5ac1f84b2508c5d4d2edf1e"
+    },
+    {
+      "path": "app/app/product-story.tsx",
+      "sha256": "995382d359f6e94f6452a3ab4467ef6ee2f9bccdaabd1870dc8c834442a39852"
+    },
+    {
+      "path": "app/app/runtime-panel.tsx",
+      "sha256": "bdb6fa2ed6983ab3143329a3d385aa46da8b42f16a4bc16d9c8886d0d2e7f210"
+    },
+    {
+      "path": "app/app/s/[sessionId]/page.tsx",
+      "sha256": "fde772f3b1b5e4c2a05aabb3c03d84aa214ab8bfc2371bf2ad9e760d232e468b"
+    },
+    {
+      "path": "app/app/s/page.tsx",
+      "sha256": "eb604a46f53508eb5a2961e4c51619e1952b4fea6e616e6a18bef929ebca3451"
+    },
+    {
+      "path": "app/components/ai-elements/chain-of-thought.tsx",
+      "sha256": "f2e736334672a5b0d582ea8fc3f8c21b9103d66de224b16a74dcd815f1b50720"
+    },
+    {
+      "path": "app/components/ai-elements/code-block.tsx",
+      "sha256": "37a19d3741c1c7939bc4119a4caeff4bc4be1d58a35b64dbe8a4887fb4be752a"
+    },
+    {
+      "path": "app/components/ai-elements/conversation.tsx",
+      "sha256": "07c89e59abc696c24edc3550caed02118c2b4f208f67baf90bfe3b04c229a83b"
+    },
+    {
+      "path": "app/components/ai-elements/message.tsx",
+      "sha256": "abfa6831e57b21983c83b3efbaf7a0ade4c43dabd7ee437bcd98cba8238c495a"
+    },
+    {
+      "path": "app/components/ai-elements/prompt-input.tsx",
+      "sha256": "585e54570b8efe7d8ee77cecaefbf4035edd427568a40d5fa4c3327f9ecfb9bc"
+    },
+    {
+      "path": "app/components/ai-elements/reasoning.tsx",
+      "sha256": "e7ad94b8413dd6a874a76c40f9589869339e0bd7e34d47ae4bf0cc877114d3f9"
+    },
+    {
+      "path": "app/components/ai-elements/shimmer.tsx",
+      "sha256": "ce52a09bc31d666db85a1fd2bb7300a2dc876ee94c2de1e279f4c107b42db15c"
+    },
+    {
+      "path": "app/components/ai-elements/tool.tsx",
+      "sha256": "4ab644ce61bb08bd9353722fac7585bc42a413434fbbbc80f7b4fc31e2ed1c2c"
+    },
+    {
+      "path": "app/components/ui/badge.tsx",
+      "sha256": "4ea6445c7a7074d2ad9b502921a29b204454ff6ed698b544ef0fcb71631d8761"
+    },
+    {
+      "path": "app/components/ui/button-group.tsx",
+      "sha256": "a04b8400f24dce057f95ce4e5362bdca4425280cd0a3ff27c9184e12994ac38a"
+    },
+    {
+      "path": "app/components/ui/button.tsx",
+      "sha256": "86c0a56d698415b231be7ae12e6167fb4ccb2b15625ba1baf5fb71d7ec24369d"
+    },
+    {
+      "path": "app/components/ui/collapsible.tsx",
+      "sha256": "725da7a95b858d296a2c7f138026ffa40292a41c590eafc0794426ed0b53ebb0"
+    },
+    {
+      "path": "app/components/ui/command.tsx",
+      "sha256": "1d24c826bdecbd9e019453fc4fbbaa6fb0830e4a458ebb3ac3847295051e0ddd"
+    },
+    {
+      "path": "app/components/ui/dialog.tsx",
+      "sha256": "c75132d97010cc2d814738c594cff4270a19b999f17a0ac6931bde2f744892d2"
+    },
+    {
+      "path": "app/components/ui/dropdown-menu.tsx",
+      "sha256": "2410b89e52e3f839bee20e2dacb1e36c546e01930c76e83d8a38f61d39826a5e"
+    },
+    {
+      "path": "app/components/ui/hover-card.tsx",
+      "sha256": "589a8e1683545e8f4846dd1e8a76e3e605fc10ecd242f930b17d85c05e1805c7"
+    },
+    {
+      "path": "app/components/ui/input-group.tsx",
+      "sha256": "2955e17cd2cb6ab32774a830ee23608257806bc594d8bc0b7ba47c2082a2d7f9"
+    },
+    {
+      "path": "app/components/ui/input.tsx",
+      "sha256": "42044918d929bb9700f7e3d09b5563d077556a5811edfba0800d7f513cdde653"
+    },
+    {
+      "path": "app/components/ui/questionnaire.tsx",
+      "sha256": "cbba7167283e2b35fe899415a6b7f75f6a642ef3523b8cdce8a13d0adadaf81c"
+    },
+    {
+      "path": "app/components/ui/select.tsx",
+      "sha256": "815fb02c3f3225c24a85194b8e45f971854ffcca7f29e5e9197f02c2cc296d75"
+    },
+    {
+      "path": "app/components/ui/separator.tsx",
+      "sha256": "24dca9610c315dd74c9683e513c7fdd207b0358cc74493195f2758d73cbad286"
+    },
+    {
+      "path": "app/components/ui/spinner.tsx",
+      "sha256": "ecd836d476573adb4403747c3457339276805433c20eacf3408303b76ec283ff"
+    },
+    {
+      "path": "app/components/ui/textarea.tsx",
+      "sha256": "fc3a4f734dd0a3b9ef7bc4b3bcafd4c420ed8ea60933af885abd40f200a57600"
+    },
+    {
+      "path": "app/components/ui/tooltip.tsx",
+      "sha256": "fb41a5c464505920ac49392758a98686ff546eec208553ba72a871c27adc0743"
+    },
+    {
+      "path": "app/components.json",
+      "sha256": "69e0b1e4d27fca1f17d46aa44d3c3e8ced350ada2f03e60f75723fe868851262"
+    },
+    {
+      "path": "app/css.d.ts",
+      "sha256": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+    },
+    {
+      "path": "app/lib/dental/access.ts",
+      "sha256": "835f00a143dbc0d804be61682a769f6a555fda1842c685db32c42539c31b026a"
+    },
+    {
+      "path": "app/lib/dental/budget.ts",
+      "sha256": "77db0cd04fbd86d8bf744d7f92523583ffadad763ba53e9cd9570f8a3aece526"
+    },
+    {
+      "path": "app/lib/dental/choice.ts",
+      "sha256": "a901d1a1f2b01005631fdc0b8a819c4687558d0cca8453a14ff6a680fedf4794"
+    },
+    {
+      "path": "app/lib/dental/domain.ts",
+      "sha256": "2b2d5d3584685fd4f2fdd1d684721d92fc2adb922bd70b8d7a004d6791cb6c7a"
+    },
+    {
+      "path": "app/lib/dental/language.ts",
+      "sha256": "b5cc82664d1bddd344049711a6849623e87018fee49231c9d42f3b7d58287660"
+    },
+    {
+      "path": "app/lib/dental/model.ts",
+      "sha256": "6ef29af8759288db84e60a2d3c3b36a356d21d63b4d225c42b459f2def784a72"
+    },
+    {
+      "path": "app/lib/dental/service.ts",
+      "sha256": "e2a8323c578e2fb532618a73da0b3e46f551c8ec44f7d2c139734e545f318c6f"
+    },
+    {
+      "path": "app/lib/dental/store.ts",
+      "sha256": "107999cf9967538c14a71dcbd41e0e60711cdb9b1fd29d37776853a6e9fbfaff"
+    },
+    {
+      "path": "app/lib/dental/support.ts",
+      "sha256": "c321d9b33dc125b734a6930e56e41fbb132a93c8fe8680ae5c4b90bf3c59dddc"
+    },
+    {
+      "path": "app/lib/dental/trace.ts",
+      "sha256": "2d173e0ae0dcb549a35a862fafe1f815f9080f24e1444c2cfe729f54ca26c3e4"
+    },
+    {
+      "path": "app/lib/utils.ts",
+      "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68"
+    },
+    {
+      "path": "app/next-env.d.ts",
+      "sha256": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b"
+    },
+    {
+      "path": "app/next.config.ts",
+      "sha256": "26cd0951ecea3ff7ec3a1d9400a85ea69d95c5f2851b62b19191e2336b161e5e"
+    },
+    {
+      "path": "app/package-lock.json",
+      "sha256": "4f68e89aeaa06aa98f2ac48e03c6860198131088de54eb5a3576d3988a6d4260"
+    },
+    {
+      "path": "app/package.json",
+      "sha256": "0892d6788e58af98a7215f55a83ba04a6014fc80046d8c4c499906aa4caa7c0b"
+    },
+    {
+      "path": "app/postcss.config.mjs",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+    },
+    {
+      "path": "app/proxy.ts",
+      "sha256": "af5be87a71a6581d54031e80bcee338b2bb0a492373c0d71321486985b07f37f"
+    },
+    {
+      "path": "app/public/evidence/summary.json",
+      "sha256": "0d58050599c3efdcfadb0c73127e1b829f79ee2b83a705b55f4bc1332fc72927"
+    },
+    {
+      "path": "app/public/training/bundle.json",
+      "sha256": "4fcdf0988c298c4c55423866fdc5ff38e0c20ece353458ee7975dbb6f2e682fb"
+    },
+    {
+      "path": "app/tests/bilingual.test.ts",
+      "sha256": "ee587cd06315d7af800c27348aced2bc4979c04b3f05d691230234e01ceef0c4"
+    },
+    {
+      "path": "app/tests/budget.test.ts",
+      "sha256": "2fa5f9ba553272bab5d986037d5ba341f2d2073e0f7a548f71ae723c4aa4488d"
+    },
+    {
+      "path": "app/tests/choice.test.ts",
+      "sha256": "c715d4aac3813d6698eec562d807cbbd9d3e1c366c31d3157a514bd8ad0f63e0"
+    },
+    {
+      "path": "app/tests/domain.test.ts",
+      "sha256": "3108976a7406c262f1aa411122e6f0ded29a2c85d66d554c7e09e4da8e98b62c"
+    },
+    {
+      "path": "app/tests/model.test.ts",
+      "sha256": "80caba9c3a4e4aa33d0619d5aa6ad20a91a984825960a032115322e9d800f22a"
+    },
+    {
+      "path": "app/tests/patient-guidance.test.ts",
+      "sha256": "8b641ef64e22ad247efcf817db0a94b1f6e567069da951f0215500245878f3bc"
+    },
+    {
+      "path": "app/tsconfig.json",
+      "sha256": "3d9bd6c20857381de65be62eddcf37ba3749071c4d5479f4e6e20dc026070349"
+    },
+    {
+      "path": "app/vercel.json",
+      "sha256": "f15b19cb4a14ac45e4652c444a0d96d991427dc508edba6d8634cb1e6212c25b"
+    },
+    {
+      "path": "data/challenge.json",
+      "sha256": "7d1caaac2e71ee97b916247bd5b71e9db0ba46dcb44974aace7a801ea13f6d32"
+    },
+    {
+      "path": "data/manifest.json",
+      "sha256": "96d51d68a29be5f7398690934509d5726422033d103e63cf6b296acf50a9948f"
+    },
+    {
+      "path": "data/test.jsonl",
+      "sha256": "af3ccfcadd088accfde7fa66f3ae6dd9e059b72c2ee97bdc5fbbcfb752a0ed52"
+    },
+    {
+      "path": "data/train.jsonl",
+      "sha256": "29a1c4825beca50cd2bd6c37435eb653372ffcadd0944dd473406c8257dfac20"
+    },
+    {
+      "path": "data/v2/manifest.json",
+      "sha256": "0e8aefcf7244a6f92526337e05c0c0c28b4a9015f8dfc43150a75350beac0545"
+    },
+    {
+      "path": "data/v2/source.json",
+      "sha256": "02f44a3f42960c39b4b4ef8fefa126c744a2f72744e8f9b24dcc4fddece0918a"
+    },
+    {
+      "path": "data/v2/test.jsonl",
+      "sha256": "dc76861790ee648fbaf1a33c15a9e4166f89e2c5ef3c5387332dee5b391e0e43"
+    },
+    {
+      "path": "data/v2/train.jsonl",
+      "sha256": "5f4b1ecf1548f07476cf628e708c45db7e6879363e8fb9044163485be2f985a1"
+    },
+    {
+      "path": "data/v2/validation.jsonl",
+      "sha256": "b723acb0593ff053b1b8091083493e2e73ebab9c4aff60a95d8964a76a137f04"
+    },
+    {
+      "path": "data/validation.jsonl",
+      "sha256": "c00b4ba65cdebdd689c281152ded6765d2f7b43f9c06bdab161d7d03243209de"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "sha256": "7b6842e1f2ba8464b78f5c1aa1480866dd7d688a334b603a38b40e2376d0b316"
+    },
+    {
+      "path": "docs/MODEL_CARD.md",
+      "sha256": "b745824efeb7f8a61d4803cf330598224f3a1d1077979132835b19689611e4f4"
+    },
+    {
+      "path": "docs/assets/README.md",
+      "sha256": "94f74a3ef036e8d8247194b8eb0208a7a500ab66ea1059575cf434c108b24ff2"
+    },
+    {
+      "path": "docs/assets/haoyue-cover.png",
+      "sha256": "ee41051fb14c5764f89020b74bffb6383b3ff4ce76039db8328fb513e2ca5dde"
+    },
+    {
+      "path": "docs/customer-service-design.md",
+      "sha256": "a2ba1ebb38dcab7c102ece45632f4d39ea9f61b91807bda181d4a300d70ecbf0"
+    },
+    {
+      "path": "docs/demo-script.md",
+      "sha256": "e441b3d257ab440713db1170c433b7415892ba8958b47e431dddf7fe0c40b32a"
+    },
+    {
+      "path": "docs/submission-draft.md",
+      "sha256": "e8b268debc72bb10a77088ba78277f18896a4a4a5aed87722a9646627532c614"
+    },
+    {
+      "path": "inference/choice.py",
+      "sha256": "a7b8fd21991537b85664d22c6ca1ec81fab16c57eff9eb11e7efdc5540e82bf0"
+    },
+    {
+      "path": "inference/evaluate_mlx.py",
+      "sha256": "0629de726d103a6cb701ee045414c0ba63404cf670d60f510ff7a9e9da3ce8f8"
+    },
+    {
+      "path": "inference/server.py",
+      "sha256": "15ef70ea323bb078a6c3ee4c2a695dc93291c73e7f96e32eec67622b306506b1"
+    },
+    {
+      "path": "licenses/NVIDIA-Nemotron-Open-Model-License.pdf",
+      "sha256": "2ffd837856bb99d4cee13d17f0b597ecfeb95c38e30abc08d3dffef7d589881d"
+    },
+    {
+      "path": "reports/colab-costs.json",
+      "sha256": "9ef63d11fb3c4b2038b9d7600c2b4b50a2261d3f03a31fb4ffbe4e0585e7c06d"
+    },
+    {
+      "path": "reports/english-demo-smoke.json",
+      "sha256": "632668808cdfbebf49b8f907fbed443aa0f7759f4a323c0585842e79bcee9ec5"
+    },
+    {
+      "path": "reports/live-chinese.json",
+      "sha256": "2ded820e198bf16dcd8937d11ddba1bbf3d9f37e51d7955e568921bf14efede4"
+    },
+    {
+      "path": "reports/live-english.json",
+      "sha256": "a98c47c65ea5d158d7698e79de84ca169100b98ec5e8ab855f4b57595d65bb5a"
+    },
+    {
+      "path": "reports/mlx-choice-v2.json",
+      "sha256": "ddeee2aeb54ee20da6a864f5e961023ea81324bcfcc26913175c97d423c6ebb3"
+    },
+    {
+      "path": "reports/nebius-baseline.json",
+      "sha256": "18ef75e22fa1c5e96205b1a67abd9e17b74bfe19db4d198dd24581970300b5c7"
+    },
+    {
+      "path": "reports/nebius-hosting-check.json",
+      "sha256": "d35cdeb09f4bad488d55eb38f9158d953b3314e1676c2e31490a88a7078461de"
+    },
+    {
+      "path": "reports/nebius-no-thinking.json",
+      "sha256": "6ec914d7e188fff4e23e974dd0c25527f30a122eecbebc4fa158c958b6c41764"
+    },
+    {
+      "path": "reports/nebius-smoke.json",
+      "sha256": "8f899b443551a5aef7eac8c907988fecf121b0aae3bbd8e39e322a39affa6f1c"
+    },
+    {
+      "path": "reports/nvidia4b-challenge-v1.json",
+      "sha256": "7513f7cf67b1d02076594d0a1df3a76319cff0eb7872c4917b078fa40e6ec30e"
+    },
+    {
+      "path": "reports/nvidia4b-choice-evaluation.json",
+      "sha256": "cfa05163fdc9c90613bb1e2c244980d82057c524836ce0a6dbb67504d87f3e8e"
+    },
+    {
+      "path": "reports/nvidia4b-choice-v2.json",
+      "sha256": "b6c1d38539133faee1e9087b8a54d6db9083dfcbf4ab471ea985872c9db62b5a"
+    },
+    {
+      "path": "reports/nvidia4b-smoke.json",
+      "sha256": "f249cb9cc937e68fd37ff1e3244a7c3dbc79e08d0aa905891f3b8df5fbf0c064"
+    },
+    {
+      "path": "scripts/deploy-source.py",
+      "sha256": "2089b7d6de540c3003432d5942515f4c5b899ff07e14437c19683e1675cbdc0f"
+    },
+    {
+      "path": "scripts/integration-en.mjs",
+      "sha256": "4237fdd9953325f73abb861648d16f425bce690551c867e55b8995e647211bfb"
+    },
+    {
+      "path": "scripts/integration.mjs",
+      "sha256": "696cc4e5dad034ac5276768fd3cc0de77e5b0f922e04758231f318348eee6d10"
+    },
+    {
+      "path": "scripts/package-training.py",
+      "sha256": "c7989eee60bbd900b857014722f6190095920ff8602e1e7b0e069c73a6fc3add"
+    },
+    {
+      "path": "scripts/run-choice-server.py",
+      "sha256": "14549fc0ec553553467cb41e075065497aafde4a4bca9d3923d57bce10e6f757"
+    },
+    {
+      "path": "scripts/supervise-choice.py",
+      "sha256": "3798acdd83912e1493c0eff96caca9bf275abe17352c0f890b6be890ac27cb4b"
+    },
+    {
+      "path": "supabase/functions/clinic-store/index.ts",
+      "sha256": "e38e4eb4bd883e81e01c9fd7a3ea07a7f0e4858e145f4ef6958703ff60369b70"
+    },
+    {
+      "path": "supabase/functions/clinic-store/secret-hash.ts",
+      "sha256": "7ad4b562af50c2022aea5b810792c2161240ec9b178ff0c96c48b5a1634184e1"
+    },
+    {
+      "path": "training/README.md",
+      "sha256": "15a75db4c314777786c959ebc3fdd0fd3e2ba949d6d3d0a8c11a59a832751c39"
+    },
+    {
+      "path": "training/build_dataset.py",
+      "sha256": "88022820e428af58ddd94434fd405d773ffc23e9143c2b60f3666a592406694a"
+    },
+    {
+      "path": "training/colab_job.py",
+      "sha256": "59a2a4697babe3a7e301bb532de176f8dd6081d949da0c9a56a4cbec6f93d3e7"
+    },
+    {
+      "path": "training/decision_model.py",
+      "sha256": "984f61174a397e9764338b2c08ddcbf5741ff45d0eb2814f0eee12fd59e8a266"
+    },
+    {
+      "path": "training/evaluate_challenge.py",
+      "sha256": "466f48447d38be66906edf4c6a43855279db58da372682273125f382c945d858"
+    },
+    {
+      "path": "training/gpu_runner.py",
+      "sha256": "7fc04bebdee3fc6c21b7bd1d05a7d6d6ed09400c523c4b83c3a019f3f07b0310"
+    },
+    {
+      "path": "training/rebuild_v2.py",
+      "sha256": "9541b2198dfffd3aa45bfb22e5cbeb1c4b90104ebcf39c17061308f33723d0b5"
+    },
+    {
+      "path": "training/setup_colab.sh",
+      "sha256": "b0aef1cb5ee55cdfc2b6fad9d389a0fd8080695ec9b1345278e5374c547024f4"
+    },
+    {
+      "path": "training/train.py",
+      "sha256": "a401b553a1121dcd08ce3e9df569a4705c9795607334f5e924decae3be49b18d"
+    },
+    {
+      "path": "training/train_v2.py",
+      "sha256": "fbeaae36047928f6815e880ce31f5c9a1d37329bf686e5692a28d591b2a507d4"
+    }
+  ]
+}

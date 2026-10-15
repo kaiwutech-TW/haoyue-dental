@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-15T15:08:28.583Z",
+  "base": "https://haoyue-dental.vercel.app",
+  "passed": true,
+  "elapsedMs": 11892,
+  "checks": [
+    "English free text",
+    "guided mistaken click without model",
+    "actual adapter decision",
+    "confirmation before write",
+    "repeat preserves proposal without model",
+    "idempotent commit",
+    "English human handoff",
+    "staff reply readback",
+    "locale cookie isolation"
+  ],
+  "choice": {
+    "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+    "adapterHash": "4940141c0e05473b3cc1bb77ea8ab341deb6183c1a6dcc4039136c8ab0fac857",
+    "forwardMs": 152.70879099989543
+  }
+}

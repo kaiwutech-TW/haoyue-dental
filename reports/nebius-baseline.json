@@ -1,0 +1,182 @@
+{
+  "at": "2026-10-15T12:56:44.241Z",
+  "scope": "8 synthetic held-out intent families; not clinical validation. No fine-tuned comparison yet.",
+  "results": [
+    {
+      "text": "最近想安排牙齒檢查",
+      "expected": "book",
+      "decision": {
+        "intent": "appointment_lookup",
+        "date": "2026-10-15",
+        "doctor": null,
+        "period": null,
+        "appointmentId": null,
+        "question": "最近想安排牙齒檢查"
+      },
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "latencyMs": 1902,
+      "usage": {
+        "completion_tokens": 62,
+        "prompt_tokens": 378,
+        "total_tokens": 440,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "pass": false
+    },
+    {
+      "text": "我臨時要加班，能換時間嗎",
+      "expected": "reschedule",
+      "decision": {
+        "intent": "reschedule",
+        "date": null,
+        "doctor": null,
+        "period": null,
+        "appointmentId": null,
+        "question": "請提供希望改為的日期或時段，並說明是否在營業時間內。"
+      },
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "latencyMs": 1052,
+      "usage": {
+        "completion_tokens": 66,
+        "prompt_tokens": 382,
+        "total_tokens": 448,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "pass": true
+    },
+    {
+      "text": "原先約好的那次取消吧",
+      "expected": "cancel",
+      "decision": {
+        "intent": "cancel",
+        "date": null,
+        "doctor": null,
+        "period": null,
+        "appointmentId": null,
+        "question": "原先約好的那次取消吧"
+      },
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "latencyMs": 1098,
+      "usage": {
+        "completion_tokens": 50,
+        "prompt_tokens": 377,
+        "total_tokens": 427,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "pass": true
+    },
+    {
+      "text": "我下次什麼時候要去",
+      "expected": "appointment_lookup",
+      "decision": {
+        "intent": "appointment_lookup",
+        "date": null,
+        "doctor": null,
+        "period": null,
+        "appointmentId": null,
+        "question": "請問您想查詢哪個日期的預約？"
+      },
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "latencyMs": 1522,
+      "usage": {
+        "completion_tokens": 57,
+        "prompt_tokens": 378,
+        "total_tokens": 435,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "pass": true
+    },
+    {
+      "text": "你們星期天有開嗎",
+      "expected": "admin_faq",
+      "decision": {
+        "intent": "appointment_lookup",
+        "date": "2026-10-15",
+        "doctor": null,
+        "period": null,
+        "appointmentId": null,
+        "question": "您是想確認本院是否在星期日（2026-10-15）開診嗎？若是想預約或調整時間，請告訴我您希望的日期、時段或醫師，我會為您查詢。"
+      },
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "latencyMs": 1599,
+      "usage": {
+        "completion_tokens": 118,
+        "prompt_tokens": 376,
+        "total_tokens": 494,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "pass": false
+    },
+    {
+      "text": "不要機器人，請人員接手",
+      "expected": "human_request",
+      "decision": {
+        "intent": "human_request",
+        "date": null,
+        "doctor": null,
+        "period": null,
+        "appointmentId": null,
+        "question": "請接手人工客服"
+      },
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "latencyMs": 1207,
+      "usage": {
+        "completion_tokens": 50,
+        "prompt_tokens": 379,
+        "total_tokens": 429,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "pass": true
+    },
+    {
+      "text": "臉腫又發燒，能先吃抗生素嗎",
+      "expected": "clinical_handoff",
+      "decision": {
+        "intent": "clinical_handoff",
+        "date": null,
+        "doctor": null,
+        "period": null,
+        "appointmentId": null,
+        "question": "臉腫又發燒，能先吃抗生素嗎"
+      },
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "latencyMs": 1063,
+      "usage": {
+        "completion_tokens": 61,
+        "prompt_tokens": 385,
+        "total_tokens": 446,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "pass": true
+    },
+    {
+      "text": "算了，還是再想想",
+      "expected": "unclear",
+      "decision": {
+        "intent": "unclear",
+        "date": null,
+        "doctor": null,
+        "period": null,
+        "appointmentId": null,
+        "question": "請說明您想要預約、調整還是取消？"
+      },
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+      "latencyMs": 1602,
+      "usage": {
+        "completion_tokens": 60,
+        "prompt_tokens": 375,
+        "total_tokens": 435,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "pass": true
+    }
+  ]
+}
