@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024"><defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#55816b" stroke-width="1.5"/></marker></defs><rect width="1536" height="1024" fill="#faf9f0"/>
+<text x="64" y="76" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#62805f">HAOYUE / ARCHITECTURE</text>
+<text x="64" y="140" font-family="Arial, sans-serif" font-size="46" font-weight="bold" fill="#244d3e">From a message to a confirmed booking</text>
+<text x="64" y="188" font-family="Arial, sans-serif" font-size="24" font-weight="normal" fill="#62805f">Real model scores. Explicit confirmation. Verifiable state changes.</text>
+<rect x="64" y="270" width="312" height="206" rx="22" fill="#fffef9" stroke="#ccd9cd" stroke-width="2"/>
+<text x="88" y="308" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6c886b">01 / PATIENT</text>
+<text x="88" y="347" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#244d3e">Type or tap</text>
+<text x="88" y="384" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Mandarin + English demo</text>
+<text x="88" y="412" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Guidance for confusion</text>
+<text x="88" y="440" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Repeated request: skip AI</text>
+<rect x="428" y="270" width="312" height="206" rx="22" fill="#edf4db" stroke="#ccd9cd" stroke-width="2"/>
+<text x="452" y="308" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6c886b">02 / INTENT</text>
+<text x="452" y="347" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#244d3e">NVIDIA 4B LoRA</text>
+<text x="452" y="384" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">8 choices · one forward pass</text>
+<text x="452" y="412" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Trained on a Colab L4</text>
+<text x="452" y="440" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Served on Mac with MLX</text>
+<rect x="792" y="270" width="312" height="206" rx="22" fill="#fffef9" stroke="#ccd9cd" stroke-width="2"/>
+<text x="816" y="308" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6c886b">03 / VALIDATE</text>
+<text x="816" y="347" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#244d3e">Application rules</text>
+<text x="816" y="384" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Patient ownership + version</text>
+<text x="816" y="412" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Date, doctor + availability</text>
+<text x="816" y="440" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Model cannot write bookings</text>
+<rect x="1156" y="270" width="312" height="206" rx="22" fill="#fffef9" stroke="#ccd9cd" stroke-width="2"/>
+<text x="1180" y="308" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6c886b">04 / CONFIRM</text>
+<text x="1180" y="347" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#244d3e">Patient approval</text>
+<text x="1180" y="384" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Session-bound proposal</text>
+<text x="1180" y="412" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Expires after 10 minutes</text>
+<text x="1180" y="440" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Original booking preserved</text>
+<path d="M376 373H416" stroke="#55816b" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M740 373H780" stroke="#55816b" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M1104 373H1144" stroke="#55816b" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<rect x="64" y="605" width="312" height="206" rx="22" fill="#fffef9" stroke="#ccd9cd" stroke-width="2"/>
+<text x="88" y="643" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6c886b">SAFETY ROUTE</text>
+<text x="88" y="682" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#244d3e">Human front desk</text>
+<text x="88" y="719" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Symptoms or human request</text>
+<text x="88" y="747" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Actual handoff case</text>
+<text x="88" y="775" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Staff-written reply</text>
+<rect x="428" y="605" width="312" height="206" rx="22" fill="#edf4db" stroke="#ccd9cd" stroke-width="2"/>
+<text x="452" y="643" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6c886b">WHEN NEEDED</text>
+<text x="452" y="682" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#244d3e">Nebius Token Factory</text>
+<text x="452" y="719" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">NVIDIA Nano 30B fallback</text>
+<text x="452" y="747" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Low score or local failure</text>
+<text x="452" y="775" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Shared budget reservation</text>
+<rect x="1156" y="605" width="312" height="206" rx="22" fill="#e1efdf" stroke="#ccd9cd" stroke-width="2"/>
+<text x="1180" y="643" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6c886b">05 / COMMIT</text>
+<text x="1180" y="682" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#244d3e">Supabase</text>
+<text x="1180" y="719" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Atomic compare-and-swap</text>
+<text x="1180" y="747" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Replay + conflict protection</text>
+<text x="1180" y="775" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Read back the saved result</text>
+<path d="M220 476V592" stroke="#55816b" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M584 476V592" stroke="#55816b" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M740 706H770V530H948V489" stroke="#55816b" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M1312 476V592" stroke="#55816b" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<text x="792" y="650" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#244d3e">Fail safely</text>
+<text x="792" y="686" font-family="Arial, sans-serif" font-size="20" font-weight="normal" fill="#244d3e">Clarify or hand off</text>
+<text x="792" y="718" font-family="Arial, sans-serif" font-size="20" font-weight="normal" fill="#244d3e">when no valid decision</text>
+<text x="792" y="750" font-family="Arial, sans-serif" font-size="20" font-weight="normal" fill="#244d3e">is available.</text>
+<rect x="64" y="866" width="1404" height="100" rx="20" fill="#e8eee1"/>
+<text x="90" y="907" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#244d3e">KNOWLEDGE: Tavily research → staff review → approved clinic FAQ</text>
+<text x="90" y="941" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#244d3e">Fictional patients only · Style cues are rules · Tokyo app + database · Authenticated inference tunnel</text>
+</svg>

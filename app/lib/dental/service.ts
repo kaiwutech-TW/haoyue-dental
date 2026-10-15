@@ -8,7 +8,7 @@ const locks=new Map<string,Promise<unknown>>();
 export async function chat(id:string,text:string,source:string){const prior=locks.get(id)??Promise.resolve();const job=prior.catch(()=>{}).then(()=>run(id,text,source));locks.set(id,job);try{return await job;}finally{if(locks.get(id)===job)locks.delete(id);}}
 async function run(id:string,text:string,source:string){
  const input=await transact(c=>{const current=getSession(c,id);if(current.messages.filter(m=>m.role==='user'&&Date.now()-Date.parse(m.at)<60000).length>=6)throw Error('請稍候再傳送訊息');
-  if(!current.handoff&&repeated(current,text)){current.trace=[];message(current,'user',text);current.support='step_by_step';recordStep(current,'validation','重複需求，免再次推論','僅依文字明確線索調整說明方式，不判定年齡、人格或真實情緒。',{provider:'Rule engine'});message(current,'assistant','已收到同樣的需求，先保留畫面上的選項。慢慢選一個時段，或直接輸入想調整的地方即可；不需要重複點擊。');return {s:structuredClone(current),skip:true};}
+  if(!current.handoff&&repeated(current,text)){current.trace=[];message(current,'user',text);current.support='step_by_step';recordStep(current,'validation','重複需求，免再次推論','僅依文字明確線索調整說明方式，不判定年齡、人格或真實情緒。',{provider:'Rule engine'});message(current,'assistant',current.proposal||current.options.length?'已收到同樣的需求，先保留畫面上的選項。慢慢選一個時段，或直接輸入想調整的地方即可；不需要重複點擊。':'您的訊息已收到，不需要重複點擊。可以直接輸入下一個需求，例如「查詢預約」，或選「找真人」，我會一步一步協助您。');return {s:structuredClone(current),skip:true};}
   const s=beginMessage(c,id,text);guide(s,text);
   const safe=ruleDecision(text,s);const help=s.support==='step_by_step'&&safe.intent==='unclear';
   if(help&&!s.handoff){recordStep(s,'validation','耐心引導','僅依文字明確線索調整說明方式，不判定年齡、人格或真實情緒。',{provider:'Rule engine'});message(s,'assistant','沒關係，不需要一直點按鈕。您可以直接輸入「我要預約」或「查詢預約」，也可以選「找真人」。確認前不會更動預約。');}

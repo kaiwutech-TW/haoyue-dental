@@ -108,3 +108,7 @@ Nebius 查核見 [hosting evidence](../reports/nebius-hosting-check.json)：帳�
 ## 授權
 
 程式與合成語句依根目錄 LICENSE；NVIDIA 基礎模型及衍生 adapter 另受 [NVIDIA Nemotron Open Model License](https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-nemotron-open-model-license/) 約束。公開權重時須保留模型來源、授權與使用限制，不能把它們改稱 MIT。
+
+## 公開來源與權重
+
+[完整程式與報告](https://github.com/kaiwutech-TW/haoyue-dental)；[v2 adapter release 與 SHA256SUMS](https://github.com/kaiwutech-TW/haoyue-dental/releases/tag/choice-v2)。release ZIP 附 NVIDIA 授權副本，未包含基礎 8 GB 權重。程式的 MIT 授權不會重新授權模型資產。

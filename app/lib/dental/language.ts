@@ -3,6 +3,7 @@ export const doctorName=(name:string,locale:Locale='zh')=>locale==='en'?name.rep
 export const patientName=(id:string,locale:Locale='zh')=>locale==='en'?(id==='lin'?'Claire Lin':'Mr. Wu'):(id==='lin'?'林小晴':'吳先生');
 // Approved presentation copy. Never translate patient messages or staff replies.
 const copy:Record<string,string>={
+'您的訊息已收到，不需要重複點擊。可以直接輸入下一個需求，例如「查詢預約」，或選「找真人」，我會一步一步協助您。':'I have your message—you don’t need to click again. Type your next request, such as “Check my appointment”, or choose human help. We can go step by step.',
 '示範使用次數已達上限，請稍後再試。':'Demo usage limit reached. Please try again later.',
 '示範暫停':'Demo paused','示範容量已滿，請稍後再試。':'Demo capacity reached. Please try again later.',
 'AI 示範已暫停。':'AI demo paused.','AI 示範暫停，等待管理員確認額度。':'AI fallback is paused pending an administrator balance check.',

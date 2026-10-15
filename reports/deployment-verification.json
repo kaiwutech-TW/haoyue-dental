@@ -1,0 +1,25 @@
+{
+  "deployment": "dpl_HuZCGtYpWsGEwx575mvCkW5sXK4r",
+  "ready": true,
+  "region": "hnd1",
+  "publicPageChecks": [
+    {
+      "path": "/en",
+      "status": 200,
+      "localizedHeading": true,
+      "sourceAndAdapterLinks": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "localizedHeading": true,
+      "sourceAndAdapterLinks": true
+    }
+  ],
+  "browserVisualReview": "pending: Computer Use cgWindowNotFound",
+  "workflowEvidence": [
+    "live-english.json",
+    "live-chinese.json"
+  ],
+  "note": "Workflow reports precede the final link/copy-only polish deployment; runtime architecture unchanged."
+}

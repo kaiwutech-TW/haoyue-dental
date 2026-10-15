@@ -19,7 +19,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "067732b0302e98d4d5c94535e4c675bb5869e457fcad54f7b43674c593cc37fa"
+      "sha256": "81d12e305bb349462d783b9d7adb2100e6ae055dd34837eb1e72740bc626326e"
     },
     {
       "path": "app/README.md",
@@ -95,7 +95,7 @@
     },
     {
       "path": "app/app/product-story.tsx",
-      "sha256": "995382d359f6e94f6452a3ab4467ef6ee2f9bccdaabd1870dc8c834442a39852"
+      "sha256": "75ea072170b9f8e6b52f33784c4edb6c2c9db13bb9c41fb8d3ae542e058bb407"
     },
     {
       "path": "app/app/runtime-panel.tsx",
@@ -231,7 +231,7 @@
     },
     {
       "path": "app/lib/dental/language.ts",
-      "sha256": "b5cc82664d1bddd344049711a6849623e87018fee49231c9d42f3b7d58287660"
+      "sha256": "3debd33055badf9a4346f0aaae09c398cefbf19de47f162012d88a8d9ab5279a"
     },
     {
       "path": "app/lib/dental/model.ts",
@@ -239,7 +239,7 @@
     },
     {
       "path": "app/lib/dental/service.ts",
-      "sha256": "e2a8323c578e2fb532618a73da0b3e46f551c8ec44f7d2c139734e545f318c6f"
+      "sha256": "67da1d2257a1bde87f55ffbc66734f411c0d33581de84a7de9a3b7040ecdbc74"
     },
     {
       "path": "app/lib/dental/store.ts",
@@ -371,7 +371,15 @@
     },
     {
       "path": "docs/assets/README.md",
-      "sha256": "94f74a3ef036e8d8247194b8eb0208a7a500ab66ea1059575cf434c108b24ff2"
+      "sha256": "a891e85883ef184cfb564b30ad991d0f680c3639832c25458ee22f456d6ad50b"
+    },
+    {
+      "path": "docs/assets/architecture.png",
+      "sha256": "11aa0adafdcc45b1215a6608f03dcda27943cb6e75573f06c9964041159186a8"
+    },
+    {
+      "path": "docs/assets/architecture.svg",
+      "sha256": "07a41a91cb0866b7e9dac69444c5cdd2e81c326c4b3f237236e8b8125cd3086a"
     },
     {
       "path": "docs/assets/haoyue-cover.png",
@@ -412,6 +420,10 @@
     {
       "path": "reports/colab-costs.json",
       "sha256": "9ef63d11fb3c4b2038b9d7600c2b4b50a2261d3f03a31fb4ffbe4e0585e7c06d"
+    },
+    {
+      "path": "reports/deployment-verification.json",
+      "sha256": "caa0e708a8d6efbc79e18eeabe596b8eee49802f7e270beda3218a020396f34b"
     },
     {
       "path": "reports/english-demo-smoke.json",
@@ -466,6 +478,10 @@
       "sha256": "f249cb9cc937e68fd37ff1e3244a7c3dbc79e08d0aa905891f3b8df5fbf0c064"
     },
     {
+      "path": "reports/public-release.json",
+      "sha256": "ef832bafa978373c21c7e45b52afc558891275b47c62357604f3e89c5558d32d"
+    },
+    {
       "path": "scripts/deploy-source.py",
       "sha256": "2089b7d6de540c3003432d5942515f4c5b899ff07e14437c19683e1675cbdc0f"
     },
@@ -503,7 +519,7 @@
     },
     {
       "path": "training/README.md",
-      "sha256": "15a75db4c314777786c959ebc3fdd0fd3e2ba949d6d3d0a8c11a59a832751c39"
+      "sha256": "5c8f7f4fc5bdcb3d41f7211c3a4b020813a7b88ea24f66eb316a9b8a4992f9fb"
     },
     {
       "path": "training/build_dataset.py",
