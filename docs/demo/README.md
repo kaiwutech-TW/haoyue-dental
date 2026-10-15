@@ -1,6 +1,6 @@
 # Demonstration video
 
-Current public edit: [HAOYUE — English demonstration](https://youtu.be/bx7hE5PcGok), 119.333 seconds (YouTube displays 2:00), on KaiWuTech. It uses reviewed NotebookLM narration and word-timestamp English captions; both burned captions and a selectable English subtitle track are available. See [current recipe and transcript](notebooklm/README.md).
+Current public edit: [HAOYUE — English demonstration](https://youtu.be/bx7hE5PcGok), 119.333 seconds (YouTube displays 2:00), on KaiWuTech. It uses reviewed NotebookLM narration and word-timestamp English captions; burned captions are available. The SRT was uploaded and the Studio Publish action completed; public selectable-caption availability is still pending. See [current recipe and transcript](notebooklm/README.md).
 
 ## Earlier edit
 

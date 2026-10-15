@@ -5,7 +5,7 @@
   "audioCodec": "AAC 48kHz stereo",
   "narration": "NotebookLM / Gemini Notebook Brief English synthetic narrator; second generation fact-checked",
   "editing": "Programmatic montage of genuine production UI captures with explanatory annotations; not continuous screen recording",
-  "captions": "Word timestamps from local Whisper ASR, reviewed semantic chapter cuts and corrected proper-name spelling. Burned captions plus uploaded selectable English SRT.",
+  "captions": "Word timestamps from local Whisper ASR, reviewed semantic chapter cuts and corrected proper-name spelling. Burned captions verified. English SRT imported, saved and Publish clicked in Studio; public watch page still reports captions unavailable, so selectable-track availability is pending.",
   "sourcePrivacy": "Only app-content crops used. Raw full-window captures, browser chrome, and audio intermediates excluded from public snapshot.",
   "productionActions": [
     "English correction classified reschedule 0.943; local cold forward 905ms, request 1.55s",
@@ -89,5 +89,10 @@
     },
     "published": true,
     "hostedVideo": "https://youtu.be/bx7hE5PcGok"
+  },
+  "subtitlePublication": {
+    "studio": "SRT contents read back correctly; Publish clicked",
+    "watchPage": "not available at verification",
+    "burnedCaptions": "verified in rendered output"
   }
 }

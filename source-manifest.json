@@ -403,7 +403,7 @@
     },
     {
       "path": "docs/demo/README.md",
-      "sha256": "b3a3d78d3a94b25d52c17baf4bb8521678b4b3bc101200f8474d0d8c8031bd97"
+      "sha256": "85133840f5c29db6ff9beeca97e986a6794a602f6e63c92ac232b64db8f77004"
     },
     {
       "path": "docs/demo/haoyue-demo-en.srt",
@@ -411,7 +411,7 @@
     },
     {
       "path": "docs/demo/notebooklm/README.md",
-      "sha256": "83ff5906a26fc1bf133732cf74fdc44a8531753416516cadb24c875297c9d102"
+      "sha256": "a2680acba664a55e7d61accee6b7e48d52b43b4524ea98d3a601ee3540178243"
     },
     {
       "path": "docs/demo/notebooklm/haoyue-demo-en.srt",
@@ -439,7 +439,7 @@
     },
     {
       "path": "docs/demo/voice-workflow.md",
-      "sha256": "e910e747d90336b85e2294a2b2bc4621e7fe67322c96fde706f8758a2b9262bb"
+      "sha256": "fa48bf9a46c4d3d80397e7d6853a51a8d35d9d589633ea5fde04a27ce2494e39"
     },
     {
       "path": "docs/demo-script.md",
@@ -475,7 +475,7 @@
     },
     {
       "path": "reports/demo-video.json",
-      "sha256": "eae9a4d983211a4782a288cf6a3117f7b2ab305ccf8763c18cef4d37fa65ed95"
+      "sha256": "01bfaa02fe999fa4abd0face5e1ec721cd9dcc50da60cd4ca58319bb4ec6f544"
     },
     {
       "path": "reports/deployment-verification.json",
