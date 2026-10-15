@@ -54,7 +54,7 @@
   "hostedVideo": "https://youtu.be/bx7hE5PcGok",
   "channel": "KaiWuTech",
   "visibility": "public",
-  "publicationVerification": "YouTube Studio displayed Video published and persisted visibility Public; copyright checks found no issues. Devpost project preview embeds bx7hE5PcGok on KaiWuTech and played successfully with elapsed 3 seconds / duration 1 minute 59 seconds. Project remains DRAFT 4/5; final terms not accepted.",
+  "publicationVerification": "YouTube Studio displayed Video published and persisted visibility Public; copyright checks found no issues. Devpost project preview embeds bx7hE5PcGok on KaiWuTech and played successfully with elapsed 3 seconds / duration 1 minute 59 seconds. After explicit user consent, Devpost displayed Project submitted!; a reload retained SUBMITTED TO the intended event.",
   "softwareChecks": {
     "tests": 30,
     "failures": 0,
@@ -94,5 +94,16 @@
     "studio": "SRT contents read back correctly; Publish clicked",
     "watchPage": "not available at verification",
     "burnedCaptions": "verified in rendered output"
+  },
+  "submission": {
+    "status": "submitted",
+    "method": "authenticated browser",
+    "connector": "unavailable; Internal error",
+    "consent": "explicit final rules/terms and submit authorization in chat",
+    "successBanner": "Project submitted!",
+    "reloadVerification": "SUBMITTED TO Nebius x NVIDIA Global AI Hackathon; Edit hackathon submission link persisted",
+    "projectUrl": "https://devpost.com/software/haoyue-a-patient-dental-concierge",
+    "date": "2026-10-16",
+    "privateEvidenceSha256": "d1ac4d1f9de0c37262556026e67aa1e0d0db2a220b4831382099d2ebf9c7c63a"
   }
 }

@@ -7,7 +7,7 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "fe2b84b3cbaf1c2e2709cb8a559e64208268bccbacc3b5d59570b24b3555d656"
+      "sha256": "925975791535a88681db93e60fa336981aa563393e2f0e26acfcf03adc7482e4"
     },
     {
       "path": "LICENSE",
@@ -475,7 +475,7 @@
     },
     {
       "path": "reports/demo-video.json",
-      "sha256": "01bfaa02fe999fa4abd0face5e1ec721cd9dcc50da60cd4ca58319bb4ec6f544"
+      "sha256": "66d69cc0bc3faf47f30ae1e1a69dd9fd482ad0344769d8533810614d162d4575"
     },
     {
       "path": "reports/deployment-verification.json",

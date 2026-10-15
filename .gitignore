@@ -32,3 +32,4 @@ artifacts/SHA256SUMS.txt
 artifacts/video/
 artifacts/video-openai/
 artifacts/video-notebooklm/
+artifacts/submission/
