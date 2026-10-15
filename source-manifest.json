@@ -398,6 +398,10 @@
       "sha256": "0629de726d103a6cb701ee045414c0ba63404cf670d60f510ff7a9e9da3ce8f8"
     },
     {
+      "path": "inference/requirements.txt",
+      "sha256": "16879272a96bcc9584e45047c432589804fd532741423a41fda722cb8e42363f"
+    },
+    {
       "path": "inference/server.py",
       "sha256": "15ef70ea323bb078a6c3ee4c2a695dc93291c73e7f96e32eec67622b306506b1"
     },
@@ -454,6 +458,10 @@
       "sha256": "b6c1d38539133faee1e9087b8a54d6db9083dfcbf4ab471ea985872c9db62b5a"
     },
     {
+      "path": "reports/nvidia4b-environment.txt",
+      "sha256": "e9afd3b19993b31e8a92ecc81e41463d65768e139229a17fc5d8b297761121cd"
+    },
+    {
       "path": "reports/nvidia4b-smoke.json",
       "sha256": "f249cb9cc937e68fd37ff1e3244a7c3dbc79e08d0aa905891f3b8df5fbf0c064"
     },
@@ -490,6 +498,10 @@
       "sha256": "7ad4b562af50c2022aea5b810792c2161240ec9b178ff0c96c48b5a1634184e1"
     },
     {
+      "path": "supabase/migrations/20261015123936_haoyue_state.sql",
+      "sha256": "c74ad2c66c3db26f9c424ffad3929089f43afb8c452073bd40f13e5a92a7c129"
+    },
+    {
       "path": "training/README.md",
       "sha256": "15a75db4c314777786c959ebc3fdd0fd3e2ba949d6d3d0a8c11a59a832751c39"
     },
@@ -516,6 +528,10 @@
     {
       "path": "training/rebuild_v2.py",
       "sha256": "9541b2198dfffd3aa45bfb22e5cbeb1c4b90104ebcf39c17061308f33723d0b5"
+    },
+    {
+      "path": "training/requirements.txt",
+      "sha256": "173d6f10defc452f270b34481500b26ddac0080861a2b0f07d6cb0e4a1919227"
     },
     {
       "path": "training/setup_colab.sh",
