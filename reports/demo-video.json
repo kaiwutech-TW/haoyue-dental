@@ -105,5 +105,7 @@
     "projectUrl": "https://devpost.com/software/haoyue-a-patient-dental-concierge",
     "date": "2026-10-16",
     "privateEvidenceSha256": "d1ac4d1f9de0c37262556026e67aa1e0d0db2a220b4831382099d2ebf9c7c63a"
-  }
+  },
+  "status": "historical montage; superseded for organizer footage correction",
+  "currentVideoReport": "live-demo-video.json"
 }

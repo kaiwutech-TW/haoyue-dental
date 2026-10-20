@@ -2,7 +2,7 @@
 
 Understand the correction. Protect the appointment.
 
-[English demo video (about 2 min)](https://youtu.be/bx7hE5PcGok) · [English interactive demo](https://haoyue-dental.vercel.app/en) · [繁體中文互動示範](https://haoyue-dental.vercel.app/) · [Model card](docs/MODEL_CARD.md) · [Training tutorial](training/README.md) · [Download v2 adapter](https://github.com/kaiwutech-TW/haoyue-dental/releases/tag/choice-v2)
+[Live working demo video (2:22)](https://youtu.be/AAXcRB4OPtQ) · [English interactive demo](https://haoyue-dental.vercel.app/en) · [繁體中文互動示範](https://haoyue-dental.vercel.app/) · [Model card](docs/MODEL_CARD.md) · [Training tutorial](training/README.md) · [Download v2 adapter](https://github.com/kaiwutech-TW/haoyue-dental/releases/tag/choice-v2)
 
 “Not cancel—please change the time.” HAOYUE turns everyday messages into confirmed dental administration actions. A simulated LINE phone sits beside a panel of actual model and transaction events. Free text and buttons share the same backend. The fictional patients never create real clinic bookings.
 

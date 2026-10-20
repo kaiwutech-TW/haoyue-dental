@@ -1,0 +1,486 @@
+{
+  "startedAt": "2026-10-20T18:01:25.930Z",
+  "base": "https://haoyue-dental.vercel.app",
+  "capture": "Playwright native recordVideo; genuine deployed browser, normal elapsed time",
+  "viewport": {
+    "width": 1600,
+    "height": 1100
+  },
+  "mockedRequests": 0,
+  "importedCookies": false,
+  "chapters": [
+    {
+      "id": "01-intro",
+      "title": "Real deployed app on the demonstration Mac",
+      "start": 1.135,
+      "end": 17.937
+    },
+    {
+      "id": "02-intent",
+      "title": "Free text reaches the fine-tuned NVIDIA model",
+      "start": 17.937,
+      "end": 34.739
+    },
+    {
+      "id": "03-confirm",
+      "title": "Review, repeat, confirm, then stored readback",
+      "start": 34.739,
+      "end": 58.741
+    },
+    {
+      "id": "04-patience",
+      "title": "Patient guidance uses transparent rules",
+      "start": 58.741,
+      "end": 69.742
+    },
+    {
+      "id": "05-handoff",
+      "title": "Open a human case without a fabricated staff reply",
+      "start": 69.742,
+      "end": 77.743
+    },
+    {
+      "id": "06-stack",
+      "title": "Implementation and sponsor roles",
+      "start": 77.743,
+      "end": 95.743
+    },
+    {
+      "id": "07-evidence",
+      "title": "Synthetic evaluation and latency limitations",
+      "start": 95.743,
+      "end": 119.744
+    },
+    {
+      "id": "08-close",
+      "title": "Mandarin input; English equivalence remains unproven",
+      "start": 119.744,
+      "end": 142.744
+    }
+  ],
+  "actions": [
+    {
+      "at": 1.135,
+      "action": "chapter:01-intro"
+    },
+    {
+      "at": 3.637,
+      "action": "choose-fictional-patient"
+    },
+    {
+      "at": 17.937,
+      "action": "chapter:02-intent"
+    },
+    {
+      "at": 17.955,
+      "action": "type:English-correction"
+    },
+    {
+      "at": 21.273,
+      "action": "English-correction"
+    },
+    {
+      "at": 34.739,
+      "action": "chapter:03-confirm"
+    },
+    {
+      "at": 36.341,
+      "action": "select-slot"
+    },
+    {
+      "at": 39.89,
+      "action": "type:repeat-identical-request"
+    },
+    {
+      "at": 43.211,
+      "action": "repeat-identical-request"
+    },
+    {
+      "at": 47.138,
+      "action": "explicit-confirm"
+    },
+    {
+      "at": 58.741,
+      "action": "chapter:04-patience"
+    },
+    {
+      "at": 60.243,
+      "action": "explicit-confusion"
+    },
+    {
+      "at": 69.742,
+      "action": "chapter:05-handoff"
+    },
+    {
+      "at": 70.744,
+      "action": "human-handoff"
+    },
+    {
+      "at": 77.743,
+      "action": "chapter:06-stack"
+    },
+    {
+      "at": 95.743,
+      "action": "chapter:07-evidence"
+    },
+    {
+      "at": 119.744,
+      "action": "chapter:08-close"
+    },
+    {
+      "at": 119.744,
+      "action": "switch-to-Mandarin"
+    },
+    {
+      "at": 119.816,
+      "action": "choose-Mandarin-patient"
+    },
+    {
+      "at": 120.937,
+      "action": "type:Mandarin-correction"
+    },
+    {
+      "at": 122.543,
+      "action": "Mandarin-correction"
+    },
+    {
+      "at": 142.744,
+      "action": "recording-complete"
+    }
+  ],
+  "responses": [
+    {
+      "at": 5.157,
+      "action": "choose-fictional-patient",
+      "ok": true,
+      "region": "hnd1",
+      "storage": "Supabase",
+      "locale": "en",
+      "appointments": [
+        {
+          "slot": "2026-10-22T09:00",
+          "version": 12
+        }
+      ],
+      "proposal": null,
+      "handoff": false,
+      "trace": []
+    },
+    {
+      "at": 24.382,
+      "action": "English-correction",
+      "ok": true,
+      "region": "hnd1",
+      "storage": "Supabase",
+      "locale": "en",
+      "appointments": [
+        {
+          "slot": "2026-10-22T09:00",
+          "version": 12
+        }
+      ],
+      "proposal": null,
+      "handoff": false,
+      "trace": [
+        {
+          "stage": "input",
+          "title": "Patient message received"
+        },
+        {
+          "stage": "model",
+          "title": "Fine-tuned NVIDIA: eight-way decision",
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "latencyMs": 1033.3570830407552,
+          "choices": {
+            "book": 0.004684695973992348,
+            "reschedule": 0.9503218531608582,
+            "cancel": 0.013555612415075302,
+            "appointment_lookup": 0.006015266757458448,
+            "admin_faq": 0.004400864243507385,
+            "human_request": 0.010557124391198158,
+            "clinical_handoff": 0.006816190667450428,
+            "unclear": 0.003648444078862667
+          },
+          "adapterHash": "4940141c0e05473b3cc1bb77ea8ab341deb6183c1a6dcc4039136c8ab0fac857"
+        },
+        {
+          "stage": "model",
+          "title": "Model inference complete",
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "latencyMs": 1585
+        },
+        {
+          "stage": "decision",
+          "title": "Structured intent received"
+        },
+        {
+          "stage": "validation",
+          "title": "Validate booking rules and availability"
+        }
+      ]
+    },
+    {
+      "at": 37.18,
+      "action": "select-slot",
+      "ok": true,
+      "region": "hnd1",
+      "storage": "Supabase",
+      "locale": "en",
+      "appointments": [
+        {
+          "slot": "2026-10-22T09:00",
+          "version": 12
+        }
+      ],
+      "proposal": {
+        "slot": "2026-10-22T10:00",
+        "version": 12
+      },
+      "handoff": false,
+      "trace": [
+        {
+          "stage": "input",
+          "title": "Patient message received"
+        },
+        {
+          "stage": "model",
+          "title": "Fine-tuned NVIDIA: eight-way decision",
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "latencyMs": 1033.3570830407552,
+          "choices": {
+            "book": 0.004684695973992348,
+            "cancel": 0.013555612415075302,
+            "unclear": 0.003648444078862667,
+            "admin_faq": 0.004400864243507385,
+            "reschedule": 0.9503218531608582,
+            "human_request": 0.010557124391198158,
+            "clinical_handoff": 0.006816190667450428,
+            "appointment_lookup": 0.006015266757458448
+          },
+          "adapterHash": "4940141c0e05473b3cc1bb77ea8ab341deb6183c1a6dcc4039136c8ab0fac857"
+        },
+        {
+          "stage": "model",
+          "title": "Model inference complete",
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "latencyMs": 1585
+        },
+        {
+          "stage": "decision",
+          "title": "Structured intent received"
+        },
+        {
+          "stage": "validation",
+          "title": "Validate booking rules and availability"
+        },
+        {
+          "stage": "confirmation",
+          "title": "Awaiting patient confirmation"
+        }
+      ]
+    },
+    {
+      "at": 44.276,
+      "action": "repeat-identical-request",
+      "ok": true,
+      "region": "hnd1",
+      "storage": "Supabase",
+      "locale": "en",
+      "appointments": [
+        {
+          "slot": "2026-10-22T09:00",
+          "version": 12
+        }
+      ],
+      "proposal": {
+        "slot": "2026-10-22T10:00",
+        "version": 12
+      },
+      "handoff": false,
+      "trace": [
+        {
+          "stage": "validation",
+          "title": "Repeated request: no additional inference",
+          "provider": "Rule engine"
+        }
+      ]
+    },
+    {
+      "at": 47.991,
+      "action": "explicit-confirm",
+      "ok": true,
+      "region": "hnd1",
+      "storage": "Supabase",
+      "locale": "en",
+      "appointments": [
+        {
+          "slot": "2026-10-22T10:00",
+          "version": 13
+        }
+      ],
+      "proposal": null,
+      "handoff": false,
+      "trace": [
+        {
+          "stage": "validation",
+          "title": "Repeated request: no additional inference",
+          "provider": "Rule engine"
+        },
+        {
+          "stage": "storage",
+          "title": "Appointment change committed"
+        }
+      ]
+    },
+    {
+      "at": 61.513,
+      "action": "explicit-confusion",
+      "ok": true,
+      "region": "hnd1",
+      "storage": "Supabase",
+      "locale": "en",
+      "appointments": [
+        {
+          "slot": "2026-10-22T10:00",
+          "version": 13
+        }
+      ],
+      "proposal": null,
+      "handoff": false,
+      "trace": [
+        {
+          "stage": "input",
+          "title": "Patient message received"
+        },
+        {
+          "stage": "validation",
+          "title": "Response style cue (rules)"
+        },
+        {
+          "stage": "validation",
+          "title": "Patient guidance",
+          "provider": "Rule engine"
+        }
+      ]
+    },
+    {
+      "at": 71.899,
+      "action": "human-handoff",
+      "ok": true,
+      "region": "hnd1",
+      "storage": "Supabase",
+      "locale": "en",
+      "appointments": [
+        {
+          "slot": "2026-10-22T10:00",
+          "version": 13
+        }
+      ],
+      "proposal": null,
+      "handoff": true,
+      "trace": [
+        {
+          "stage": "input",
+          "title": "Patient message received"
+        },
+        {
+          "stage": "model",
+          "title": "Safety rule triggered handoff",
+          "provider": "Rule engine",
+          "model": "safety-rules"
+        },
+        {
+          "stage": "decision",
+          "title": "Structured intent received"
+        },
+        {
+          "stage": "handoff",
+          "title": "Human handoff case opened"
+        }
+      ]
+    },
+    {
+      "at": 120.909,
+      "action": "choose-Mandarin-patient",
+      "ok": true,
+      "region": "hnd1",
+      "storage": "Supabase",
+      "locale": "zh",
+      "appointments": [
+        {
+          "slot": "2026-10-22T10:00",
+          "version": 13
+        }
+      ],
+      "proposal": null,
+      "handoff": false,
+      "trace": []
+    },
+    {
+      "at": 124.685,
+      "action": "Mandarin-correction",
+      "ok": true,
+      "region": "hnd1",
+      "storage": "Supabase",
+      "locale": "zh",
+      "appointments": [
+        {
+          "slot": "2026-10-22T10:00",
+          "version": 13
+        }
+      ],
+      "proposal": null,
+      "handoff": false,
+      "trace": [
+        {
+          "stage": "input",
+          "title": "收到患者訊息"
+        },
+        {
+          "stage": "model",
+          "title": "NVIDIA 微調八選一判斷",
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "latencyMs": 180.97379198297858,
+          "choices": {
+            "book": 0.0021375641226768494,
+            "reschedule": 0.9771759510040283,
+            "cancel": 0.007008802145719528,
+            "appointment_lookup": 0.0029217032715678215,
+            "admin_faq": 0.002008055103942752,
+            "human_request": 0.0037515414878726006,
+            "clinical_handoff": 0.0031101382337510586,
+            "unclear": 0.00188639375846833
+          },
+          "adapterHash": "4940141c0e05473b3cc1bb77ea8ab341deb6183c1a6dcc4039136c8ab0fac857"
+        },
+        {
+          "stage": "model",
+          "title": "模型判斷完成",
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "latencyMs": 766
+        },
+        {
+          "stage": "decision",
+          "title": "取得結構化意圖"
+        },
+        {
+          "stage": "validation",
+          "title": "檢查預約規則與可用時段"
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "readyAt": 1.121,
+  "language": "zh",
+  "completedAt": "2026-10-20T18:03:48.674Z",
+  "pageCloseAt": 142.744,
+  "totalElapsedSeconds": 143.109,
+  "playwrightVersion": "1.64.1"
+}

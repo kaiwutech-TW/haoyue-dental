@@ -1,6 +1,10 @@
 # Demonstration video
 
-Current public edit: [HAOYUE — English demonstration](https://youtu.be/bx7hE5PcGok), 119.333 seconds (YouTube displays 2:00), on KaiWuTech. It uses reviewed NotebookLM narration and word-timestamp English captions; burned captions are available. The SRT was uploaded and the Studio Publish action completed; public selectable-caption availability is still pending. See [current recipe and transcript](notebooklm/README.md).
+Current public edit: [HAOYUE — Live Working Demo](https://youtu.be/AAXcRB4OPtQ), 141.64 seconds (2:22), on KaiWuTech. A continuous, normal-speed recording shows real English/Mandarin input, NVIDIA decisions, explicit confirmation and Supabase readback. It reuses reviewed NotebookLM narration and includes burned English captions. [Recording recipe and evidence](live/README.md). The new embed played on Devpost and survived reload with the existing submitted event association. Organizer acceptance remains unconfirmed.
+
+## Historical NotebookLM montage
+
+The [119-second edit](https://youtu.be/bx7hE5PcGok) remains public as history. Its [voice recipe](notebooklm/README.md) supplies the replacement narration; it is no longer the submitted demo.
 
 ## Earlier edit
 

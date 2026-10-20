@@ -7,7 +7,7 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "925975791535a88681db93e60fa336981aa563393e2f0e26acfcf03adc7482e4"
+      "sha256": "838ebfe753609b19c89f6b169b90511769235e75511eecce424271e134e423ef"
     },
     {
       "path": "LICENSE",
@@ -19,7 +19,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "209c459d55bd36a31a5ed09d876220ffb301d0e362a22ec771bec43a8abf9d09"
+      "sha256": "c8309937fd7dedb458ba3dbe1b19b97f3c11c6de6c35b3be58ffefac107d0dd8"
     },
     {
       "path": "app/README.md",
@@ -403,15 +403,27 @@
     },
     {
       "path": "docs/demo/README.md",
-      "sha256": "85133840f5c29db6ff9beeca97e986a6794a602f6e63c92ac232b64db8f77004"
+      "sha256": "49397b321e7e94fce559e8772f633dcaedec2af20ef56ce3b5e552d08a779509"
     },
     {
       "path": "docs/demo/haoyue-demo-en.srt",
       "sha256": "39368528650c954e32b6385a7a84c44e6d9ee83647dff5136802b48bcf04dcb4"
     },
     {
+      "path": "docs/demo/live/PLAN.md",
+      "sha256": "3db38e126c87eafe56418a071a2651bc20878d013a08a43820f556928211dbd6"
+    },
+    {
+      "path": "docs/demo/live/README.md",
+      "sha256": "f467c247a3cee22487a1c666d9ea374e03d34abf31758554ba5b831eb7004b51"
+    },
+    {
+      "path": "docs/demo/live/haoyue-live-en.srt",
+      "sha256": "2b2890fce56acb03c62a82b5512c2635b9de149dfe231a381ad186a89299c118"
+    },
+    {
       "path": "docs/demo/notebooklm/README.md",
-      "sha256": "a2680acba664a55e7d61accee6b7e48d52b43b4524ea98d3a601ee3540178243"
+      "sha256": "b2b9d001bc925768be22b5ac557e66e117161bc2263994b15ac941bdcb6c9988"
     },
     {
       "path": "docs/demo/notebooklm/haoyue-demo-en.srt",
@@ -475,7 +487,7 @@
     },
     {
       "path": "reports/demo-video.json",
-      "sha256": "66d69cc0bc3faf47f30ae1e1a69dd9fd482ad0344769d8533810614d162d4575"
+      "sha256": "328704881e7a4f8b62fe75001823b824fc8e357a41558bddde0bf1abd78a6f27"
     },
     {
       "path": "reports/deployment-verification.json",
@@ -490,8 +502,16 @@
       "sha256": "2ded820e198bf16dcd8937d11ddba1bbf3d9f37e51d7955e568921bf14efede4"
     },
     {
+      "path": "reports/live-demo-video.json",
+      "sha256": "3e0daa7b9b2ef424bb40d96ca7366a7f43ca6b887f6586d1bbe727120649a163"
+    },
+    {
       "path": "reports/live-english.json",
       "sha256": "a98c47c65ea5d158d7698e79de84ca169100b98ec5e8ab855f4b57595d65bb5a"
+    },
+    {
+      "path": "reports/live-recording.json",
+      "sha256": "70602d275033049dca1f8aa69e2fa51f3159315b159439c8fbc9ec3714d9af1e"
     },
     {
       "path": "reports/mlx-choice-v2.json",
@@ -542,6 +562,10 @@
       "sha256": "9a0f1d6970020b8ff1ebe3712597c6a90036e97dd3c7c12f68624c25fd1e0bed"
     },
     {
+      "path": "scripts/build-live-demo.mjs",
+      "sha256": "2824dfeeee0036b1514d756aa400624b46badebd4821d4982b121affe3d665b3"
+    },
+    {
       "path": "scripts/deploy-source.py",
       "sha256": "2089b7d6de540c3003432d5942515f4c5b899ff07e14437c19683e1675cbdc0f"
     },
@@ -564,6 +588,10 @@
     {
       "path": "scripts/prepare-notebooklm-edit.py",
       "sha256": "68b216c6d5617d835e0a9eb456db659c17f36f769e15a7bae96bdd7d26a5037d"
+    },
+    {
+      "path": "scripts/record-live-demo.mjs",
+      "sha256": "e6e69425d77b2aef2f09f0c082a83c46bb0b06d3f3e089325cf5944442adc313"
     },
     {
       "path": "scripts/run-choice-server.py",

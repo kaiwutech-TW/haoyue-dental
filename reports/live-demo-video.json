@@ -1,0 +1,111 @@
+{
+  "createdAt": "2026-10-20T18:04:30.923Z",
+  "durationSeconds": 141.609,
+  "resolution": "1920x1080",
+  "source": {
+    "format": "Playwright native WebM video",
+    "viewport": {
+      "width": 1600,
+      "height": 1100
+    },
+    "frameRate": "25/1",
+    "sha256": "5499066e240a0c2d32fa08efeb43de4211b59b7f9a6f138fb564731204ba8689",
+    "clockDifferenceSeconds": 0.8559999999999945,
+    "trimStartSeconds": 1.9909999999999946
+  },
+  "editing": "One continuous normal-speed browser recording, trimmed before the first chapter. Same-timestamp viewport crop plus explanatory text. No operation frames reconstructed from screenshots.",
+  "narration": "Reviewed NotebookLM second generation reused; synthetic voice. Timed English SRT and burned captions.",
+  "outputSha256": "1a843af3d2738096fb2382b13b3f4bb3f4d3046bc8d98720b51cb9555a214da2",
+  "runtimeVerified": true,
+  "booking": {
+    "before": {
+      "slot": "2026-10-22T09:00",
+      "version": 12
+    },
+    "after": {
+      "slot": "2026-10-22T10:00",
+      "version": 13
+    }
+  },
+  "chapters": [
+    {
+      "id": "01-intro",
+      "title": "Real deployed app on the demonstration Mac",
+      "start": 0,
+      "end": 16.802
+    },
+    {
+      "id": "02-intent",
+      "title": "Free text reaches the fine-tuned NVIDIA model",
+      "start": 16.802,
+      "end": 33.604
+    },
+    {
+      "id": "03-confirm",
+      "title": "Review, repeat, confirm, then stored readback",
+      "start": 33.604,
+      "end": 57.606
+    },
+    {
+      "id": "04-patience",
+      "title": "Patient guidance uses transparent rules",
+      "start": 57.606,
+      "end": 68.607
+    },
+    {
+      "id": "05-handoff",
+      "title": "Open a human case without a fabricated staff reply",
+      "start": 68.607,
+      "end": 76.60799999999999
+    },
+    {
+      "id": "06-stack",
+      "title": "Implementation and sponsor roles",
+      "start": 76.60799999999999,
+      "end": 94.60799999999999
+    },
+    {
+      "id": "07-evidence",
+      "title": "Synthetic evaluation and latency limitations",
+      "start": 94.60799999999999,
+      "end": 118.609
+    },
+    {
+      "id": "08-close",
+      "title": "Mandarin input; English equivalence remains unproven",
+      "start": 118.609,
+      "end": 141.609
+    }
+  ],
+  "published": true,
+  "organizerAcceptance": "not yet confirmed",
+  "checks": {
+    "videoFullDecode": "passed",
+    "eightChapterVisualReview": "passed; actual video crops remain legible; no personal browser tabs",
+    "unitTests": {
+      "passed": 30,
+      "failed": 0
+    },
+    "typecheck": "passed",
+    "runtimeRecording": "passed; English/Mandarin model evidence, original preserved, repeat skips inference, explicit commit v12 to v13, guidance and handoff"
+  },
+  "bytes": 7042260,
+  "encodedDurationSeconds": 141.64,
+  "organizerCorrection": {
+    "reportedOn": "2026-10-20",
+    "requirement": "Footage showing the project functioning on its target device",
+    "status": "replacement saved and playback verified in existing Devpost submission",
+    "acceptance": "not confirmed by organizer"
+  },
+  "firstAttempt": {
+    "status": "rejected for publication",
+    "reason": "One data-service request returned an error. A direct authenticated store read returned HTTP200 afterward. No production fix or guaranteed root cause is claimed; the subsequent full browser run passed.",
+    "localEvidence": "ignored artifacts/video-live/playwright-failed-01/"
+  },
+  "hostedVideo": "https://youtu.be/AAXcRB4OPtQ",
+  "channel": "KaiWuTech",
+  "visibility": "public",
+  "publicationVerification": "YouTube Studio displayed Video published; copyright check found no issues. Devpost embedded AAXcRB4OPtQ on KaiWuTech; playback advanced to 21 seconds. Page reload retained the new video ID and SUBMITTED TO Nebius x NVIDIA Global AI Hackathon. Existing finalization page retained disabled Project submitted! status; no duplicate submission was created.",
+  "verifiedOn": "2026-10-21",
+  "privatePlaybackEvidence": "ignored artifacts/submission/live-video-playback.png"
+}
