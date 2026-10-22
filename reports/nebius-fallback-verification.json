@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-22T06:17:04.530Z",
+  "billingEvidence": "Authenticated Payments page reloaded; active billing and sufficient account balance observed. Separate trial credits were not combined. Exact balance stays in private configuration.",
+  "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+  "requests": 1,
+  "reservationUsd": 0.02,
+  "actualInvoiceChargeUsd": null,
+  "passed": true,
+  "latencyMs": 1974,
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 363,
+    "total_tokens": 422,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  },
+  "decision": {
+    "intent": "reschedule",
+    "date": null,
+    "doctor": null,
+    "period": null,
+    "appointmentId": null,
+    "question": "Please provide the appointment ID and the new date/time you would like to reschedule to."
+  }
+}

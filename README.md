@@ -11,7 +11,7 @@ Understand the correction. Protect the appointment.
 - Book, reschedule, cancel, look up appointments, approved administrative FAQs and human handoff.
 - Real fine-tuned **NVIDIA-Nemotron-3-Nano-4B-BF16** LoRA, eight intent choices in one forward pass, served with MLX on a Mac.
 - Low-score / unavailable inference routes to **NVIDIA Nano 30B on Nebius Token Factory**, subject to shared financial limits. Failure asks for clarification or hands off; it never silently pretends a rule was model inference.
-- Patient confirmation, ownership/version checks, atomic Supabase transactions, replay protection and persistent readback.
+- Before/after confirmation, ownership/version checks, atomic Supabase transactions, replay protection and persistent transaction receipts.
 - English and Traditional Chinese demo copy and fixtures. Patient guidance for explicit worry/confusion; repeated messages do not trigger another model call. These style cues are rules, not a trained emotion classifier.
 - **Tavily** staff research creates drafts; an administrator must review before knowledge is used. No automatic web search on patient messages.
 
@@ -59,4 +59,14 @@ Next.js → safety / guidance → NVIDIA 4B choice → budgeted Nebius fallback 
 
 Shared budgets preserve at least US$5 of the verified Nebius balance and cap this app at US$1 total / US$0.40 daily for paid fallback. Source, session and request limits also cover local inference. Expired balance snapshots disable paid fallback. Generic eve agent endpoints are blocked to prevent bypassing these controls.
 
-The two fictional patients are shared across demo visitors. This is not real patient authentication or a production clinic system. No private customer-service spreadsheets, patient records or clinic price lists are in the public training corpus. Base weights remain subject to NVIDIA's license; project code licensing is separate.
+New visitor sessions receive independent synthetic booking workspaces; existing legacy sessions remain shared until a new session is started. Source limits and financial caps remain shared. This is not real patient authentication or a production clinic system. No private customer-service spreadsheets, patient records or clinic price lists are in the public training corpus. Base weights remain subject to NVIDIA's license; project code licensing is separate.
+
+## Judge readiness and user research
+
+Start with the on-page task guide. Review the old and proposed appointment, confirm, then reload to inspect the saved receipt. Technical events expand below the saved outcome.
+
+`node --experimental-strip-types scripts/compare-decisions.mjs` regenerates the comparison from frozen synthetic predictions: rules 26/64, NVIDIA base 52/64, LoRA v2 58/64. This compares intent classification, not clinic outcomes.
+
+`node --env-file=.env --experimental-strip-types scripts/check-readiness.mjs` checks database, authenticated adapter health and fallback eligibility without inference or spending. An expired balance check leaves paid fallback disabled.
+
+[Clinic and unfamiliar-user test kit](docs/pilot/README.md) is ready; actual human results are pending. [Readiness checklist](docs/judge-readiness.md) distinguishes implementation, verification and research. This temporary deployment is for the hackathon; stop it after the required judging access period. LINE and commercial trials are separate future work.

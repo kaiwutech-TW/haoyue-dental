@@ -1,0 +1,169 @@
+{
+  "checkedAt": "2026-10-22T06:29:48.563Z",
+  "base": "http://127.0.0.1:3014",
+  "passed": true,
+  "realFlow": [
+    "Keyboard skip link reaches the focusable booking demo",
+    "Two independent browser visitors can confirm the same fictional slot; no cross-visitor booking or message change",
+    "Confirmation before write; original snapshot; idempotent replay; stored receipt survives reload",
+    "Human handoff preserves booking and does not impersonate staff"
+  ],
+  "faultInjection": [],
+  "accessibility": [
+    {
+      "name": "desktop-welcome",
+      "violations": []
+    },
+    {
+      "name": "desktop-confirmation",
+      "violations": []
+    },
+    {
+      "name": "desktop-saved",
+      "violations": []
+    },
+    {
+      "name": "desktop-expanded-evidence",
+      "violations": []
+    },
+    {
+      "name": "mobile-saved-en",
+      "violations": []
+    }
+  ],
+  "timings": [
+    {
+      "action": "start-en",
+      "ms": 60,
+      "traceModels": []
+    },
+    {
+      "action": "start-en",
+      "ms": 62,
+      "traceModels": []
+    },
+    {
+      "action": "message-en",
+      "ms": 2842,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 2206.2353750225157
+        },
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "message-en",
+      "ms": 201,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 108.7262500077486
+        },
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "ms": 30,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 2206.2353750225157
+        },
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "confirm",
+      "ms": 51,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 2206.2353750225157
+        },
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "select-independent-same-slot",
+      "ms": 41,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 108.7262500077486
+        },
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "confirm-independent-same-slot",
+      "ms": 49,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 108.7262500077486
+        },
+        {
+          "provider": "Mac / MLX · LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "message-en",
+      "ms": 43,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "safety-rules"
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "note": "Actual NVIDIA 4B MLX inference over authenticated tunnel, isolated local SQLite test store. Paid fallback cap forced to zero; no production booking mutation. Trace model entries persist across select/confirm and are not extra inference calls.",
+  "paidFallbackCapUsd": 0,
+  "mandarinIntegration": {
+    "passed": true,
+    "command": "scripts/integration.mjs with EXPECT_CHOICE=1 against the isolated local app",
+    "elapsedMs": 395,
+    "forwardMs": 200.9597080759704,
+    "adapterHash": "4940141c0e05473b3cc1bb77ea8ab341deb6183c1a6dcc4039136c8ab0fac857",
+    "checks": [
+      "session",
+      "query",
+      "proposal",
+      "commit",
+      "replay",
+      "handoff",
+      "staff reply",
+      "persistent read",
+      "actual trace",
+      "rule attribution",
+      "no premature commit"
+    ]
+  }
+}

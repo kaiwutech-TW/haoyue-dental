@@ -1,0 +1,239 @@
+{
+  "checkedAt": "2026-10-22T11:46:21.836Z",
+  "base": "https://haoyue-dental.vercel.app",
+  "passed": true,
+  "realFlow": [
+    "Keyboard skip link reaches the focusable booking demo",
+    "Two independent browser visitors can confirm the same fictional slot; no cross-visitor booking or message change",
+    "Confirmation before write; original snapshot; idempotent replay; stored receipt survives reload",
+    "Human handoff preserves booking and does not impersonate staff"
+  ],
+  "faultInjection": [],
+  "accessibility": [
+    {
+      "name": "desktop-welcome",
+      "violations": []
+    },
+    {
+      "name": "desktop-confirmation",
+      "violations": []
+    },
+    {
+      "name": "desktop-saved",
+      "violations": []
+    },
+    {
+      "name": "desktop-expanded-evidence",
+      "violations": []
+    },
+    {
+      "name": "mobile-saved-en",
+      "violations": []
+    }
+  ],
+  "timings": [
+    {
+      "action": "start-en",
+      "ms": 1233,
+      "traceModels": []
+    },
+    {
+      "action": "start-en",
+      "ms": 1125,
+      "traceModels": []
+    },
+    {
+      "action": "message-en",
+      "ms": 3845,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 998.2824159087613
+        },
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "message-en",
+      "ms": 2108,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 173.10750007163733
+        },
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "ms": 1099,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 998.2824159087613
+        },
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "confirm",
+      "ms": 1041,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 998.2824159087613
+        },
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "select-independent-same-slot",
+      "ms": 1098,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 173.10750007163733
+        },
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "confirm-independent-same-slot",
+      "ms": 895,
+      "traceModels": [
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+          "forwardMs": 173.10750007163733
+        },
+        {
+          "provider": "Mac / MLX \u00b7 LoRA",
+          "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2"
+        }
+      ]
+    },
+    {
+      "action": "message-en",
+      "ms": 1727,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "safety-rules"
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "note": "Production Vercel deployment using Supabase and actual authenticated NVIDIA 4B MLX LoRA inference. Only synthetic demo workspaces were changed. No fault injection. Trace entries persist across select/confirm and do not represent extra inference calls. This is engineering evidence, not participant research.",
+  "deployment": {
+    "readyState": "READY",
+    "runtimeRegion": "hnd1",
+    "next": "16.3.8",
+    "nanoid": "5.1.16",
+    "sourceCommit": "df5bab4"
+  },
+  "mandarinIntegration": {
+    "base": "https://haoyue-dental.vercel.app",
+    "serverRegion": "hnd1",
+    "elapsedMs": 9083,
+    "choice": {
+      "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 / haoyue-choice-v2",
+      "adapterHash": "4940141c0e05473b3cc1bb77ea8ab341deb6183c1a6dcc4039136c8ab0fac857",
+      "forwardMs": 218.33620802499354
+    },
+    "checks": [
+      "session",
+      "query",
+      "proposal",
+      "commit",
+      "replay",
+      "handoff",
+      "staff reply",
+      "persistent read",
+      "actual trace",
+      "rule attribution",
+      "no premature commit"
+    ],
+    "passed": true
+  },
+  "routes": {
+    "checkedAt": "2026-10-22T11:46:34.970Z",
+    "base": "https://haoyue-dental.vercel.app",
+    "checks": [
+      {
+        "path": "/",
+        "status": 200,
+        "expected": 200,
+        "passed": true
+      },
+      {
+        "path": "/en",
+        "status": 200,
+        "expected": 200,
+        "passed": true
+      },
+      {
+        "path": "/evidence/decision-comparison.json",
+        "status": 200,
+        "expected": 200,
+        "passed": true
+      },
+      {
+        "path": "/api/clinic?locale=en",
+        "status": 200,
+        "expected": 200,
+        "passed": true,
+        "metadata": {
+          "storage": "Supabase",
+          "mode": "hybrid",
+          "serverRegion": "hnd1"
+        }
+      },
+      {
+        "path": "/eve/v1/health",
+        "status": 403,
+        "expected": 403,
+        "passed": true
+      },
+      {
+        "path": "/s",
+        "status": 403,
+        "expected": 403,
+        "passed": true
+      },
+      {
+        "path": "/.well-known/agent.json",
+        "status": 403,
+        "expected": 403,
+        "passed": true
+      },
+      {
+        "path": "/api/desk",
+        "status": 401,
+        "expected": 401,
+        "passed": true
+      }
+    ],
+    "passed": true
+  }
+}

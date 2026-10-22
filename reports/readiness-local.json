@@ -1,0 +1,191 @@
+{
+  "checkedAt": "2026-10-22T06:27:17.015Z",
+  "base": "http://127.0.0.1:3013",
+  "passed": true,
+  "realFlow": [
+    "Keyboard skip link reaches the focusable booking demo",
+    "Two independent browser visitors can confirm the same fictional slot; no cross-visitor booking or message change",
+    "Confirmation before write; original snapshot; idempotent replay; stored receipt survives reload",
+    "Human handoff preserves booking and does not impersonate staff",
+    "A new message invalidates an uncommitted confirmation without changing the stored booking"
+  ],
+  "faultInjection": [
+    "Injected GET 503 is visible and read-only retry restores persisted state",
+    "Real confirmation committed, then response dropped: client re-reads persisted receipt instead of declaring failure or retrying a write",
+    "Injected slow request shows elapsed waiting and prevents duplicate send"
+  ],
+  "accessibility": [
+    {
+      "name": "desktop-welcome",
+      "violations": []
+    },
+    {
+      "name": "desktop-confirmation",
+      "violations": []
+    },
+    {
+      "name": "desktop-saved",
+      "violations": []
+    },
+    {
+      "name": "desktop-expanded-evidence",
+      "violations": []
+    },
+    {
+      "name": "mobile-confirmation-zh",
+      "violations": []
+    },
+    {
+      "name": "mobile-saved-zh",
+      "violations": []
+    },
+    {
+      "name": "mobile-saved-en",
+      "violations": []
+    }
+  ],
+  "timings": [
+    {
+      "action": "start-en",
+      "ms": 66,
+      "traceModels": []
+    },
+    {
+      "action": "start-en",
+      "ms": 52,
+      "traceModels": []
+    },
+    {
+      "action": "message-en",
+      "ms": 49,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    },
+    {
+      "action": "message-en",
+      "ms": 51,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    },
+    {
+      "action": "select",
+      "ms": 30,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    },
+    {
+      "action": "confirm",
+      "ms": 55,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    },
+    {
+      "action": "select-independent-same-slot",
+      "ms": 30,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    },
+    {
+      "action": "confirm-independent-same-slot",
+      "ms": 49,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    },
+    {
+      "action": "message-en",
+      "ms": 46,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "safety-rules"
+        }
+      ]
+    },
+    {
+      "action": "start-zh",
+      "ms": 69,
+      "traceModels": []
+    },
+    {
+      "action": "message-zh",
+      "ms": 49,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    },
+    {
+      "action": "select-zh",
+      "ms": 50,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    },
+    {
+      "action": "message-en",
+      "ms": 58,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    },
+    {
+      "action": "select-for-stale-check",
+      "ms": 45,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    },
+    {
+      "action": "message-en",
+      "ms": 44,
+      "traceModels": []
+    },
+    {
+      "action": "message-en",
+      "ms": 9262,
+      "traceModels": [
+        {
+          "provider": "Rule engine",
+          "model": "rule-baseline"
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "note": "Production-build local rule-mode browser verification. No model or paid API claim. Fault-injected cases are explicitly separated from genuine flow."
+}

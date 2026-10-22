@@ -39,3 +39,39 @@ Local inference has shared source/session rate limits without a Nebius charge. P
 ## Verification
 
 `scripts/integration.mjs` exercises query, proposal, commit, replay, handoff and staff reply. It changes only synthetic demo data. `EXPECTED_REGION=hnd1 EXPECT_CHOICE=1` verifies the deployed region and real adapter evidence. The bilingual tests also verify English copy, dates, safety routes and repeat suppression. No real clinic credentials or patient data should ever be used in this demo.
+
+## Hackathon readiness and end of service
+
+This deployment is a temporary hackathon demonstration on existing resources. No database plan upgrade or cloud GPU is part of the readiness work. The later LINE/paid-clinic experiment needs a separate deployment decision.
+
+The official rules currently require test access through the judging period, ending December 15, 2026 in Pacific time. Do not equate the submission deadline with the end of required testing. After required access ends, disable model calls and stop the project LaunchAgent using the commands above. Keep the source, recorded evidence and submission association. Deleting the database or project is a separate destructive action and is not part of this plan.
+
+Read-only readiness check from the repository root:
+
+```sh
+node --env-file=.env --experimental-strip-types scripts/check-readiness.mjs
+```
+
+It reports database access, authenticated local-model health/hash and whether a fallback reservation would currently be allowed. It never performs inference, commits a reservation, refreshes balance verification or prints credentials. Only update the balance and its verification timestamp after observing the real authenticated billing page. Preserve the US$5 account reserve and existing project/daily caps. A US$0.02 reservation is a conservative allowance, not an invoice charge.
+
+For a real sponsor API check, explicitly run `DECISION_MODE=nebius node --env-file=.env --experimental-strip-types scripts/verify-nebius-fallback.mjs`. This **does** reserve shared budget and make one real API call. Do not run it as a periodic health check. Its report separates token usage from unknown invoiced cost.
+
+New public sessions use independent synthetic scopes within the existing JSON store; no SQL schema migration is needed. Existing shared sessions still work and are labelled as legacy. Global spending and source limits do not reset when a visitor starts a new session. The 1,000-session demo cap remains; this single-store architecture is not multi-clinic production infrastructure.
+
+## Browser verification
+
+Use an isolated local SQLite file and rule mode for fault-injection checks; never use the production database for injected failures. Set `APP_ORIGIN` to the exact local origin:
+
+```sh
+cd app
+APP_ORIGIN=http://127.0.0.1:3010 DECISION_MODE=rule SUPABASE_URL='' CLINIC_DB_PATH=/tmp/haoyue-local-verification.sqlite npm run dev -- --port 3010
+```
+
+In another terminal, install test-only tooling into the ignored directory and run from the repository root:
+
+```sh
+npm install --prefix artifacts/video-live/tooling playwright @axe-core/playwright
+FAULTS=1 node scripts/verify-readiness.mjs
+```
+
+The script uses a fresh browser profile, never imported logins. It checks independent visitors, receipts, replay, handoff, keyboard/contrast and responsive layouts. Faults are separately labelled and restricted to localhost. For deployed verification use `TEST_URL=https://haoyue-dental.vercel.app EXPECT_CHOICE=1 node scripts/verify-readiness.mjs`; this exercises the real model and global limits. Reports and screenshots initially stay under ignored `artifacts/private/readiness/`; publish only reviewed, sanitised reports. Automated accessibility scanning is not a full accessibility audit.

@@ -1,0 +1,608 @@
+{
+  "generatedAt": "2026-10-22T05:58:46.740Z",
+  "source": "reports/nvidia4b-choice-v2.json",
+  "sourceSha256": "b6c1d38539133faee1e9087b8a54d6db9083dfcbf4ab471ea985872c9db62b5a",
+  "n": 64,
+  "methodology": "Same frozen 64 single-message, author-written synthetic inputs and labels. Rules executed now; base and tuned predictions reanalysed from the saved CUDA experiment. No new model inference, no paid calls, no clinical or independent validation. Intent classification only; not end-to-end task success.",
+  "rows": [
+    {
+      "id": "rule",
+      "label": "Current deterministic rules",
+      "correct": 26,
+      "accepted": null,
+      "acceptedErrors": null
+    },
+    {
+      "id": "base",
+      "label": "NVIDIA 4B base",
+      "correct": 52,
+      "accepted": 30,
+      "acceptedErrors": 2
+    },
+    {
+      "id": "tuned",
+      "label": "NVIDIA 4B + LoRA v2",
+      "correct": 58,
+      "accepted": 54,
+      "acceptedErrors": 1
+    }
+  ],
+  "breakdown": [
+    {
+      "intent": "book",
+      "n": 8,
+      "rule": 3,
+      "base": 6,
+      "tuned": 6
+    },
+    {
+      "intent": "reschedule",
+      "n": 8,
+      "rule": 1,
+      "base": 7,
+      "tuned": 7
+    },
+    {
+      "intent": "cancel",
+      "n": 8,
+      "rule": 4,
+      "base": 8,
+      "tuned": 8
+    },
+    {
+      "intent": "appointment_lookup",
+      "n": 8,
+      "rule": 1,
+      "base": 5,
+      "tuned": 7
+    },
+    {
+      "intent": "admin_faq",
+      "n": 8,
+      "rule": 1,
+      "base": 6,
+      "tuned": 8
+    },
+    {
+      "intent": "human_request",
+      "n": 8,
+      "rule": 4,
+      "base": 4,
+      "tuned": 7
+    },
+    {
+      "intent": "clinical_handoff",
+      "n": 8,
+      "rule": 4,
+      "base": 8,
+      "tuned": 8
+    },
+    {
+      "intent": "unclear",
+      "n": 8,
+      "rule": 8,
+      "base": 8,
+      "tuned": 7
+    }
+  ],
+  "cases": [
+    {
+      "text": "麻煩替本人登記年度檢查",
+      "expected": "book",
+      "rule": "appointment_lookup",
+      "base": "unclear",
+      "tuned": "human_request",
+      "score": 0.6902083158493042
+    },
+    {
+      "text": "我這個月想第一次來洗牙",
+      "expected": "book",
+      "rule": "book",
+      "base": "book",
+      "tuned": "book",
+      "score": 0.7466354370117188
+    },
+    {
+      "text": "您好，從沒去過貴診所，能排個諮詢嗎",
+      "expected": "book",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "admin_faq",
+      "score": 0.8130610585212708
+    },
+    {
+      "text": "固定半年檢查到了，可以新約一次嗎",
+      "expected": "book",
+      "rule": "appointment_lookup",
+      "base": "book",
+      "tuned": "book",
+      "score": 0.9478529095649719
+    },
+    {
+      "text": "目前沒任何掛號，想找一個可來的時間",
+      "expected": "book",
+      "rule": "book",
+      "base": "book",
+      "tuned": "book",
+      "score": 0.886589765548706
+    },
+    {
+      "text": "想幫自己預約一般看診",
+      "expected": "book",
+      "rule": "book",
+      "base": "book",
+      "tuned": "book",
+      "score": 0.9640678763389587
+    },
+    {
+      "text": "這次是新增，不是修改以前那筆",
+      "expected": "book",
+      "rule": "reschedule",
+      "base": "book",
+      "tuned": "book",
+      "score": 0.9696646928787231
+    },
+    {
+      "text": "排個例行回診檢查給我好嗎",
+      "expected": "book",
+      "rule": "appointment_lookup",
+      "base": "book",
+      "tuned": "book",
+      "score": 0.8970220685005188
+    },
+    {
+      "text": "已經掛好的那筆延到下個星期行嗎",
+      "expected": "reschedule",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "appointment_lookup",
+      "score": 0.9531736969947815
+    },
+    {
+      "text": "預定那天我人在外縣市，幫我另找日期",
+      "expected": "reschedule",
+      "rule": "unclear",
+      "base": "reschedule",
+      "tuned": "reschedule",
+      "score": 0.7511774897575378
+    },
+    {
+      "text": "不退約，改到午休後好了",
+      "expected": "reschedule",
+      "rule": "reschedule",
+      "base": "reschedule",
+      "tuned": "reschedule",
+      "score": 0.9489928483963013
+    },
+    {
+      "text": "本來的看診要從傍晚調到早上",
+      "expected": "reschedule",
+      "rule": "unclear",
+      "base": "reschedule",
+      "tuned": "reschedule",
+      "score": 0.9159078001976013
+    },
+    {
+      "text": "我要去，只是原本那天卡到事情",
+      "expected": "reschedule",
+      "rule": "appointment_lookup",
+      "base": "reschedule",
+      "tuned": "reschedule",
+      "score": 0.8863200545310974
+    },
+    {
+      "text": "前面的取消收回，我其實想延期",
+      "expected": "reschedule",
+      "rule": "cancel",
+      "base": "reschedule",
+      "tuned": "reschedule",
+      "score": 0.9199440479278564
+    },
+    {
+      "text": "想問原預約能不能提早一日",
+      "expected": "reschedule",
+      "rule": "book",
+      "base": "reschedule",
+      "tuned": "reschedule",
+      "score": 0.9317778944969177
+    },
+    {
+      "text": "原來的門診挪一個鐘頭，醫師照舊",
+      "expected": "reschedule",
+      "rule": "unclear",
+      "base": "reschedule",
+      "tuned": "reschedule",
+      "score": 0.9296038746833801
+    },
+    {
+      "text": "已經不用看了，原訂的時段釋出吧",
+      "expected": "cancel",
+      "rule": "unclear",
+      "base": "cancel",
+      "tuned": "cancel",
+      "score": 0.817592442035675
+    },
+    {
+      "text": "麻煩退掉這回掛號，我確定",
+      "expected": "cancel",
+      "rule": "book",
+      "base": "cancel",
+      "tuned": "cancel",
+      "score": 0.9533032178878784
+    },
+    {
+      "text": "這個約作廢就行，別找其他時間",
+      "expected": "cancel",
+      "rule": "admin_faq",
+      "base": "cancel",
+      "tuned": "cancel",
+      "score": 0.9462973475456238
+    },
+    {
+      "text": "我決定這次不去了，請取消",
+      "expected": "cancel",
+      "rule": "cancel",
+      "base": "cancel",
+      "tuned": "cancel",
+      "score": 0.9534628391265869
+    },
+    {
+      "text": "先取消原約，未來再自己登記",
+      "expected": "cancel",
+      "rule": "cancel",
+      "base": "cancel",
+      "tuned": "cancel",
+      "score": 0.9431845545768738
+    },
+    {
+      "text": "原來預約我不要了，幫我撤回",
+      "expected": "cancel",
+      "rule": "unclear",
+      "base": "cancel",
+      "tuned": "cancel",
+      "score": 0.9446758031845093
+    },
+    {
+      "text": "確定不保留掛號，取消即可",
+      "expected": "cancel",
+      "rule": "cancel",
+      "base": "cancel",
+      "tuned": "cancel",
+      "score": 0.9451082348823547
+    },
+    {
+      "text": "不要延期，就把預約取消",
+      "expected": "cancel",
+      "rule": "cancel",
+      "base": "cancel",
+      "tuned": "cancel",
+      "score": 0.9564133882522583
+    },
+    {
+      "text": "我的下一次到診日能幫我查出來嗎",
+      "expected": "appointment_lookup",
+      "rule": "appointment_lookup",
+      "base": "appointment_lookup",
+      "tuned": "appointment_lookup",
+      "score": 0.9478123188018799
+    },
+    {
+      "text": "想核對掛號單上的日期",
+      "expected": "appointment_lookup",
+      "rule": "book",
+      "base": "appointment_lookup",
+      "tuned": "appointment_lookup",
+      "score": 0.9572194814682007
+    },
+    {
+      "text": "我不記得約到哪個醫師了",
+      "expected": "appointment_lookup",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "appointment_lookup",
+      "score": 0.8898505568504333
+    },
+    {
+      "text": "掛號完忘記抄下時間，幫我看一眼",
+      "expected": "appointment_lookup",
+      "rule": "book",
+      "base": "unclear",
+      "tuned": "appointment_lookup",
+      "score": 0.9238505959510803
+    },
+    {
+      "text": "上回留的預約現在是否還有效",
+      "expected": "appointment_lookup",
+      "rule": "book",
+      "base": "appointment_lookup",
+      "tuned": "appointment_lookup",
+      "score": 0.9611711502075195
+    },
+    {
+      "text": "讓我知道目前排了幾次門診",
+      "expected": "appointment_lookup",
+      "rule": "unclear",
+      "base": "appointment_lookup",
+      "tuned": "appointment_lookup",
+      "score": 0.9650266170501709
+    },
+    {
+      "text": "我只是要知道預約資訊，別幫我改",
+      "expected": "appointment_lookup",
+      "rule": "reschedule",
+      "base": "appointment_lookup",
+      "tuned": "appointment_lookup",
+      "score": 0.9711382985115051
+    },
+    {
+      "text": "原來排的是早診還是晚診，我忘了",
+      "expected": "appointment_lookup",
+      "rule": "unclear",
+      "base": "reschedule",
+      "tuned": "reschedule",
+      "score": 0.8332183361053467
+    },
+    {
+      "text": "貴診所中午會休息嗎",
+      "expected": "admin_faq",
+      "rule": "unclear",
+      "base": "admin_faq",
+      "tuned": "admin_faq",
+      "score": 0.9588571786880493
+    },
+    {
+      "text": "報到時要出示哪些證件",
+      "expected": "admin_faq",
+      "rule": "unclear",
+      "base": "admin_faq",
+      "tuned": "admin_faq",
+      "score": 0.8962817192077637
+    },
+    {
+      "text": "搭公車要在哪站下車",
+      "expected": "admin_faq",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "admin_faq",
+      "score": 0.9530820846557617
+    },
+    {
+      "text": "車可以停地下室嗎",
+      "expected": "admin_faq",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "admin_faq",
+      "score": 0.9319344758987427
+    },
+    {
+      "text": "診所門牌號碼再給我一次",
+      "expected": "admin_faq",
+      "rule": "unclear",
+      "base": "admin_faq",
+      "tuned": "admin_faq",
+      "score": 0.9503939747810364
+    },
+    {
+      "text": "櫃檯最晚到幾點還在",
+      "expected": "admin_faq",
+      "rule": "admin_faq",
+      "base": "admin_faq",
+      "tuned": "admin_faq",
+      "score": 0.9580177068710327
+    },
+    {
+      "text": "一般掛號收現金還是能電子付款",
+      "expected": "admin_faq",
+      "rule": "book",
+      "base": "admin_faq",
+      "tuned": "admin_faq",
+      "score": 0.9645528197288513
+    },
+    {
+      "text": "有電梯讓輪椅上去嗎",
+      "expected": "admin_faq",
+      "rule": "unclear",
+      "base": "admin_faq",
+      "tuned": "admin_faq",
+      "score": 0.9686257243156433
+    },
+    {
+      "text": "可以讓一位真人客服加入這個對話嗎",
+      "expected": "human_request",
+      "rule": "human_request",
+      "base": "human_request",
+      "tuned": "human_request",
+      "score": 0.9680666327476501
+    },
+    {
+      "text": "把我轉給在現場的同仁",
+      "expected": "human_request",
+      "rule": "unclear",
+      "base": "human_request",
+      "tuned": "human_request",
+      "score": 0.9652611613273621
+    },
+    {
+      "text": "我要替女兒退掛，別取消我自己的",
+      "expected": "human_request",
+      "rule": "human_request",
+      "base": "cancel",
+      "tuned": "cancel",
+      "score": 0.8492985367774963
+    },
+    {
+      "text": "不要自動回答了，給我人工服務",
+      "expected": "human_request",
+      "rule": "human_request",
+      "base": "unclear",
+      "tuned": "human_request",
+      "score": 0.9599424600601196
+    },
+    {
+      "text": "能請櫃台小姐直接聯絡我嗎",
+      "expected": "human_request",
+      "rule": "human_request",
+      "base": "human_request",
+      "tuned": "human_request",
+      "score": 0.9594349265098572
+    },
+    {
+      "text": "我的對話請交由工作人員處理",
+      "expected": "human_request",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "human_request",
+      "score": 0.9557543396949768
+    },
+    {
+      "text": "家父原本的約想延期，由我來代辦",
+      "expected": "human_request",
+      "rule": "appointment_lookup",
+      "base": "human_request",
+      "tuned": "human_request",
+      "score": 0.9458882212638855
+    },
+    {
+      "text": "機器人先停，換專員回覆",
+      "expected": "human_request",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "human_request",
+      "score": 0.7754533886909485
+    },
+    {
+      "text": "牙齦有膿包，可以自己弄破嗎",
+      "expected": "clinical_handoff",
+      "rule": "unclear",
+      "base": "clinical_handoff",
+      "tuned": "clinical_handoff",
+      "score": 0.9537643194198608
+    },
+    {
+      "text": "拔牙傷口整夜出血，怎麼辦",
+      "expected": "clinical_handoff",
+      "rule": "unclear",
+      "base": "clinical_handoff",
+      "tuned": "clinical_handoff",
+      "score": 0.9317697882652283
+    },
+    {
+      "text": "吞嚥困難還呼吸不順，現在該做什麼",
+      "expected": "clinical_handoff",
+      "rule": "clinical_handoff",
+      "base": "clinical_handoff",
+      "tuned": "clinical_handoff",
+      "score": 0.9600244164466858
+    },
+    {
+      "text": "止痛藥吃幾毫克才有效",
+      "expected": "clinical_handoff",
+      "rule": "clinical_handoff",
+      "base": "clinical_handoff",
+      "tuned": "clinical_handoff",
+      "score": 0.9692556262016296
+    },
+    {
+      "text": "我懷孕可以打麻醉嗎",
+      "expected": "clinical_handoff",
+      "rule": "unclear",
+      "base": "clinical_handoff",
+      "tuned": "clinical_handoff",
+      "score": 0.9498128890991211
+    },
+    {
+      "text": "看這些症狀能判斷感染嗎",
+      "expected": "clinical_handoff",
+      "rule": "clinical_handoff",
+      "base": "clinical_handoff",
+      "tuned": "clinical_handoff",
+      "score": 0.9680970907211304
+    },
+    {
+      "text": "牙套磨到破皮要擦什麼藥",
+      "expected": "clinical_handoff",
+      "rule": "clinical_handoff",
+      "base": "clinical_handoff",
+      "tuned": "clinical_handoff",
+      "score": 0.9579938650131226
+    },
+    {
+      "text": "嘴巴有麻麻的感覺是不是正常",
+      "expected": "clinical_handoff",
+      "rule": "unclear",
+      "base": "clinical_handoff",
+      "tuned": "clinical_handoff",
+      "score": 0.9561169743537903
+    },
+    {
+      "text": "就那樣啦，你看著辦",
+      "expected": "unclear",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "human_request",
+      "score": 0.8170660734176636
+    },
+    {
+      "text": "我先跟家裡商量，不要動",
+      "expected": "unclear",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "unclear",
+      "score": 0.8494209051132202
+    },
+    {
+      "text": "嗯，我還要想一想",
+      "expected": "unclear",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "unclear",
+      "score": 0.9776509404182434
+    },
+    {
+      "text": "先擱著，晚點給答案",
+      "expected": "unclear",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "unclear",
+      "score": 0.9495208859443665
+    },
+    {
+      "text": "沒有確定，暫時別處理",
+      "expected": "unclear",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "unclear",
+      "score": 0.9305111169815063
+    },
+    {
+      "text": "剛剛的事情再等等",
+      "expected": "unclear",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "unclear",
+      "score": 0.9469879865646362
+    },
+    {
+      "text": "我沒說要哪個，還在考慮",
+      "expected": "unclear",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "unclear",
+      "score": 0.9614101052284241
+    },
+    {
+      "text": "可能吧，現在沒辦法決定",
+      "expected": "unclear",
+      "rule": "unclear",
+      "base": "unclear",
+      "tuned": "unclear",
+      "score": 0.9313515424728394
+    }
+  ],
+  "limitations": [
+    "The rules include handwritten safety overrides, but this comparison does not apply those overrides to the saved model predictions.",
+    "All data shares the authoring process. Results do not establish real-world generalisation or a statistically reliable ranking.",
+    "Scores are not calibrated correctness probabilities. The 0.85 threshold does not authorize writes.",
+    "English equivalence, multi-turn quality, clinic workload reduction and matched end-to-end latency/cost remain unmeasured."
+  ]
+}

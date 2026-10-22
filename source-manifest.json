@@ -19,7 +19,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "c8309937fd7dedb458ba3dbe1b19b97f3c11c6de6c35b3be58ffefac107d0dd8"
+      "sha256": "d1a113f9d645a9269774a531abc3ca443d58df3f79acb6ea869dff178ab9974f"
     },
     {
       "path": "app/README.md",
@@ -51,7 +51,7 @@
     },
     {
       "path": "app/app/api/clinic/route.ts",
-      "sha256": "650c04654d95344dd95eb011094f8e42284ac6f3b57cc771d376eeb0579ea615"
+      "sha256": "6a6a1208a7c096cca6b55dc748d76954aa4246a05bced921efed60672e500ac7"
     },
     {
       "path": "app/app/api/desk/route.ts",
@@ -62,8 +62,12 @@
       "sha256": "947e926268759870756f133ea7089bbeda1df7e96cb779a6b5e91352e1f7c334"
     },
     {
+      "path": "app/app/booking-outcome.tsx",
+      "sha256": "5de84adb17cf2752c6cfcfd6216c10dc33d96bba8712e9ba69e2f2c880b4d3c7"
+    },
+    {
       "path": "app/app/dental-demo.tsx",
-      "sha256": "2a2fbfef5c1aca1aaf5f326a19daa2c7f328ec9e5ef0f4b865006b6dbb2f0528"
+      "sha256": "f781f17a8db560a8b0c6ec70940b51e86119f9a4f917c71701ddb28f29a4fc5b"
     },
     {
       "path": "app/app/desk/page.tsx",
@@ -74,12 +78,16 @@
       "sha256": "20ef55fd58eeed67caefd0911704e913f33cbd1ac38da37dd0265ec5832b82ed"
     },
     {
+      "path": "app/app/evaluation-evidence.tsx",
+      "sha256": "2fc4a9f75d61b6a3ce343395d8e080433c4e91eb749bfe33c4c9c1bb4f0ccf8f"
+    },
+    {
       "path": "app/app/eve-agent.ts",
       "sha256": "d048c7169ed7e79bcc965d78115c98362729bf196114c36338d996a885ddc8cc"
     },
     {
       "path": "app/app/globals.css",
-      "sha256": "91d907dd255985742102e8f98798f838492d149d762a58dd7c64cc89dc573786"
+      "sha256": "8f3856a06e6a063a838fc719b26976fbb088bcb4117b6bf81efaa7d06ac85826"
     },
     {
       "path": "app/app/icon.svg",
@@ -95,11 +103,11 @@
     },
     {
       "path": "app/app/product-story.tsx",
-      "sha256": "75ea072170b9f8e6b52f33784c4edb6c2c9db13bb9c41fb8d3ae542e058bb407"
+      "sha256": "1044088169a21935f79a7d74e65cca74501d34a1a84b7df54f5e796c67b65a79"
     },
     {
       "path": "app/app/runtime-panel.tsx",
-      "sha256": "bdb6fa2ed6983ab3143329a3d385aa46da8b42f16a4bc16d9c8886d0d2e7f210"
+      "sha256": "199954a4acb0cce1e7232546c1fb6d8b10ad41cd4119a86a816f5c2a0271efd2"
     },
     {
       "path": "app/app/s/[sessionId]/page.tsx",
@@ -227,11 +235,11 @@
     },
     {
       "path": "app/lib/dental/domain.ts",
-      "sha256": "2b2d5d3584685fd4f2fdd1d684721d92fc2adb922bd70b8d7a004d6791cb6c7a"
+      "sha256": "93d12e99cd419c8650dc39d32aa8744d85f37420b3d839abec3bf45ea4f34b1d"
     },
     {
       "path": "app/lib/dental/language.ts",
-      "sha256": "3debd33055badf9a4346f0aaae09c398cefbf19de47f162012d88a8d9ab5279a"
+      "sha256": "deca0cfe1aedd1340b2133f63c3e1ca121fa3aab07d4139ec217e7b6fd024fa1"
     },
     {
       "path": "app/lib/dental/model.ts",
@@ -267,11 +275,11 @@
     },
     {
       "path": "app/package-lock.json",
-      "sha256": "4f68e89aeaa06aa98f2ac48e03c6860198131088de54eb5a3576d3988a6d4260"
+      "sha256": "e39901aa56bcb079a4a5cee196cff77a5fd2cdd81d3deac4774f47b898c874ce"
     },
     {
       "path": "app/package.json",
-      "sha256": "0892d6788e58af98a7215f55a83ba04a6014fc80046d8c4c499906aa4caa7c0b"
+      "sha256": "032350a684d742f9205036d58abcf8442ef6bc55daf6386638a184397c2f9763"
     },
     {
       "path": "app/postcss.config.mjs",
@@ -280,6 +288,10 @@
     {
       "path": "app/proxy.ts",
       "sha256": "af5be87a71a6581d54031e80bcee338b2bb0a492373c0d71321486985b07f37f"
+    },
+    {
+      "path": "app/public/evidence/decision-comparison.json",
+      "sha256": "eef582ea66222b9bfddef3cd2fbc2323fe7dfd318a28f560033993e8d9b96346"
     },
     {
       "path": "app/public/evidence/summary.json",
@@ -304,6 +316,10 @@
     {
       "path": "app/tests/domain.test.ts",
       "sha256": "3108976a7406c262f1aa411122e6f0ded29a2c85d66d554c7e09e4da8e98b62c"
+    },
+    {
+      "path": "app/tests/isolation.test.ts",
+      "sha256": "4c64df5b324f6defa819ea71e2a0410bb27127b68e45cd0ac4968ea688e98fc4"
     },
     {
       "path": "app/tests/model.test.ts",
@@ -363,7 +379,7 @@
     },
     {
       "path": "docs/DEPLOYMENT.md",
-      "sha256": "7b6842e1f2ba8464b78f5c1aa1480866dd7d688a334b603a38b40e2376d0b316"
+      "sha256": "f7bca1a0732bbd86138ebbb7e83bfb3480f390fc4cbd3d166d7155b6c40b3f02"
     },
     {
       "path": "docs/MODEL_CARD.md",
@@ -458,8 +474,32 @@
       "sha256": "c00889bd9bf4ffe1933ccbb112bd2f44fd5617c151b7909c91f7fc0faaaa931c"
     },
     {
+      "path": "docs/judge-readiness.md",
+      "sha256": "2700fb3eab5d3d1da085873774863bcc31225b777b0b4a02e6342c038826bb92"
+    },
+    {
+      "path": "docs/pilot/README.md",
+      "sha256": "6cf1002a289088c40e8851d9c7284c0b59039656359118ebd3ffd045dd6fa17c"
+    },
+    {
+      "path": "docs/pilot/clinic-guide.md",
+      "sha256": "24842a75d5f7258c989bdacbaed15403d85684f5542dcdd49a2e2c8cefed4586"
+    },
+    {
+      "path": "docs/pilot/observer-guide.md",
+      "sha256": "528eb34e80899324c4bd7a042dadc52e91ae5e1a1375c14f03172a635704e961"
+    },
+    {
+      "path": "docs/pilot/results-template.md",
+      "sha256": "51df696b8488672985363aea31171a5c5d614a400a6d2945e36caeabe169f353"
+    },
+    {
+      "path": "docs/pilot/user-tasks.md",
+      "sha256": "b2840671c1b7d4f6eee71602ffde2abd198f5771dd42b070d19749246b46f297"
+    },
+    {
       "path": "docs/submission-draft.md",
-      "sha256": "1621028affe2912c6f2b87fb5161a8c7f66191c4d50ae04a7e846165078cb757"
+      "sha256": "8944184389a58330d1c620a7de547fee9b45da5b1fcab371845f35f418ce8036"
     },
     {
       "path": "inference/choice.py",
@@ -488,6 +528,10 @@
     {
       "path": "reports/demo-video.json",
       "sha256": "328704881e7a4f8b62fe75001823b824fc8e357a41558bddde0bf1abd78a6f27"
+    },
+    {
+      "path": "reports/dependency-review.md",
+      "sha256": "a4874e2e67ee11727738ed7cc318bbc41e454a9fb9569b6357ee79b18f5084d0"
     },
     {
       "path": "reports/deployment-verification.json",
@@ -520,6 +564,10 @@
     {
       "path": "reports/nebius-baseline.json",
       "sha256": "18ef75e22fa1c5e96205b1a67abd9e17b74bfe19db4d198dd24581970300b5c7"
+    },
+    {
+      "path": "reports/nebius-fallback-verification.json",
+      "sha256": "9b72eea9af010ba078d70381450ce903da116d5260fb30d51c7d66b044df8612"
     },
     {
       "path": "reports/nebius-hosting-check.json",
@@ -558,12 +606,32 @@
       "sha256": "ef832bafa978373c21c7e45b52afc558891275b47c62357604f3e89c5558d32d"
     },
     {
+      "path": "reports/readiness-deployed.json",
+      "sha256": "5b4a370232df5a1f9bd93490f30c7989df38de5cf6ed6ff42db72ce627947f8c"
+    },
+    {
+      "path": "reports/readiness-local.json",
+      "sha256": "4d47bb35ac45cae4033ed899d0b303d86c919f67d112ebc5ddebd06e4ca40b38"
+    },
+    {
+      "path": "reports/readiness-mlx.json",
+      "sha256": "0b85ddd3b5b535e5cdcaabd21372862361bf254fc786bb5488f0f47ab5099f87"
+    },
+    {
       "path": "scripts/build-demo-video.mjs",
       "sha256": "9a0f1d6970020b8ff1ebe3712597c6a90036e97dd3c7c12f68624c25fd1e0bed"
     },
     {
       "path": "scripts/build-live-demo.mjs",
       "sha256": "2824dfeeee0036b1514d756aa400624b46badebd4821d4982b121affe3d665b3"
+    },
+    {
+      "path": "scripts/check-readiness.mjs",
+      "sha256": "37c09133976a676c28a3bec4036835192f4fe1a3e3c687c2e510cc6fdf93e0ee"
+    },
+    {
+      "path": "scripts/compare-decisions.mjs",
+      "sha256": "40451242622d4ef1be3338fbe0573eea1eddf18d3af619ed4369aa4a202d7da3"
     },
     {
       "path": "scripts/deploy-source.py",
@@ -604,6 +672,14 @@
     {
       "path": "scripts/transcribe-demo.py",
       "sha256": "9d9815af5e3d50652a5a53185b5ea9e7b358b1ff3b671c11009007fba185b7e6"
+    },
+    {
+      "path": "scripts/verify-nebius-fallback.mjs",
+      "sha256": "3ff083de65c24ae1f79ca0d5bbb390ae2a536394f33a7c8ede647dd3ecab588f"
+    },
+    {
+      "path": "scripts/verify-readiness.mjs",
+      "sha256": "a35bd45361d8d936e54796e260c956aa767f4e2d997f2ac8f81a92daea61f723"
     },
     {
       "path": "supabase/functions/clinic-store/index.ts",
